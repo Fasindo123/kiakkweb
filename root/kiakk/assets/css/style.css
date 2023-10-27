@@ -11939,6 +11939,16 @@ ul{
   line-height: 35px;
 }
 
+.kepzes {
+  margin-top: 20px;
+}
+
+.kepzes ul li {
+  list-style-type: decimal;
+  line-height: 40px;
+  font-size: 30px;
+}
+
 #justify {
   margin-top: 15px;
   text-align: justify;

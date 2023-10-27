@@ -15,10 +15,35 @@
             </div>
           <div class="col-lg-12">
             <div class="card-feature-3 parallax-item">
-              <h2 class="heading-1 text-center "><span class="card-steps stroke stroke-900 grow-up">Képzés</span> 1</h2>
-              <h5 class="card-desc color-900 text-opacity" id="justify">
-              Similique fuga laboriosam praesentium veritatis eveniet, perspiciatis, est molestiae, quo ad maiores ducimus error? Laudantium eveniet earum velit. Corporis tempore ipsa adipisci corrupti molestias hic voluptatem, eaque ut iusto facere.
-              Possimus quas ad officiis rerum vero beatae molestias illo optio exercitationem blanditiis impedit corporis tempora, ipsam accusamus eius magni inventore deleniti ex, libero architecto illum veritatis? Labore hic inventore voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iste veritatis fugit doloribus eius in consequatur ex hic minus recusandae. Sed inventore minus quas reprehenderit dignissimos, odio ex iste sint? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime aspernatur beatae ratione quisrit dignissimos quo explicabo accusantium, asperiores molestiae?</h5>
+              <h2 class="heading-1 text-center "><span class="card-steps stroke stroke-900 grow-up">01.</span> Képzés</h2>
+              
+              <h3>Képzés neve: ---</h3>
+              <h4>Képzés helye: ---</h4>
+              <div class="row kepzes">
+                <div class="col-lg-6">
+                  <h4>Kezdete: --- <br> Tanfolyam díja: ---</h4>
+                </div>
+                <div class="col-lg-6">
+                  <h4>Vége: ---</h4>
+                </div>
+
+              <div class="col-lg-12 kepzes">
+              <h3>Miért nálunk végezd el a tanfolyamot?</h3>
+                <ul>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                  <li>iugfsdgfiugssugsugi</li>
+                </ul>
+              </div>
+
+              </div>
             </div>
           </div>
         </div>
