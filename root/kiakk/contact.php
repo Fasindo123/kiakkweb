@@ -39,7 +39,7 @@
                       </div>
                       <div class="col-lg-6">
                         <div class="form-group">
-                          <input class="form-control" type="text" placeholder="Telefonszám" id="phone-number">
+                        <input class="form-control" type="text" placeholder="Telefonszám" id="phone-number" oninput="formatPhoneNumber(this)">
                         </div>
                       </div>
                       <div class="col-lg-6">
@@ -83,39 +83,53 @@
     <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>
     <?php require_once("components/scripts.php"); ?>
     <script>
-      function sendForm() {
-        // Minden mező kitöltöttségének ellenőrzése
-        const elements = document.querySelectorAll('.form-control');
-        for (let i = 0; i < elements.length - 1; i++) {
-          if (elements[i].value === "") {
-            alert('Minden mezőt ki kell tölteni!');
-            return false;
-          }
-        }
-        
-        // Telefon ellenőrzése
-        //const phoneNumber = $("#phone-number").val();
-        //const phoneRegex = /^(\+36|06)([\/\s-]?\d{2}){3}\d{4}$/;
-        //if (!phoneRegex.test(phoneNumber)) {
-        //  alert('Hibás telefon formátum!');
-        //  return false;
-        //}
+  function formatPhoneNumber(input) {
+    var phoneNumber = input.value.replace(/\D/g, '');
 
-        // Email ellenőrzése
-        const email = $("#email-address").val()
-        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-        if (!emailRegex.test(email)) {
-          alert('Hibás email cím formátum!');
-          return false;
-        }
+    if (phoneNumber.length > 11) {
+      phoneNumber = phoneNumber.slice(0, 11);
+    }
 
-        // Név ellenőrzése
-        const name = $("#name").val();
-        if (!/^[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+(\s[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+)+$/.test(name)) {
-          alert('Hibás név formátum!');
-          return false;
-        }
+    var formattedPhoneNumber = '+36 ';
+    if (phoneNumber.length > 2) {
+      formattedPhoneNumber += phoneNumber.substr(2, 2) + ' ';
+    }
+    if (phoneNumber.length > 4) {
+      formattedPhoneNumber += phoneNumber.substr(4, 3) + ' ';
+    }
+    if (phoneNumber.length > 7) {
+      formattedPhoneNumber += phoneNumber.substr(7, 4);
+    }
+
+    input.value = formattedPhoneNumber;
+  }
+
+  function sendForm() {
+    // Minden mező kitöltöttségének ellenőrzése
+    const elements = document.querySelectorAll('.form-control');
+    for (let i = 0; i < elements.length - 1; i++) {
+      if (elements[i].value === "") {
+        alert('Minden mezőt ki kell tölteni!');
+        return false;
       }
-    </script>
+    }
+
+    // Email ellenőrzése
+    const email = document.getElementById("email-address").value;
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      alert('Hibás email cím formátum!');
+      return false;
+    }
+
+    // Név ellenőrzése
+    const name = document.getElementById("name").value;
+    if (!/^[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+(\s[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+)+$/.test(name)) {
+      alert('Hibás név formátum!');
+      return false;
+    }
+  }
+</script>
+
   </body>
 </html>
