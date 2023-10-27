@@ -1,3 +1,4 @@
+működik
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once('components/head.php'); ?>
@@ -39,7 +40,7 @@
                       </div>
                       <div class="col-lg-6">
                         <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Telefonszám" id="phone-number" oninput="formatPhoneNumber(this)">
+                        <input class="form-control" type="text" placeholder="Telefonszám" id="phone-number" oninput="formatPhoneNumber(this)">  
                         </div>
                       </div>
                       <div class="col-lg-6">
