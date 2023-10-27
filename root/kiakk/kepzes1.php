@@ -19,6 +19,7 @@
               <h5 class="card-desc color-900 text-opacity" id="justify">
               Similique fuga laboriosam praesentium veritatis eveniet, perspiciatis, est molestiae, quo ad maiores ducimus error? Laudantium eveniet earum velit. Corporis tempore ipsa adipisci corrupti molestias hic voluptatem, eaque ut iusto facere.
               Possimus quas ad officiis rerum vero beatae molestias illo optio exercitationem blanditiis impedit corporis tempora, ipsam accusamus eius magni inventore deleniti ex, libero architecto illum veritatis? Labore hic inventore voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iste veritatis fugit doloribus eius in consequatur ex hic minus recusandae. Sed inventore minus quas reprehenderit dignissimos, odio ex iste sint? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime aspernatur beatae ratione quisrit dignissimos quo explicabo accusantium, asperiores molestiae?</h5>
+              asda
             </div>
           </div>
         </div>
