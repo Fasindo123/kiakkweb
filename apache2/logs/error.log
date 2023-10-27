@@ -1,7 +1,16 @@
 PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/User/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+<<<<<<< HEAD
 [Fri Oct 27 11:19:15.783235 2023] [mpm_winnt:notice] [pid 2856:tid 736] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
 [Fri Oct 27 11:19:15.783235 2023] [mpm_winnt:notice] [pid 2856:tid 736] AH00456: Server built: Nov  3 2017 01:01:54
 [Fri Oct 27 11:19:15.783235 2023] [core:notice] [pid 2856:tid 736] AH00094: Command line: 'C:\\Users\\User\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/User/Documents/GitHub/kiakkweb/apache2'
 [Fri Oct 27 11:19:15.787950 2023] [mpm_winnt:notice] [pid 2856:tid 736] AH00418: Parent: Created child process 10200
 PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/User/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
 [Fri Oct 27 11:19:16.133605 2023] [mpm_winnt:notice] [pid 10200:tid 712] AH00354: Child: Starting 64 worker threads.
+=======
+[Fri Oct 27 11:17:56.127527 2023] [mpm_winnt:notice] [pid 10256:tid 692] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
+[Fri Oct 27 11:17:56.127527 2023] [mpm_winnt:notice] [pid 10256:tid 692] AH00456: Server built: Nov  3 2017 01:01:54
+[Fri Oct 27 11:17:56.127527 2023] [core:notice] [pid 10256:tid 692] AH00094: Command line: 'C:\\Users\\User\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/User/Documents/GitHub/kiakkweb/apache2'
+[Fri Oct 27 11:17:56.127527 2023] [mpm_winnt:notice] [pid 10256:tid 692] AH00418: Parent: Created child process 5040
+PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/User/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Fri Oct 27 11:17:56.557383 2023] [mpm_winnt:notice] [pid 5040:tid 704] AH00354: Child: Starting 64 worker threads.
+>>>>>>> 2388062daff01f0459d4893af22678e01c1f134b
