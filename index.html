@@ -301,7 +301,7 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="card-feature card-feature-2">
-                        <div class="card-image"><img class="parallax-image" src="assets/imgs/page/homepage2/img1.png" alt="neuron"></div>
+                        <div class="card-image"><img class="parallax-image popup-button" id="oktatokep1" open="oktato1.html" src="assets/imgs/page/homepage2/img1.png" alt="neuron"></div>
                         <div class="card-info">
                           <h4 class="color-900 card-title">MMO Solutions</h4>
                           <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
@@ -650,8 +650,7 @@
       const iframe = document.getElementById("popup-iframe");
 
       document.body.addEventListener('click', function (evt) {
-        console.log(evt.target)
-        if (evt.target.className === 'popup-button') {
+        if (evt.target.className.includes("popup-button")) {
           const button = document.getElementById(evt.target.id)
           const open = button.getAttribute("open")
           iframe.setAttribute("src", open)
