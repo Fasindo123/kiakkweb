@@ -23,18 +23,16 @@
     const popup = document.getElementById("popup");
     const iframe = document.getElementById("popup-iframe");
 
-    document.body.addEventListener('click', function (evt) {
-    if (evt.target.className.includes("popup-button")) {
-        const button = document.getElementById(evt.target.id)
+    $(".popup-button").click(function() {
+        const button = document.getElementById($(this).attr("id"))
         const open = button.getAttribute("open")
         iframe.setAttribute("src", open)
         overlay.style.display = "block";
         popup.style.display = "block";
-    }
-    }, false);
+    })
 
     overlay.addEventListener("click", function () {
-    overlay.style.display = "none";
-    popup.style.display = "none";
+        overlay.style.display = "none";
+        popup.style.display = "none";
     });
 </script>

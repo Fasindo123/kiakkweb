@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="hu">
   <?php require_once('components/head.php'); ?>
-  <?php require_once('components/loader.php'); ?>
-  <?php require_once('components/mobile-menu.php'); ?>
-  <?php require_once('components/header.php'); ?>
+  <body>
+      <?php require_once('components/loader.php'); ?>
+      <?php require_once('components/mobile-menu.php'); ?>
+      <?php require_once('components/header.php'); ?>
       <main class="main">
         <section class="section banner-mode-4 bg-900">
           <div class="banner-homepage4">
@@ -393,7 +394,7 @@
           </div>
         </section>
 
-        <button class="popup-button" id="oktato1" open="oktato1.html">Oktató 1</button>
+        <button class="popup-button" id="oktato1" open="oktato1.php">Oktató 1</button>
 
         <div id="popup">
           <iframe src="#" id="popup-iframe"></iframe>
