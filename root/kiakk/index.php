@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <?php require_once('head.php'); ?>
-  <?php require_once('loader.php'); ?>
-  <?php require_once('mobile-menu.php'); ?>
-  <?php require_once('header.php'); ?>
+  <?php require_once('components/head.php'); ?>
+  <?php require_once('components/loader.php'); ?>
+  <?php require_once('components/mobile-menu.php'); ?>
+  <?php require_once('components/header.php'); ?>
       <main class="main">
         <section class="section banner-mode-4 bg-900">
           <div class="banner-homepage4">
@@ -401,9 +401,9 @@
         <div id="overlay"></div>
       </main>
 
-    <?php require_once("footer.php"); ?>
+    <?php require_once("components/footer.php"); ?>
     </div>
     <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>
-    <?php require_once("scripts.php"); ?>
+    <?php require_once("components/scripts.php"); ?>
   </body>
 </html>

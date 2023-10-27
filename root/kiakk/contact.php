@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="hu">
-      <?php require_once('head.php'); ?>
-      <?php require_once('loader.php'); ?>
-      <?php require_once('mobile-menu.php'); ?>
-      <?php require_once('header.php'); ?>
+    <?php require_once('components/head.php'); ?>
+    <?php require_once('components/loader.php'); ?>
+    <?php require_once('components/mobile-menu.php'); ?>
+    <?php require_once('components/header.php'); ?>
       <main class="main">
         <section class="section block-contact is-mode bg-0">
           <div class="container">

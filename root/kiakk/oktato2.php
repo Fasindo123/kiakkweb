@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <?php require_once('head.php'); ?>
+  <?php require_once('components/head.php'); ?>
   <body class="dark-mode page-transition alith-magic-cursor">
     
     <section class="section block-section-2 is-mode bg-0">
