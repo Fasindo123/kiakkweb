@@ -30,21 +30,21 @@
               <div class="col-lg-8">
                 <div class="form-in-touch position-relative">
                   <div class="image-mark-scroll"></div>
-                  <form action="contact.html" method="post">
+                  <form action="contact.php" method="post" onsubmit="sendForm()">
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="form-group">
-                          <input class="form-control" type="text" placeholder="Teljes név">
+                          <input class="form-control" type="text" placeholder="Teljes név" id="name">
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="form-group">
-                          <input class="form-control" type="text" placeholder="Telefonszám">
+                          <input class="form-control" type="text" placeholder="Telefonszám" id="phone-number">
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="form-group">
-                          <input class="form-control" type="text" placeholder="Email cím">
+                          <input class="form-control" type="text" placeholder="Email cím" id="email-address">
                         </div>
                       </div>
                       <div class="col-lg-6">
@@ -60,7 +60,7 @@
                       <div class="col-lg-12">
                         <div class="box-button-touch">
                           <div class="form-group">
-                            <button class="btn btn-black" onclick="sendForm()">Üzenet küldése<img src="assets/imgs/template/icons/arrow.svg" alt="neuron"></button>
+                            <button class="btn btn-black">Üzenet küldése<img src="assets/imgs/template/icons/arrow.svg" alt="neuron"></button>
                           </div>
                           <div class="agree-cb color-600">
                             <input class="cb-agree" type="checkbox">A kapcsolatfelvétel gombra kattintva Ön elfogadja feltételeinket és szabályzatunkat.
@@ -82,5 +82,40 @@
     </div>
     <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>
     <?php require_once("components/scripts.php"); ?>
+    <script>
+      function sendForm() {
+        // Minden mező kitöltöttségének ellenőrzése
+        const elements = document.querySelectorAll('.form-control');
+        for (let i = 0; i < elements.length - 1; i++) {
+          if (elements[i].value === "") {
+            alert('Minden mezőt ki kell tölteni!');
+            return false;
+          }
+        }
+        
+        // Telefon ellenőrzése
+        //const phoneNumber = $("#phone-number").val();
+        //const phoneRegex = /^(\+36|06)([\/\s-]?\d{2}){3}\d{4}$/;
+        //if (!phoneRegex.test(phoneNumber)) {
+        //  alert('Hibás telefon formátum!');
+        //  return false;
+        //}
+
+        // Email ellenőrzése
+        const email = $("#email-address").val()
+        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (!emailRegex.test(email)) {
+          alert('Hibás email cím formátum!');
+          return false;
+        }
+
+        // Név ellenőrzése
+        const name = $("#name").val();
+        if (!/^[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+(\s[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+)+$/.test(name)) {
+          alert('Hibás név formátum!');
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>
