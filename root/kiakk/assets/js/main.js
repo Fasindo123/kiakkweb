@@ -445,3 +445,42 @@
     });
 
 })(jQuery);
+
+
+function sendForm() {
+  // Telefon ellenőrzése
+  const phoneNumber = document.querySelector('input[type="tel"]').value;
+  const phoneRegex = /^(\+36|06)([\/\s-]?\d{2}){3}\d{4}$/;
+  if (!phoneRegex.test(phoneNumber)) {
+    alert('Hibás telefon formátum!');
+    return;
+  }
+
+  // Email ellenőrzése
+  const email = document.querySelector('input[type="email"]').value;
+  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  if (!emailRegex.test(email)) {
+    alert('Hibás email cím formátum!');
+    return;
+  }
+
+  // Név ellenőrzése
+  const name = document.querySelector('input[type="text"][placeholder="Teljes név"]').value;
+  if (!/^[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+(\s[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+)+$/.test(name)) {
+    alert('Hibás név formátum!');
+    return;
+  }
+
+  // Minden mező kitöltöttségének ellenőrzése
+  const form = document.querySelector('form');
+  for (let i = 0; i < form.elements.length - 1; i++) {
+    if (form.elements[i].value === "") {
+      alert('Minden mezőt ki kell tölteni!');
+      return;
+    }
+  }
+
+  // Ha minden ellenőrzés sikeres, akkor elküldheted az űrlapot
+  alert('Az üzenet elküldve!');
+  form.submit();
+}
