@@ -77,9 +77,9 @@
           </div>
         </section>
       </main>
-      <?php require_once("footer.php"); ?>
+      <?php require_once("components/footer.php"); ?>
     </div>
     <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>
-    <?php require_once("scripts.php"); ?>
+    <?php require_once("components/scripts.php"); ?>
   </body>
 </html>
