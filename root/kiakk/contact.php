@@ -1,4 +1,3 @@
-működik
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once('components/head.php'); ?>

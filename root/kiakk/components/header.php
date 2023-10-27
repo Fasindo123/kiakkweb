@@ -1,7 +1,7 @@
 <header class="header sticky-bar">
         <div class="container-fluid">
           <div class="main-header">
-            <div class="header-logo parallax-item"><a class="d-flex cursor-scale small" href="index.html"><img alt="neuron" src="assets/imgs/template/logo.svg" width="100px" height="100px"><span class="logo-text">Kaposvári Informatika <br>Ágazati Képzőközpont</span></a></div>
+            <div class="header-logo parallax-item"><a class="d-flex cursor-scale small" href="index.php"><img alt="neuron" src="assets/imgs/template/logo.svg" width="100px" height="100px"><span class="logo-text">Kaposvári Informatika <br>Ágazati Képzőközpont</span></a></div>
             <div class="header-menu">
               <div class="header-nav">
                 <nav class="nav-main-menu d-none d-xl-block">
