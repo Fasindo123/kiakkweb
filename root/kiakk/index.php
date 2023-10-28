@@ -397,11 +397,14 @@
 
         <button class="popup-button" id="oktato1" open="oktato1.php">Oktató 1</button>
 
-        <div id="popup">
-          <iframe src="#" id="popup-iframe"></iframe>
-        </div>
-        <div id="overlay"></div>
-      </main>
+<div id="popup" align="right">
+  <div id="popup-header">
+    <button id="close-popup">X</button>
+  </div>
+  <iframe src="#" id="popup-iframe"></iframe>
+</div>
+<div id="overlay"></div>
+
 
     <?php require_once("components/footer.php"); ?>
     </div>

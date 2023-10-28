@@ -30,7 +30,7 @@
               <div class="col-lg-8">
                 <div class="form-in-touch position-relative">
                   <div class="image-mark-scroll"></div>
-                  <form action="contact.php" method="post" onsubmit="sendForm()">
+                  <form action="contact.php" method="post" onsubmit="return sendForm()">
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="form-group">
@@ -105,30 +105,40 @@
   }
 
   function sendForm() {
-    // Minden mező kitöltöttségének ellenőrzése
-    const elements = document.querySelectorAll('.form-control');
-    for (let i = 0; i < elements.length - 1; i++) {
-      if (elements[i].value === "") {
-        alert('Minden mezőt ki kell tölteni!');
-        return false;
-      }
-    }
-
-    // Email ellenőrzése
-    const email = document.getElementById("email-address").value;
-    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-    if (!emailRegex.test(email)) {
-      alert('Hibás email cím formátum!');
-      return false;
-    }
-
-    // Név ellenőrzése
-    const name = document.getElementById("name").value;
-    if (!/^[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+(\s[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+)+$/.test(name)) {
-      alert('Hibás név formátum!');
-      return false;
+  // Minden mező kitöltöttségének ellenőrzése
+  const elements = document.querySelectorAll('.form-control');
+  for (let i = 0; i < elements.length - 1; i++) {
+    if (elements[i].value === "") {
+      alert('Minden mezőt ki kell tölteni!');
+      return false; // Ha van hiányzó mező, visszaadunk false értéket
     }
   }
+
+  // Email ellenőrzése
+  const email = document.getElementById("email-address").value;
+  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  if (!emailRegex.test(email)) {
+    alert('Hibás email cím formátum!');
+    return false; // Ha hibás email cím, visszaadunk false értéket
+  }
+
+  // Név ellenőrzése
+  const name = document.getElementById("name").value;
+  if (!/^[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+(\s[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+)+$/.test(name)) {
+    alert('Hibás név formátum!');
+    return false; // Ha hibás név, visszaadunk false értéket
+  }
+
+  // Üzenet ellenőrzése
+  const message = document.querySelector('textarea.form-control').value;
+  if (message.trim() === "") {
+    alert('Az üzenet mezőt ki kell tölteni!');
+    return false; // Ha üres az üzenet mező, visszaadunk false értéket
+  }
+
+  return true; // Ha minden ellenőrzés sikeres, visszaadunk true értéket
+}
+
 </script>
 
   </body>

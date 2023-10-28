@@ -19,20 +19,30 @@
 <script src="assets/js/swiper-slider-config.js?v=2.0.0"></script>
 <script src="assets/js/custom.js?v=2.0.0"></script>
 <script>
+   $(document).ready(function() {
     const overlay = document.getElementById("overlay");
     const popup = document.getElementById("popup");
     const iframe = document.getElementById("popup-iframe");
 
-    $(".popup-button").click(function() {
-        const button = document.getElementById($(this).attr("id"))
-        const open = button.getAttribute("open")
-        iframe.setAttribute("src", open)
+    $(".popup-button").on("click", function() {
+        const button = document.getElementById($(this).attr("id"));
+        const open = button.getAttribute("open");
+        iframe.setAttribute("src", open);
         overlay.style.display = "block";
         popup.style.display = "block";
-    })
+    });
 
     overlay.addEventListener("click", function () {
         overlay.style.display = "none";
         popup.style.display = "none";
     });
+
+    // Új eseménykezelő a gomb bezárásához
+    $("#close-popup").on("click", function() {
+        overlay.style.display = "none";
+        popup.style.display = "none";
+    });
+});
+
+
 </script>
