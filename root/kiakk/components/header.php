@@ -15,7 +15,7 @@
                       </ul>
                     </li>
                     <li class="has-children"><a href="#oktatok">Oktatóink</a>
-                        <ul class="menu-inner">
+                        <ul class="sub-menu">
                           <li><a href="#">Oktató 1</a></li>
                           <li><a href="#">Oktató 2</a></li>
                           <li><a href="#">Oktató 3</a></li>

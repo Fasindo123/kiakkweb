@@ -1,7 +1,7 @@
 PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
-[Fri Oct 27 15:49:40.255436 2023] [mpm_winnt:notice] [pid 19764:tid 736] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
-[Fri Oct 27 15:49:40.255436 2023] [mpm_winnt:notice] [pid 19764:tid 736] AH00456: Server built: Nov  3 2017 01:01:54
-[Fri Oct 27 15:49:40.255436 2023] [core:notice] [pid 19764:tid 736] AH00094: Command line: 'C:\\Users\\Peti\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/Peti/Documents/GitHub/kiakkweb/apache2'
-[Fri Oct 27 15:49:40.276781 2023] [mpm_winnt:notice] [pid 19764:tid 736] AH00418: Parent: Created child process 260
+[Sat Oct 28 08:17:25.206275 2023] [mpm_winnt:notice] [pid 13928:tid 708] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
+[Sat Oct 28 08:17:25.206275 2023] [mpm_winnt:notice] [pid 13928:tid 708] AH00456: Server built: Nov  3 2017 01:01:54
+[Sat Oct 28 08:17:25.206275 2023] [core:notice] [pid 13928:tid 708] AH00094: Command line: 'C:\\Users\\Peti\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/Peti/Documents/GitHub/kiakkweb/apache2'
+[Sat Oct 28 08:17:25.217375 2023] [mpm_winnt:notice] [pid 13928:tid 708] AH00418: Parent: Created child process 3940
 PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
-[Fri Oct 27 15:49:41.450840 2023] [mpm_winnt:notice] [pid 260:tid 748] AH00354: Child: Starting 64 worker threads.
+[Sat Oct 28 08:17:26.118349 2023] [mpm_winnt:notice] [pid 3940:tid 712] AH00354: Child: Starting 64 worker threads.

@@ -1,3 +1,4 @@
+<!-- itt vannak .html-ek, de még nem kell javítani -->
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once('components/head.php'); ?>
@@ -14,7 +15,7 @@
               <div class="text-center">
                 <h3 class="color-brand-1 mb-25 text-up fadeInUp"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium nemo iusto tempora?</h3>
                 <h2 class="display-5 color-white mb-55 fadeInUp">Kaposvári Informatika<br class="d-none d-lg-block">Ágazati Képzőközpont</h2>
-                <div class="d-flex justify-content-center fadeInUp get-quote"><a class="d-inline-block align-middle mr-50" href="contact.html">
+                <div class="d-flex justify-content-center fadeInUp get-quote"><a class="d-inline-block align-middle mr-50" href="contact.php">
                     <div class="box-get-quote parallax-item">
                       <div class="img-quote img-zoom-in"><img src="assets/imgs/page/homepage1/img-get-quote.png" alt="neuron"></div>
                       <div class="info-quote"><span class="font-xl mr-15">Lépj Kapcsolatba <i class="fa-solid fa-share-from-square"></i></span></div>
@@ -99,7 +100,7 @@
                   <h2 class="card-steps heading-1 stroke stroke-900 grow-up">02.</h2>
                   <h3 class="card-title color-900 text-up">Képzés 2</h3>
                   <h5 class="card-desc color-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ea dignissimos sequi quisquam quam error! Ex voluptas quas totam beatae eligendi! Aperiam mollitia reprehenderit aliquam. Ad, earum! Esse, obcaecati pariatur.</h5>
-                  <div class="popup-button card-link d-flex" id="képzés1" onclick="openPopup('kepzes1.html')">
+                  <div class="popup-button card-link d-flex" id="képzés1" onclick="openPopup('kepzes1.php')">
                     <a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a>
                     <img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron">
                     TESZT
@@ -127,7 +128,7 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="card-feature card-feature-2">
-                        <div class="card-image"><img class="parallax-image popup-button" id="oktatokep1" open="oktato1.html" src="assets/imgs/page/homepage2/img1.png" alt="neuron"></div>
+                        <div class="card-image"><img class="parallax-image popup-button" id="oktatokep1" open="oktato1.php" src="assets/imgs/page/homepage2/img1.png" alt="neuron"></div>
                         <div class="card-info">
                           <h4 class="color-900 card-title">MMO Solutions</h4>
                           <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
@@ -289,7 +290,7 @@
                     <p class="font-md color-600">Contact us and we’ll get back to youas soon as possible.</p>
                   </div>
                   <div class="mt-40">
-                    <div class="grow-up"><a class="btn btn-default btn-default-sm" href="contact.html">Contact Us<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></a></div>
+                    <div class="grow-up"><a class="btn btn-default btn-default-sm" href="contact.php">Contact Us<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6">
