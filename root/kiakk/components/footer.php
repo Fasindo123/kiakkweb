@@ -23,7 +23,7 @@
               </ul>
             </div>
             <div class="footer-col">
-              <h4><i class="fa-solid fa-code"></i> Adavédelem és Felhasználás</h4>
+              <h4><i class="fa-solid fa-scroll"></i> Irányelvek</h4>
               <ul>
                 <li><a href="#">Adatvédelem</a></li>
                 <li><a href="#">Felhasználási Feltételek</a></li>
@@ -32,9 +32,9 @@
             <div class="footer-col">
               <h4><i class="fa-solid fa-share-nodes"></i> Közösségi Média</h4>
               <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
               </div>
             </div>
           </div>

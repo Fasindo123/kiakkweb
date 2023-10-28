@@ -231,19 +231,17 @@ li.hr span {
   color: #fff;
 }
 
-/* ::-webkit-scrollbar {
-  width: 7px;
+::-webkit-scrollbar {
+  width: 5px;
 }
  
-
 ::-webkit-scrollbar-thumb {
-  background: #68c4a9;
-  border-radius: 7px;
+  background: #166198;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #166198;
-} */
+  background: #0F044C;
+}
 
 ::-moz-placeholder {
   color: #E8E9ED;
@@ -541,7 +539,7 @@ h6,
 }
 
 .color-brand-1 {
-  color: #68c4a9;
+  color: #fff;
 }
 
 .color-brand-2 {
@@ -1033,7 +1031,7 @@ body.dark-mode {
 }
 .box-button-slider-bottom .swiper-button-next-style1:hover,
 .box-button-slider-bottom .swiper-button-prev-style1:hover {
-  background-color: #68c4a9;
+  background-color: #1a2a48;
   background-image: none !important;
 }
 .box-button-slider-bottom .swiper-button-next-style1:hover svg,
@@ -2291,7 +2289,7 @@ body {
   width: 100%;
 }
 
-.cardCustomer .cardImage .oktato{
+.cardCustomer .cardImage {
   margin-top: 90px;
   border-radius: 20px;
   width: 90%;
@@ -2761,7 +2759,7 @@ body {
   text-decoration: none;
 }
 .card-feature-3:hover .card-title {
-  color: #68c4a9;
+  color: #014FE5;
 }
 
 .card-feature-4 {
@@ -11884,7 +11882,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #68c4a9;
+	background-color: #1a2a48;
 	height: 2px;
 	box-sizing: border-box;
 	width: 60%;
@@ -11919,7 +11917,7 @@ ul{
 }
 .footer-col .social-links a:hover{
 	color: #fff;
-	background-color: #68c4a9;
+	background-color: #1a2a48;
 }
 
 @media(max-width: 767px){
@@ -11934,11 +11932,32 @@ ul{
 }
 }
 
-.oktato {
-  font-size: 25px;
-  line-height: 35px;
+/* Oktató */
+
+.oktato h2 {
+  font-weight: 900;
 }
 
+.oktato h5 {
+  margin-top: 15px;
+  text-align: justify;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.oktato img {
+  box-shadow: 15px 7px 20px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  border: 2px solid #0F044C;
+}
+
+.oktato ul li {
+  line-height: 1.7rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Képzés */
 .kepzes {
   margin-top: 20px;
 }
@@ -11947,13 +11966,6 @@ ul{
   list-style-type: decimal;
   line-height: 40px;
   font-size: 30px;
-}
-
-#justify {
-  margin-top: 15px;
-  text-align: justify;
-  font-size: 25px;
-  font-weight: 500;
 }
 
 #overlay {
