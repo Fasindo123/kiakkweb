@@ -398,10 +398,12 @@
         <button class="popup-button" id="oktato1" open="oktato1.php">Oktató 1</button>
 
 <div id="popup" align="right">
-  <div id="popup-header">
-    <button id="close-popup"><i class="fa-solid fa-x"></i></button>
+  <div class="modal-content">
+    <div id="popup-header">
+      <button id="close-popup" class="close-button"><i class="fa-solid fa-x"></i></button>
+    </div>
+    <iframe src="#" id="popup-iframe"></iframe>
   </div>
-  <iframe src="#" id="popup-iframe"></iframe>
 </div>
 <div id="overlay"></div>
 

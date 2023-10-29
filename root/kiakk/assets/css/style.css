@@ -11994,3 +11994,8 @@ ul{
   height: 100%;
   border-radius: 15px;
 }
+
+#popup .modal-content {
+  width: 1024px;
+  height: 500px;
+}
