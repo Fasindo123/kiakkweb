@@ -399,7 +399,7 @@
 
 <div id="popup" align="right">
   <div id="popup-header">
-    <button id="close-popup">X</button>
+    <button id="close-popup"><i class="fa-solid fa-x"></i></button>
   </div>
   <iframe src="#" id="popup-iframe"></iframe>
 </div>
