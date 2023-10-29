@@ -1,7 +1,7 @@
-PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/DrRyters/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
-[Sat Oct 28 14:46:26.274083 2023] [mpm_winnt:notice] [pid 15468:tid 564] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
-[Sat Oct 28 14:46:26.274083 2023] [mpm_winnt:notice] [pid 15468:tid 564] AH00456: Server built: Nov  3 2017 01:01:54
-[Sat Oct 28 14:46:26.274083 2023] [core:notice] [pid 15468:tid 564] AH00094: Command line: 'C:\\Users\\DrRyters\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/DrRyters/Documents/GitHub/kiakkweb/apache2'
-[Sat Oct 28 14:46:26.277085 2023] [mpm_winnt:notice] [pid 15468:tid 564] AH00418: Parent: Created child process 800
-PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/DrRyters/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
-[Sat Oct 28 14:46:26.649195 2023] [mpm_winnt:notice] [pid 800:tid 736] AH00354: Child: Starting 64 worker threads.
+PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sun Oct 29 11:36:05.488196 2023] [mpm_winnt:notice] [pid 9276:tid 688] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
+[Sun Oct 29 11:36:05.488196 2023] [mpm_winnt:notice] [pid 9276:tid 688] AH00456: Server built: Nov  3 2017 01:01:54
+[Sun Oct 29 11:36:05.488196 2023] [core:notice] [pid 9276:tid 688] AH00094: Command line: 'C:\\Users\\Peti\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/Peti/Documents/GitHub/kiakkweb/apache2'
+[Sun Oct 29 11:36:05.488196 2023] [mpm_winnt:notice] [pid 9276:tid 688] AH00418: Parent: Created child process 10544
+PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sun Oct 29 11:36:06.206776 2023] [mpm_winnt:notice] [pid 10544:tid 716] AH00354: Child: Starting 64 worker threads.
