@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
 [Sun Oct 29 17:35:06.508193 2023] [mpm_winnt:notice] [pid 7664:tid 736] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
 [Sun Oct 29 17:35:06.509190 2023] [mpm_winnt:notice] [pid 7664:tid 736] AH00456: Server built: Nov  3 2017 01:01:54
@@ -5,3 +6,13 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documen
 [Sun Oct 29 17:35:06.513733 2023] [mpm_winnt:notice] [pid 7664:tid 736] AH00418: Parent: Created child process 11308
 PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
 [Sun Oct 29 17:35:07.624896 2023] [mpm_winnt:notice] [pid 11308:tid 600] AH00354: Child: Starting 64 worker threads.
+=======
+PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/DrRyters/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sun Oct 29 15:47:08.512702 2023] [mpm_winnt:notice] [pid 15508:tid 708] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
+[Sun Oct 29 15:47:08.513702 2023] [mpm_winnt:notice] [pid 15508:tid 708] AH00456: Server built: Nov  3 2017 01:01:54
+[Sun Oct 29 15:47:08.513702 2023] [core:notice] [pid 15508:tid 708] AH00094: Command line: 'C:\\Users\\DrRyters\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/DrRyters/Documents/GitHub/kiakkweb/apache2'
+[Sun Oct 29 15:47:08.516705 2023] [mpm_winnt:notice] [pid 15508:tid 708] AH00418: Parent: Created child process 8668
+PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/DrRyters/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sun Oct 29 15:47:08.888043 2023] [mpm_winnt:notice] [pid 8668:tid 732] AH00354: Child: Starting 64 worker threads.
+[Sun Oct 29 16:48:41.624138 2023] [php7:error] [pid 8668:tid 1228] [client ::1:65361] script 'C:/Users/DrRyters/Documents/GitHub/kiakkweb/root/kiakk/okato1.php' not found or unable to stat
+>>>>>>> eceea2406b70c21025e627f5e80fef4126a70ae2

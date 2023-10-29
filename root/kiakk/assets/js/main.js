@@ -140,35 +140,6 @@
     // text circle
     $(".box-text-circle").lettering();
 
-    // // check and apply mode on page load
-    // $(document).ready(function () {
-    //     if (!localStorage.getItem('mode')) {
-    //         localStorage.setItem('mode', 'dark');
-    //     }
-    //     var mode = localStorage.getItem("mode");
-    //     if (mode === "dark") {
-    //         $(".dark-light-mode").addClass("dark-mode");
-    //         $("body").addClass("dark-mode");
-    //     } else {
-    //         $(".dark-light-mode").removeClass("dark-mode");
-    //         $("body").removeClass("dark-mode");
-    //     }
-    // });
-
-    // // switch light dark mode
-    // $(".dark-light-mode").on("click", function (e) {
-    //     e.preventDefault();
-    //     if ($(this).hasClass("dark-mode")) {
-    //         $(this).removeClass("dark-mode");
-    //         $("body").removeClass("dark-mode");
-    //         localStorage.setItem("mode", "light");
-    //     } else {
-    //         $(this).addClass("dark-mode");
-    //         $("body").addClass("dark-mode");
-    //         localStorage.setItem("mode", "dark");
-    //     }
-    // });
-
     $(document).ready(function () {
         var mode = localStorage.getItem("mode");
         if (mode === "dark") {

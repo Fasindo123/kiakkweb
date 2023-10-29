@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="hu">
   <?php require_once('components/head.php'); ?>
+  <head>
+    <link rel="stylesheet" href="assets/css/sablon.css">
+  </head>
+
   <body class="dark-light-mode page-transition alith-magic-cursor">
     
-    <section class="section block-section-2 is-mode bg-0  oktato">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="swiper-slide">
-              <div class="cardCustomer">
-                <div class="cardImage">
-                  <div class="parallax-item">
-                    <div><img class="parallax-image" src="assets/imgs/page/homepage1/team2.png" alt="neuron"></div>
-                  </div>
-                </div>
-                <ul class="">
-                  <li><i class="fa-solid fa-phone"></i> Tel. szám: (+36) 30 664 8937</li>
-                  <li><i class="fa-solid fa-envelope"></i> E-mail cím: info@kiakk.hu</li>
-                </ul>
-              </div>
+  <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">Bloch Tamás</h1>
+                <h6 class="header-mono" >Nyugdíjas váltóőr</h6>
             </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="card-feature-3 parallax-item">
-              <h2 class="heading-1 text-center ">Szabó Richárd</h2>
-              <h3 class="color-900 text-up text-center">Oktató</h3>
-              <h5 class="card-desc color-900 text-opacity">
-              Possimus quas ad officiis rerum vero beatae molestias illo optio exercitationem blanditiis impedit corporis tempora, ipsam accusamus eius magni inventore deleniti ex, libero architecto illum veritatis? Labore hic inventore voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iste veritatis fugit doloribus eius in consequatur ex hic minus recusandae. Sed inventore minus quas reprehenderit dignissimos, odio ex iste sint? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime aspernatur beatae ratione quisrit dignissimos quo explicabo accusantium, asperiores molestiae?</h5>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </header>
+
+            <div class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+                <ul class="navbar-nav brand">
+                    <img src="assets/imgs/támogatók/kaposvar.jpg" alt="" class="brand-img">
+                </ul>
+            </div>
+
+    <div class="container-fluid">
+        <div id="about" class="row about-section">
+            <div class="col-lg-6 about-card">
+                <h3 class="font-weight-bolder text-center">Információk</h3>
+                <span class="line mb-5"></span>
+                <h5 class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ea. Inventore, tempora, incidunt error magni eligendi itaque ut nobis illo sequi eius, laboriosam excepturi? Nihil sapiente minus quibusdam dolores aliquid?</h5>
+            </div>
+            <div class="col-lg-6 about-card">
+                <h3 class="font-weight-bolder text-center">Elérhetőségek</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span><i class="fa-solid fa-envelope"></i> E-mail :</span> info@website.com</li>
+                    <li><span><i class="fa-solid fa-phone"></i> Tel. szám :</span> + (123) 456-7890</li>
+                </ul> 
+            </div>
+            <!-- <div class="col-lg-4 about-card">
+                <h3 class="font-weight-bolder text-center">Egyéb</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique obcaecati porro praesentium minima accusamus dolorum asperio</li>
+                </ul> 
+            </div> -->
+        </div>
+    </div>
   </body>
 </html>
