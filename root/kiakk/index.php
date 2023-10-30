@@ -100,9 +100,9 @@
                   <h2 class="card-steps heading-1 stroke stroke-900 grow-up">02.</h2>
                   <h3 class="card-title color-900 text-up">Képzés 2</h3>
                   <h5 class="card-desc color-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ea dignissimos sequi quisquam quam error! Ex voluptas quas totam beatae eligendi! Aperiam mollitia reprehenderit aliquam. Ad, earum! Esse, obcaecati pariatur.</h5>
-                  <div> <button class="popup-button link-effect font-xl-bold" id="kepzes1" open="kepzes1.php">TOVÁBBI INFORMÁCIÓK</button>
 
-                      <img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron">
+                  <div class="popup-button tovabb" id="oktato1" open="oktato1.php">
+                    <span><a></a></span>
                   </div>
               </div>
           </div>

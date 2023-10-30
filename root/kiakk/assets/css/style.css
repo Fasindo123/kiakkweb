@@ -12106,6 +12106,58 @@ ul{
 }
 
 #popup .modal-content {
-  width: 1024px;
-  height: 500px;
+  width: 80vw;
+  height: 90vh;
+}
+
+.close-button {
+  background-color: #fff;
+  border: 2px solid #014FE5;
+  border-radius: 5px;
+}
+
+.tovabb span{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.tovabb span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  
+}
+.tovabb span a:before,
+.tovabb span a:after{
+  position: absolute;
+  content: "További Információ";
+  height: 55px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #014FE5;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.tovabb span a:before{
+  color: #fff;
+  background-color: #014FE5;
+  font-weight: 800;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.tovabb span a:after{
+  font-weight: 800;
+  color: #014FE5;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.tovabb span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
 }
