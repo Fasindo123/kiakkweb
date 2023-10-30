@@ -16,14 +16,14 @@
                   <div class="contact-icon"><img src="assets/imgs/page/homepage2/touch1.svg" alt="neuron"></div>
                   <div class="contact-info">
                     <h4 class="color-900 card-title">Iroda</h4>
-                    <p class="font-md color-600">Cím: 7400 Kaposvár,<br> Damjanich utca 17<br>Telefon: <a href="tel:+36306648937">(+36) 30 664 8937</a><br>E-mail: <a href="info@kiakk.hu">info@kiakk.hu</a></p>
+                    <p class="font-md color-600">Cím: 7400 Kaposvár,<br> Damjanich utca 17<br>Telefon: <a href="tel:+36306648937">(+36) 30 664 8937</a><br>E-mail: <a href="mailto:info@kiakk.hu">info@kiakk.hu</a></p>
                   </div>
                 </div>
                 <div class="card-contact">
                   <div class="contact-icon"><img src="assets/imgs/page/homepage2/touch1.svg" alt="neuron"></div>
                   <div class="contact-info">
                     <h4 class="color-900 card-title">Studió</h4>
-                    <p class="font-md color-600">Cím: 7400 Kaposvár,<br> Damjanich utca 17<br>Telefon: <a href="tel:+36306648937">(+36) 30 664 8937</a><br>E-mail: <a href="info@kiakk.hu">info@kiakk.hu</a></p>
+                    <p class="font-md color-600">Cím: 7400 Kaposvár,<br> Damjanich utca 17<br>Telefon: <a href="tel:+36306648937">(+36) 30 664 8937</a><br>E-mail: <a href="mailto:info@kiakk.hu">info@kiakk.hu</a></p>
                   </div>
                 </div>
               </div>

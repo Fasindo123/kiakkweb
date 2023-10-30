@@ -33,7 +33,7 @@
                 <h3 class="font-weight-bolder text-center">Elérhetőségek</h3>
                 <span class="line mb-5"></span>
                 <ul class="mt40 info list-unstyled">
-                    <li><span><i class="fa-solid fa-envelope"></i> E-mail: </span> <a href="tamas@bloch.hu">tamas@bloch.hu</a></li>
+                    <li><span><i class="fa-solid fa-envelope"></i> E-mail: </span> <a href="mailto:tamas@bloch.hu">tamas@bloch.hu</a></li>
                     <li><span><i class="fa-solid fa-phone"></i> Telefon: </span> <a href="tel:+36306564394">(+36) 656 4394</a></li>
                 </ul> 
             </div>

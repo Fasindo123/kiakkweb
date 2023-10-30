@@ -295,9 +295,9 @@
                   <div class="accordion" id="accordionFAQ">
                     <div class="accordion-item scroll-move-up-2">
                       <h5 class="accordion-header" id="headingOne">
-                        <button class="accordion-button heading-5 color-900" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Where is my order? Quisque molestie</button>
+                      <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Where is my order? Quisque molestie</button>
                       </h5>
-                      <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                      <div class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body font-lg color-600">Vel tenetur officiis ab reiciendis dolor aut quae doloremque est ipsum natus et consequatur animi aut sunt dolores ut quasi rerum. Aut velit velit id quasi velit eum reiciendis laudantium quo galisum incidunt aut velit animi hic temporibus blanditiis sit odit iure. Eum laborum dolores ea molestias fuga qui temporibus accusantium qui soluta aliquid ab vero soluta.</div>
                       </div>
                     </div>

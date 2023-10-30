@@ -9,8 +9,8 @@
             <div class="mobile-menu-wrap mobile-header-border">
               <nav class="mt-15">
                 <ul class="mobile-menu font-heading">
-                  <li><a href="#">Kezdőlap</a></li>
-                  <li><a href="index.php">Szervezetünk</a></li>
+                  <li><a href="index.php">Kezdőlap</a></li>
+                  <li><a href="#">Szervezetünk</a></li>
                   <li class="has-children"><a href="#">Képzéseink</a>
                     <ul class="sub-menu">
                       <li><a href="portfolio.html">Képzéseink 1</a></li>  
