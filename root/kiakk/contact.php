@@ -83,26 +83,37 @@
     <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>
     <?php require_once("components/scripts.php"); ?>
     <script>
-  function formatPhoneNumber(input) {
-    var phoneNumber = input.value.replace(/\D/g, '');
+function formatPhoneNumber(input) {
+  var phoneNumber = input.value.replace(/\D/g, ''); // Eltávolítja az összes nem-számszerű karaktert
 
-    if (phoneNumber.length > 11) {
-      phoneNumber = phoneNumber.slice(0, 11);
-    }
+  // Ellenőrizzük, hogy a kurzor hol van, és mentjük a pozíciót
+  var cursorPosition = input.selectionStart;
 
-    var formattedPhoneNumber = '+36 ';
-    if (phoneNumber.length > 2) {
-      formattedPhoneNumber += phoneNumber.substr(2, 2) + ' ';
-    }
-    if (phoneNumber.length > 4) {
-      formattedPhoneNumber += phoneNumber.substr(4, 3) + ' ';
-    }
-    if (phoneNumber.length > 7) {
-      formattedPhoneNumber += phoneNumber.substr(7, 4);
-    }
-
-    input.value = formattedPhoneNumber;
+  if (phoneNumber.length > 11) {
+    phoneNumber = phoneNumber.slice(0, 11);
   }
+
+  var formattedPhoneNumber = '+36 ';
+
+  var cursorOffset = 4; // Alapértelmezett kurzor eltolás
+
+  for (var i = 2; i < phoneNumber.length; i++) {
+        if (i === 4 || i === 7) {
+      formattedPhoneNumber += ' ';
+      if (i < cursorPosition) {
+        cursorOffset++; // Növeljük a kurzor eltolást, ha a kurzor már a szóköz előtt van
+      }
+    }
+    formattedPhoneNumber += phoneNumber.charAt(i);
+  }
+
+  // Visszaállítjuk az input mező tartalmát és a kurzor pozícióját
+  input.value = formattedPhoneNumber;
+
+  // Visszaállítjuk a kurzor pozícióját az eredeti helyére
+  cursorPosition = Math.min(cursorPosition + cursorOffset, formattedPhoneNumber.length); // Korlátozzuk a kurzor pozíciót a végére
+  input.selectionStart = input.selectionEnd = cursorPosition;
+}
 
   function sendForm() {
   // Minden mező kitöltöttségének ellenőrzése
