@@ -85,9 +85,7 @@
     <script>
 function formatPhoneNumber(input) {
   var phoneNumber = input.value.replace(/\D/g, ''); // Eltávolítja az összes nem-számszerű karaktert
-
-  // Ellenőrizzük, hogy a kurzor hol van, és mentjük a pozíciót
-  var cursorPosition = input.selectionStart;
+  var originalCursorPosition = input.selectionStart; // Az eredeti kurzor pozíciója
 
   if (phoneNumber.length > 11) {
     phoneNumber = phoneNumber.slice(0, 11);
@@ -95,24 +93,33 @@ function formatPhoneNumber(input) {
 
   var formattedPhoneNumber = '+36 ';
 
-  var cursorOffset = 4; // Alapértelmezett kurzor eltolás
+  var cursorOffset = 1; // Alapértelmezett kurzor eltolás
 
-  for (var i = 2; i < phoneNumber.length; i++) {
-        if (i === 4 || i === 7) {
-      formattedPhoneNumber += ' ';
-      if (i < cursorPosition) {
-        cursorOffset++; // Növeljük a kurzor eltolást, ha a kurzor már a szóköz előtt van
-      }
-    }
-    formattedPhoneNumber += phoneNumber.charAt(i);
+  if (originalCursorPosition <= 3) {
+    cursorOffset = 4;
   }
 
-  // Visszaállítjuk az input mező tartalmát és a kurzor pozícióját
+  for (var i = 2; i < phoneNumber.length; i++) {
+    if (i === 4 || i === 7) {
+      formattedPhoneNumber += ' ';
+      if (i < cursorOffset) {
+        cursorOffset++;
+      }
+    }
+
+    formattedPhoneNumber += phoneNumber.charAt(i);
+
+      if (i === originalCursorPosition - 2) {
+    cursorOffset--;
+    }
+  }
+
+  // Visszaállítjuk az input mező tartalmát
   input.value = formattedPhoneNumber;
 
-  // Visszaállítjuk a kurzor pozícióját az eredeti helyére
-  cursorPosition = Math.min(cursorPosition + cursorOffset, formattedPhoneNumber.length); // Korlátozzuk a kurzor pozíciót a végére
-  input.selectionStart = input.selectionEnd = cursorPosition;
+  // Beállítjuk a kurzort az új pozícióba
+  var newCursorPosition = originalCursorPosition + cursorOffset;
+  input.setSelectionRange(newCursorPosition, newCursorPosition);
 }
 
   function sendForm() {
@@ -152,5 +159,5 @@ function formatPhoneNumber(input) {
 
 </script>
 
-  </body>
+</body>
 </html>
