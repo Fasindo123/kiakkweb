@@ -231,19 +231,18 @@ li.hr span {
   color: #fff;
 }
 
-/* ::-webkit-scrollbar {
-  width: 7px;
+::-webkit-scrollbar {
+  width: 5px;
 }
  
 
 ::-webkit-scrollbar-thumb {
-  background: #68c4a9;
-  border-radius: 7px;
+  background: #014FE5
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #166198;
-} */
+  background: #0F044C;
+}
 
 ::-moz-placeholder {
   color: #E8E9ED;
@@ -4077,11 +4076,10 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
   left: 0px;
   z-index: 124;
   min-width: 220px;
-  border-radius: 21px;
+  border-radius: 10px;
   padding: 10px 12px;
-  background-color: #142850;
-  border: 1.5px solid #fff;
-  box-shadow: 0px 5px 30px rgba(19, 27, 34, 0.12);
+  background-color: #014FE5;
+  box-shadow: 0px 3px 20px rgba(19, 27, 34, 1);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -11934,21 +11932,6 @@ ul{
 }
 }
 
-.oktato {
-  font-size: 25px;
-  line-height: 35px;
-}
-
-.kepzes {
-  margin-top: 20px;
-}
-
-.kepzes ul li {
-  list-style-type: decimal;
-  line-height: 40px;
-  font-size: 30px;
-}
-
 #justify {
   margin-top: 15px;
   text-align: justify;
@@ -11978,7 +11961,52 @@ ul{
 }
 
 #popup-iframe {
-  width: 100%;
-  height: 100%;
+  width: 80vw;
+  height: 90vh;
   border-radius: 15px;
+}
+
+/* Gomb */
+.tobb span{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.tobb span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  
+}
+.tobb span a:before,
+.tobb span a:after{
+  position: absolute;
+  content: "Több";
+  height: 54px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #014FE5;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.tobb span a:before{
+  font-weight: 700;
+  color: #014FE5;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.tobb span a:after{
+  font-weight: 600;
+  color: #fff;
+  background: #014FE5;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.tobb span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
 }

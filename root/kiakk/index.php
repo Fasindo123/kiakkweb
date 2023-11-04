@@ -101,8 +101,8 @@
                   <h3 class="card-title color-900 text-up">Képzés 2</h3>
                   <h5 class="card-desc color-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ea dignissimos sequi quisquam quam error! Ex voluptas quas totam beatae eligendi! Aperiam mollitia reprehenderit aliquam. Ad, earum! Esse, obcaecati pariatur.</h5>
 
-                  <div class="popup-button tovabb" id="oktato1" open="oktato1.php">
-                    <span><a></a></span>
+                  <div class="popup-button tobb" id="oktato1" open="oktato1.php">
+                  <span><a></a></span>
                   </div>
               </div>
           </div>
