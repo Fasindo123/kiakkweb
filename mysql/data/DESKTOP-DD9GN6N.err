@@ -739,3 +739,55 @@ Version: '5.6.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
 2023-11-04 16:52:52 764 [Note] IPv6 is available.
 2023-11-04 16:52:52 764 [Note]   - '::' resolves to '::';
 2023-11-04 16:52:52 764 [Note] Server socket created on IP: '::'.
+2023-11-08 15:34:38 2800 [Note] Plugin 'FEDERATED' is disabled.
+2023-11-08 15:34:38 2800 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2023-11-08 15:34:38 2800 [Note] InnoDB: The InnoDB memory heap is disabled
+2023-11-08 15:34:38 2800 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-11-08 15:34:38 2800 [Note] InnoDB: Memory barrier is not used
+2023-11-08 15:34:38 2800 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2023-11-08 15:34:38 2800 [Note] InnoDB: Not using CPU crc32 instructions
+2023-11-08 15:34:38 2800 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2023-11-08 15:34:38 2800 [Note] InnoDB: Completed initialization of buffer pool
+2023-11-08 15:34:38 2800 [Note] InnoDB: Highest supported file format is Barracuda.
+2023-11-08 15:34:38 2800 [Note] InnoDB: The log sequence numbers 1626134 and 1626134 in ibdata files do not match the log sequence number 27012088 in the ib_logfiles!
+2023-11-08 15:34:38 2800 [Note] InnoDB: Database was not shutdown normally!
+2023-11-08 15:34:38 2800 [Note] InnoDB: Starting crash recovery.
+2023-11-08 15:34:38 2800 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2023-11-08 15:34:38 2800 [Note] InnoDB: Restoring possible half-written data pages 
+2023-11-08 15:34:38 2800 [Note] InnoDB: from the doublewrite buffer...
+2023-11-08 15:34:38 2800 [Note] InnoDB: 128 rollback segment(s) are active.
+2023-11-08 15:34:38 2800 [Note] InnoDB: Waiting for purge to start
+2023-11-08 15:34:38 2800 [Note] InnoDB: 5.6.34 started; log sequence number 27012088
+2023-11-08 15:34:39 2800 [Note] Server hostname (bind-address): '*'; port: 3306
+2023-11-08 15:34:39 2800 [Note] IPv6 is available.
+2023-11-08 15:34:39 2800 [Note]   - '::' resolves to '::';
+2023-11-08 15:34:39 2800 [Note] Server socket created on IP: '::'.
+2023-11-08 15:34:39 2800 [Note] Event Scheduler: Loaded 0 events
+2023-11-08 15:34:39 2800 [Note] C:\Users\Peti\Documents\GitHub\kiakkweb\kiakkweb/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2023-11-09 15:42:28 7844 [Note] Plugin 'FEDERATED' is disabled.
+2023-11-09 15:42:28 7844 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2023-11-09 15:42:28 7844 [Note] InnoDB: The InnoDB memory heap is disabled
+2023-11-09 15:42:28 7844 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-11-09 15:42:28 7844 [Note] InnoDB: Memory barrier is not used
+2023-11-09 15:42:28 7844 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2023-11-09 15:42:28 7844 [Note] InnoDB: Not using CPU crc32 instructions
+2023-11-09 15:42:28 7844 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2023-11-09 15:42:28 7844 [Note] InnoDB: Completed initialization of buffer pool
+2023-11-09 15:42:28 7844 [Note] InnoDB: Highest supported file format is Barracuda.
+2023-11-09 15:42:28 7844 [Note] InnoDB: The log sequence numbers 1626134 and 1626134 in ibdata files do not match the log sequence number 27012114 in the ib_logfiles!
+2023-11-09 15:42:28 7844 [Note] InnoDB: Database was not shutdown normally!
+2023-11-09 15:42:28 7844 [Note] InnoDB: Starting crash recovery.
+2023-11-09 15:42:28 7844 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2023-11-09 15:42:28 7844 [Note] InnoDB: Restoring possible half-written data pages 
+2023-11-09 15:42:28 7844 [Note] InnoDB: from the doublewrite buffer...
+2023-11-09 15:42:29 7844 [Note] InnoDB: 128 rollback segment(s) are active.
+2023-11-09 15:42:29 7844 [Note] InnoDB: Waiting for purge to start
+2023-11-09 15:42:29 7844 [Note] InnoDB: 5.6.34 started; log sequence number 27012114
+2023-11-09 15:42:29 7844 [Note] Server hostname (bind-address): '*'; port: 3306
+2023-11-09 15:42:29 7844 [Note] IPv6 is available.
+2023-11-09 15:42:29 7844 [Note]   - '::' resolves to '::';
+2023-11-09 15:42:29 7844 [Note] Server socket created on IP: '::'.
+2023-11-09 15:42:29 7844 [Note] Event Scheduler: Loaded 0 events
+2023-11-09 15:42:29 7844 [Note] C:\Users\Peti\Documents\GitHub\kiakkweb\kiakkweb/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
