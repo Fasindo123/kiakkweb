@@ -28,7 +28,8 @@
             </div>
           </div>
         </section>
-                <section class="section is-mode">
+<!-- Hírfolyam -->
+        <section class="section is-mode">
           <div class="box-blogs bg-100">
             <div class="container">
               <h1 class="color-900 mb-95 text-center">Hírfolyam</h1>
@@ -84,6 +85,7 @@
             </div>
           </div>
         </section>
+<!-- Képzések -->
         <section class="section block-section-2 is-mode bg-0" id="kepzesek">
           <div class="container">
             <div class="row">
@@ -107,6 +109,7 @@
               </div>
           </div>
         </section>
+<!-- Oktatók -->
         <section class="section is-mode" id="oktatok">
           <div class="box-services box-about bg-100">
             <div class="container">
@@ -128,15 +131,15 @@
                       <div class="card-feature card-feature-2">
                         <div class="card-image"><img class="parallax-image popup-button" id="oktatokep1" open="oktato1.php" src="assets/imgs/page/homepage2/img1.png" alt="neuron"></div>
                         <div class="card-info">
-                          <h4 class="color-900 card-title">MMO Solutions</h4>
-                          <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
+                          <h4 class="color-900 card-title">Bloch Tamás</h4>
+                          <p class="card-desc font-xl color-600">A legjobb oktató, nyugdíjas váltóőr!!</p>
                         </div>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="card-feature">
                         <div class="card-info">
-                          <h4 class="color-900 card-title">MMO Solutions</h4>
+                          <h4 class="color-900 card-title">Szabó Richárd</h4>
                           <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
                         </div>
                         <div class="card-image"><img class="parallax-image" src="assets/imgs/page/homepage2/img2.png" alt="neuron"></div>
@@ -146,7 +149,7 @@
                       <div class="card-feature card-feature-2">
                         <div class="card-image"><img class="parallax-image" src="assets/imgs/page/homepage2/img3.png" alt="neuron"></div>
                         <div class="card-info">
-                          <h4 class="color-900 card-title">MMO Solutions</h4>
+                          <h4 class="color-900 card-title">3. oktató</h4>
                           <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
                         </div>
                       </div>
@@ -154,7 +157,7 @@
                     <div class="swiper-slide">
                       <div class="card-feature">
                         <div class="card-info">
-                          <h4 class="color-900 card-title">MMO Solutions</h4>
+                          <h4 class="color-900 card-title">4. oktató</h4>
                           <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
                         </div>
                         <div class="card-image"><img class="parallax-image" src="assets/imgs/page/homepage2/img4.png" alt="neuron"></div>
@@ -166,6 +169,7 @@
             </div>
           </div>
         </section>
+<!-- Infrastruktura -->
         <section class="section is-mode" id="infrastruktura">
           <div class="box-services bg-0">
             <div class="container">
@@ -240,6 +244,7 @@
             </div>
           </div>
         </section>
+<!-- Galéria -->
         <section class="section is-mode">
           <div class="box-recent-work block-recent-work-4 bg-0">
             <div class="container">
@@ -276,6 +281,7 @@
             </div>
           </div>
         </section>
+<!-- Gyakori kérdések -->
         <section class="section is-mode">
           <div class="box-faqs bg-100">
             <div class="container">
@@ -342,6 +348,76 @@
             </div>
           </div>
         </section>
+<!-- Dokumentumok -->
+<section class="section is-mode">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="color-900 mb-75 text-up">Dokumentumok</h2>
+        <div class="accordion" id="accordionDocs">
+          <!-- Dokumentum 1 -->
+          <div class="accordion-item scroll-move-up-2">
+            <h5 class="accordion-header" id="docHeadingOne">
+              <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapseOne" aria-expanded="false" aria-controls="docCollapseOne">Dokumentum 1 címe</button>
+            </h5>
+            <div class="accordion-collapse collapse" id="docCollapseOne" aria-labelledby="docHeadingOne" data-bs-parent="#accordionDocs">
+              <div class="row">
+                <!-- Tartalom bal oldalra -->
+                <div class="col-lg-8">
+                  <div class="accordion-body font-lg color-600">
+                    Dokumentum 1 tartalma...
+                  </div>
+                </div>
+                
+                <!-- Letölthető rész jobb oldalra -->
+                <div class="col-lg-4 mt-2">
+                  <p>A hosszabb változatért kérem töltse le "Letöltés" vagy nyissa meg a "Több" gombra kattintva</p><br>
+                  <p class="color-900 mb-15">Letöltés</p>
+                  <p class="font-md color-600">Több</p>
+
+                  <!-- vagy:
+                <div class="col-lg-4 mt-2">
+                  <p>A hosszabb változatért kérem töltse le "Letöltés és Több információ" vagy nyissa meg a "Több" gombra kattintva</p><br>
+                  <p class="color-900 mb-15"><a href="download_doc1.php">Letöltés és Több információ</a></p>
+                </div>
+                -->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Dokumentum 2 -->
+          <div class="accordion-item scroll-move-up-2">
+            <h5 class="accordion-header" id="docHeadingTwo">
+              <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapseTwo" aria-expanded="false" aria-controls="docCollapseTwo">Dokumentum 2 címe</button>
+            </h5>
+            <div class="accordion-collapse collapse" id="docCollapseTwo" aria-labelledby="docHeadingTwo" data-bs-parent="#accordionDocs">
+              <div class="row">
+                <!-- Tartalom bal oldalra -->
+                <div class="col-lg-6">
+                  <div class="accordion-body font-lg color-600">
+                    Dokumentum 2 tartalma...
+                  </div>
+                </div>
+                
+                <!-- Letölthető rész jobb oldalra -->
+                <div class="col-lg-4 mt-2">
+                  <h6 class="color-900 mb-15">Letöltés</h6>
+                  <p class="font-md color-600">Töltse le a Dokumentumot.</p>
+                  <div class="grow-up"><a class="btn btn-default btn-default-sm" href="download_doc2.php">Letöltés<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- További dokumentumok... -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Támogatók -->
         <section class="section is-mode">
           <div class="box-loved bg-0">
             <div class="container">
@@ -355,40 +431,21 @@
                   <p class="font-xl color-900 text-up">Köszönjük szépen szíves támogatásukat!</p>
                 </div>
               </div>
-              <div class="box-list-logos">
-                <div class="row">
-                  <div class="col-lg-4 col-sm-6 grow-up">
-                    <div class="box-logo parallax-item">
-                      <img class="cm-img-0" src="assets/imgs/támogatók/kometa.jpg" alt="Kométa">
-                      <img class="cm-img-900" src="assets/imgs/támogatók/kometa.jpg" alt="Kométa">
+              <div class="box-why-us-bottom">
+              <div class="box-logo-slider">
+                <div class="box-swiper">
+                  <div class="swiper-container swiper-group-5">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="assets/imgs/támogatók/kometa.png" alt="Kométa 99 Élelmiszeripari Zrt." title="KOMETA 99 Élelmiszeripari Zrt."></div>
+                      <div class="swiper-slide"><img src="assets/imgs/támogatók/kszc.png" alt="Kaposvári Szakképzési Centrum" title="Kaposvári Szakképzési Centrum"></div>
+                      <div class="swiper-slide"><img src="assets/imgs/támogatók/kaposvar.png" alt="Kaposvár Megyei Jogú Város" title="Kaposvár Megyei Jogú Város"></div>
+                      <div class="swiper-slide"><img src="assets/imgs/támogatók/bazisinfo.png" alt= "Bázis Informatika Kft" title="Bázis Informatika Kf"></div>
+                      <div class="swiper-slide"><img src="assets/imgs/támogatók/precognox.png"  alt="Precognox Informatikai Kft" title="Precognox Informatikai Kft"></div>
                     </div>
                   </div>
-                  <div class="col-lg-4 col-sm-6 grow-up">
-                    <div class="box-logo parallax-item">
-                      <img class="cm-img-0" src="assets/imgs/támogatók/kszc.png" alt="Kaposvári Szakképzési Centrum">
-                      <img class="cm-img-900" src="assets/imgs/támogatók/kszc.png" alt="Kaposvári Szakképzési Centrum">
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-6 grow-up">
-                    <div class="box-logo parallax-item">
-                      <img class="cm-img-0" src="assets/imgs/támogatók/kaposvar.jpg" alt="Kaposvár Megyei Jogú Város Önkormányzata">
-                      <img class="cm-img-900" src="assets/imgs/támogatók/kaposvar.jpg" alt="Kaposvár Megyei Jogú Város Önkormányzata">
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-6 grow-up">
-                    <div class="box-logo parallax-item">
-                      <img class="cm-img-0" src="assets/imgs/támogatók/bazisinfo.jpg" alt="Bázis Informatika Kft">
-                      <img class="cm-img-900" src="assets/imgs/támogatók/bazisinfo.jpg" alt="Bázis Informatika Kft">
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-6 grow-up">
-                    <div class="box-logo parallax-item">
-                      <img class="cm-img-0" src="assets/imgs/támogatók/precognox.png" alt="Precognox Informatikai Kft">
-                      <img class="cm-img-900" src="assets/imgs/támogatók/precognox.png" alt="Precognox Informatikai Kft">
-                    </div>
-                  </div>
-                </div>             
+                </div>
               </div>
+            </div>
             </div>      
           </div>
         </section>

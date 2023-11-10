@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
-[Sat Nov 04 16:53:03.033612 2023] [mpm_winnt:notice] [pid 12928:tid 708] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
-[Sat Nov 04 16:53:03.033612 2023] [mpm_winnt:notice] [pid 12928:tid 708] AH00456: Server built: Nov  3 2017 01:01:54
-[Sat Nov 04 16:53:03.033612 2023] [core:notice] [pid 12928:tid 708] AH00094: Command line: 'C:\\Users\\Peti\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/Peti/Documents/GitHub/kiakkweb/apache2'
-[Sat Nov 04 16:53:03.047203 2023] [mpm_winnt:notice] [pid 12928:tid 708] AH00418: Parent: Created child process 15788
-PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/Peti/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
-[Sat Nov 04 16:53:09.549477 2023] [mpm_winnt:notice] [pid 15788:tid 600] AH00354: Child: Starting 64 worker threads.
-=======
-PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/DrRyters/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
-[Sat Nov 04 14:38:52.894769 2023] [mpm_winnt:notice] [pid 9184:tid 704] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
-[Sat Nov 04 14:38:52.894769 2023] [mpm_winnt:notice] [pid 9184:tid 704] AH00456: Server built: Nov  3 2017 01:01:54
-[Sat Nov 04 14:38:52.894769 2023] [core:notice] [pid 9184:tid 704] AH00094: Command line: 'C:\\Users\\DrRyters\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/DrRyters/Documents/GitHub/kiakkweb/apache2'
-[Sat Nov 04 14:38:52.897772 2023] [mpm_winnt:notice] [pid 9184:tid 704] AH00418: Parent: Created child process 10392
-PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/DrRyters/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
-[Sat Nov 04 14:38:53.224069 2023] [mpm_winnt:notice] [pid 10392:tid 756] AH00354: Child: Starting 64 worker threads.
->>>>>>> efffdae83e77e1741cd540a6d120c98e8b7d856d
+PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/User/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Fri Nov 10 07:59:52.221556 2023] [mpm_winnt:notice] [pid 7688:tid 668] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
+[Fri Nov 10 07:59:52.221556 2023] [mpm_winnt:notice] [pid 7688:tid 668] AH00456: Server built: Nov  3 2017 01:01:54
+[Fri Nov 10 07:59:52.221556 2023] [core:notice] [pid 7688:tid 668] AH00094: Command line: 'C:\\Users\\User\\Documents\\GitHub\\kiakkweb/apache2/bin/httpd_usbwv8.exe -d C:/Users/User/Documents/GitHub/kiakkweb/apache2'
+[Fri Nov 10 07:59:52.237177 2023] [mpm_winnt:notice] [pid 7688:tid 668] AH00418: Parent: Created child process 8428
+PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/User/Documents/GitHub/kiakkweb\\php\\ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Fri Nov 10 07:59:52.643333 2023] [mpm_winnt:notice] [pid 8428:tid 712] AH00354: Child: Starting 64 worker threads.
