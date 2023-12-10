@@ -37,13 +37,6 @@
                     <li><span><i class="fa-solid fa-phone"></i> Telefon: </span> <a href="tel:+36306564394">(+36) 656 4394</a></li>
                 </ul> 
             </div>
-            <!-- <div class="col-lg-4 about-card">
-                <h3 class="font-weight-bolder text-center">Egyéb</h3>
-                <span class="line mb-5"></span>
-                <ul class="mt40 info list-unstyled">
-                    <li><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique obcaecati porro praesentium minima accusamus dolorum asperio</li>
-                </ul> 
-            </div> -->
         </div>
     </div>
   </body>
