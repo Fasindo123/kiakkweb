@@ -50,7 +50,7 @@
             <div class="banner-icon-2 shape-3"></div>
             <div class="container">
               <div class="text-center">
-                <h3 class="color-brand-1 mb-25 text-up fadeInUp"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium nemo iusto tempora?</h3>
+                <!-- <h3 class="color-brand-1 mb-25 text-up fadeInUp"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium nemo iusto tempora?</h3> -->
                 <h2 class="display-5 color-white mb-55 fadeInUp">Kaposvári Informatika<br class="d-none d-lg-block">Ágazati Képzőközpont</h2>
                 <div class="d-flex justify-content-center fadeInUp get-quote"><a class="d-inline-block align-middle mr-50" href="contact.php">
                     <div class="box-get-quote parallax-item">
@@ -474,7 +474,7 @@
                 <div class="box-swiper">
                   <div class="swiper-container swiper-group-5">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide"><img src="assets/imgs/támogatók/kometa.png" alt="Kométa 99 Élelmiszeripari Zrt." title="KOMETA 99 Élelmiszeripari Zrt."></div>
+                      <div class="swiper-slide"><img src="assets/imgs/támogatók/kometa.png" alt="Kométa 99 Élelmiszeripari Zrt." title="Kométa 99 Élelmiszeripari Zrt."></div>
                       <div class="swiper-slide"><img src="assets/imgs/támogatók/kszc.png" alt="Kaposvári Szakképzési Centrum" title="Kaposvári Szakképzési Centrum"></div>
                       <div class="swiper-slide"><img src="assets/imgs/támogatók/kaposvar.png" alt="Kaposvár Megyei Jogú Város" title="Kaposvár Megyei Jogú Város"></div>
                       <div class="swiper-slide"><img src="assets/imgs/támogatók/bazisinfo.png" alt= "Bázis Informatika Kft" title="Bázis Informatika Kf"></div>
