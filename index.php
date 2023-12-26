@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once("dashboard/config.php");
-  function connectToDB() {
+  function query($query) {
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD);
 
     if ($conn->connect_error) {
@@ -10,7 +10,10 @@
     }
     echo "Connected successfully";
 
-    return $conn;
+    $result = $conn->query($query);
+    $conn->close();
+  
+    return $result;
   };
 
   function getPicture($img, $count) {
@@ -73,13 +76,20 @@
               <div class="box-swiper">
                 <div class="swiper-container swiper-group-3-customer blogs-slider">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="cardBlog">
-                        <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog1.png" alt="neuron"></a></div>
-                        <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS1</span></a><a class="link-blog" href="blog-single.html">
-                        <h4 class="color-light-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias dolorem, ipsa eius ad voluptas molestiae ut repellendus, minima aspernatur animi magni dolores recusandae in magnam</h4></a></div>
-                      </div>
-                    </div>
+                    <!-- HÍREK LEKÉRÉSE ADATBÁZISBÓL !!! jelenleg az összes létrehozott hírt lekéri !!! -->
+                    <?php
+                      $news = query("SELECT * FROM news");
+                      while ($news_e = $news->fetch_assoc()) {
+                        $cover_img = getPicture($news_e["cover_img"], 1);
+                        echo '<div class="swiper-slide">
+                                <div class="cardBlog">
+                                  <div class="cardImage"><a href="#"><img class="parallax-image" src="'.$cover_img.'" alt="'.$news_e["title"].' cikk borítóképe"></a></div>
+                                  <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="#">'.$news_e["date"].'</a><a class="link-blog" href="#">
+                                  <h4 class="color-light-900 text-opacity">'.$news_e["title"].'</h4></a></div>
+                                </div>
+                              </div>';
+                      }
+                    ?>
                   </div>
                   <div class="box-button-slider-bottom">
                     <div class="swiper-button-prev swiper-button-prev-group-4 swiper-button-prev-style1">
