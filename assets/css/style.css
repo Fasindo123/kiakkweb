@@ -8778,11 +8778,6 @@ footer a {
 }
 
 .contact-banner {
-  height: 1100px;
-  position: relative;
-}
-
-.contact-banner {
   background-image: url(../imgs/page/homepage4/banner.png);
   background-position: top center;
   background-repeat: no-repeat;
@@ -8790,7 +8785,7 @@ footer a {
 }
 
 .contact-banner {
-  padding: 200px 0px 250px 0px;
+  padding: 200px 0px 0px 0px;
 }
 
 .block-map {
