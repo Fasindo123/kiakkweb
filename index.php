@@ -1,6 +1,33 @@
 <!-- itt vannak .html-ek, de még nem kell javítani -->
 <!DOCTYPE html>
 <html lang="hu">
+<?php require_once("dashboard/config.php");
+  function connectToDB() {
+    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD);
+
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+    echo "Connected successfully";
+
+    return $conn;
+  };
+
+  function getPicture($img) {
+    if ($img) {
+      if (count($img) > 1){
+        for ($i = 0; count($img)-1; $i++) {
+          $img[$i] = "dashboard/".$img[$i];
+        }
+        return $img;
+      } else {
+        return "dashhboard/".$img;
+      }
+    } else {
+      return "assets/no-img.jpg";
+    }
+  };
+?>
 <?php require_once('components/head.php'); ?>
 <body>
       <?php require_once('components/loader.php'); ?>
@@ -43,28 +70,7 @@
                       <div class="cardBlog">
                         <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog1.png" alt="neuron"></a></div>
                         <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS1</span></a><a class="link-blog" href="blog-single.html">
-                            <h4 class="color-light-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias dolorem, ipsa eius ad voluptas molestiae ut repellendus, minima aspernatur animi magni dolores recusandae in magnam</h4></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardBlog">
-                        <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog2.png" alt="neuron"></a></div>
-                        <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS2</span></a><a class="link-blog" href="blog-single.html">
-                            <h4 class="color-light-900 text-opacity">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolorum nesciunt, est commodi aliquam ea reprehenderit, maxime, eveniet ad incidunt vero dolores non ipsam! Maiores quos ducimus error suscipit laborum?</h4></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardBlog">
-                        <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog3.png" alt="neuron"></a></div>
-                        <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS3</span></a><a class="link-blog" href="blog-single.html">
-                            <h4 class="color-light-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, reiciendis molestiae esse vero et dolorem corrupti quasi error aliquid enim ad sed cum quos aut provident magnam quas tempore delectus.</h4></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardBlog">
-                        <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog2.png" alt="neuron"></a></div>
-                        <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS4</span></a><a class="link-blog" href="blog-single.html">
-                            <h4 class="color-light-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod inventore temporibus iusto. Rerum, quaerat culpa quos tempora quod soluta vel dolores nam illo quo necessitatibus cupiditate, facilis temporibus dolor illum!</h4></a></div>
+                        <h4 class="color-light-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias dolorem, ipsa eius ad voluptas molestiae ut repellendus, minima aspernatur animi magni dolores recusandae in magnam</h4></a></div>
                       </div>
                     </div>
                   </div>
@@ -98,11 +104,26 @@
                 </div>
               </div>
               <div class="col-lg-6">
-              <div class="card-feature-3 parallax-item">
+                <div class="card-feature-3 parallax-item">
+                  <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01.</h2>
+                  <h3 class="card-title color-900 text-up">Képzés 1</h3>
+                  <h5 class="card-desc color-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis cum eius praesentium quibusdam, expedita molestiae impedit ad ex ratione amet id perspiciatis repellendus ut eum vero accusamus reiciendis architecto rerum!</h5>
+                  <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card-feature-3 parallax-item">
+                  <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01.</h2>
+                  <h3 class="card-title color-900 text-up">Képzés 1</h3>
+                  <h5 class="card-desc color-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis cum eius praesentium quibusdam, expedita molestiae impedit ad ex ratione amet id perspiciatis repellendus ut eum vero accusamus reiciendis architecto rerum!</h5>
+                  <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
+                </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="card-feature-3 parallax-item">
                   <h2 class="card-steps heading-1 stroke stroke-900 grow-up">02.</h2>
                   <h3 class="card-title color-900 text-up">Képzés 2</h3>
                   <h5 class="card-desc color-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ea dignissimos sequi quisquam quam error! Ex voluptas quas totam beatae eligendi! Aperiam mollitia reprehenderit aliquam. Ad, earum! Esse, obcaecati pariatur.</h5>
-
                   <div class="popup-button tobb" id="oktato1" open="oktato1.php">
                   <span><a></a></span>
                   </div>
@@ -449,11 +470,7 @@
             </div>      
           </div>
         </section>
-
-        <button class="popup-button" id="oktato1" open="oktato1.php">Oktató 1</button>
-
         
-
   <?php require_once("components/footer.php"); ?>
   </div>
   <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>

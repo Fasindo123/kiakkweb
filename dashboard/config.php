@@ -10,7 +10,6 @@ define("ROOT_DIR_NAME", basename(ROOT));
 
 define("SITE_NAME", "KIAKK - Dashboard");
 
-
 // Get Site Address Dynamically
 $site_addr = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] !== "off" ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["SCRIPT_NAME"]);
 
