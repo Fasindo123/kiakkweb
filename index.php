@@ -12,6 +12,21 @@
 
     return $conn;
   };
+
+  function getPicture($img) {
+    if ($img) {
+      if (count($img) > 1){
+        for ($i = 0; count($img)-1; $i++) {
+          $img[$i] = "dashboard/".$img[$i];
+        }
+        return $img;
+      } else {
+        return "dashhboard/".$img;
+      }
+    } else {
+      return "assets/no-img.jpg";
+    }
+  };
 ?>
 <?php require_once('components/head.php'); ?>
 <body>
@@ -55,28 +70,7 @@
                       <div class="cardBlog">
                         <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog1.png" alt="neuron"></a></div>
                         <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS1</span></a><a class="link-blog" href="blog-single.html">
-                            <h4 class="color-light-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias dolorem, ipsa eius ad voluptas molestiae ut repellendus, minima aspernatur animi magni dolores recusandae in magnam</h4></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardBlog">
-                        <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog2.png" alt="neuron"></a></div>
-                        <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS2</span></a><a class="link-blog" href="blog-single.html">
-                            <h4 class="color-light-900 text-opacity">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolorum nesciunt, est commodi aliquam ea reprehenderit, maxime, eveniet ad incidunt vero dolores non ipsam! Maiores quos ducimus error suscipit laborum?</h4></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardBlog">
-                        <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog3.png" alt="neuron"></a></div>
-                        <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS3</span></a><a class="link-blog" href="blog-single.html">
-                            <h4 class="color-light-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, reiciendis molestiae esse vero et dolorem corrupti quasi error aliquid enim ad sed cum quos aut provident magnam quas tempore delectus.</h4></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardBlog">
-                        <div class="cardImage"><a href="blog-single.html"><img class="parallax-image" src="assets/imgs/page/homepage1/blog2.png" alt="neuron"></a></div>
-                        <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="blog-2.html">#<span>NEWS4</span></a><a class="link-blog" href="blog-single.html">
-                            <h4 class="color-light-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod inventore temporibus iusto. Rerum, quaerat culpa quos tempora quod soluta vel dolores nam illo quo necessitatibus cupiditate, facilis temporibus dolor illum!</h4></a></div>
+                        <h4 class="color-light-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias dolorem, ipsa eius ad voluptas molestiae ut repellendus, minima aspernatur animi magni dolores recusandae in magnam</h4></a></div>
                       </div>
                     </div>
                   </div>
