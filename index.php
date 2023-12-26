@@ -464,7 +464,7 @@
                 <div class="box-swiper">
                   <div class="swiper-container swiper-group-5">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide"><img src="assets/imgs/támogatók/kometa.png" alt="Kométa 99 Élelmiszeripari Zrt." title="KOMETA 99 Élelmiszeripari Zrt."></div>
+                      <div class="swiper-slide"><img src="assets/imgs/támogatók/kometa.png" alt="Kométa 99 Élelmiszeripari Zrt." title="Kométa 99 Élelmiszeripari Zrt."></div>
                       <div class="swiper-slide"><img src="assets/imgs/támogatók/kszc.png" alt="Kaposvári Szakképzési Centrum" title="Kaposvári Szakképzési Centrum"></div>
                       <div class="swiper-slide"><img src="assets/imgs/támogatók/kaposvar.png" alt="Kaposvár Megyei Jogú Város" title="Kaposvár Megyei Jogú Város"></div>
                       <div class="swiper-slide"><img src="assets/imgs/támogatók/bazisinfo.png" alt= "Bázis Informatika Kft" title="Bázis Informatika Kf"></div>
