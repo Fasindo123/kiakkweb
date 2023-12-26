@@ -13,18 +13,25 @@
     return $conn;
   };
 
-  function getPicture($img) {
-    if ($img) {
-      if (count($img) > 1){
+  function getPicture($img, $count) {
+    if ($count != 1){
+      if ($img) {
         for ($i = 0; count($img)-1; $i++) {
           $img[$i] = "dashboard/".$img[$i];
         }
         return $img;
       } else {
-        return "dashhboard/".$img;
+        for ($i = 0; count($img)-1; $i++) {
+          $img[$i] = "assets/imgs/no-img.jpg";
+        }
+        return $img;
       }
     } else {
-      return "assets/no-img.jpg";
+      if ($img) {
+        return "dashhboard/".$img;
+      } else {
+        return "assets/imgs/no-img.jpg";
+      }
     }
   };
 ?>
