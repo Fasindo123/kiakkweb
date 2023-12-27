@@ -207,46 +207,24 @@
               <div class="box-swiper">
                 <div class="swiper-container swiper-group-3-center services-slider">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="cardService">
-                        <div class="cardImage parallax-item"><a href="service-1.html"><img class="parallax-image" src="assets/imgs/page/homepage1/service1.png" alt="neuron"></a></div>
-                        <div class="cardInfo">
-                          <h3 class="color-900">1. hely</h3>
-                          <h5 class="color-700 text-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio exercitationem maiores laborum. Molestiae consequuntur fugiat voluptatem laboriosam voluptas veritatis provident cumque recusandae architecto, iure, maxime repudiandae natus enim, impedit nostrum.</h5>
-                          <div class="d-flex"><a class="font-xl-bold color-900 link-effect" href="service-1.html">Megtekintés</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardService">
-                        <div class="cardImage parallax-item"><a href="service-1.html"><img class="parallax-image" src="assets/imgs/page/homepage1/service2.png" alt="neuron"></a></div>
-                        <div class="cardInfo">
-                          <h3 class="color-900">2. hely</h3>
-                          <h5 class="color-700 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci officia ipsa optio, iure magni error autem, commodi saepe delectus iusto ipsum, ab dolores. Doloremque doloribus tempore iste sunt eos.</h5>
-                          <div class="d-flex"><a class="font-xl-bold color-900 link-effect" href="service-1.html">Megtekintés</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardService">
-                        <div class="cardImage parallax-item"><a href="service-1.html"><img class="parallax-image" src="assets/imgs/page/homepage1/service3.png" alt="neuron"></a></div>
-                        <div class="cardInfo">
-                          <h3 class="color-900">3. hely</h3>
-                          <h5 class="color-700 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta obcaecati dolores nesciunt tenetur, rerum aliquid minima amet ea officia impedit? Accusamus, distinctio facere. A quidem, repudiandae nam velit doloribus error.</h5>
-                          <div class="d-flex"><a class="font-xl-bold color-900 link-effect" href="service-1.html">Megtekintés</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cardService">
-                        <div class="cardImage parallax-item"><a href="service-1.html"><img class="parallax-image" src="assets/imgs/page/homepage1/service4.png" alt="neuron"></a></div>
-                        <div class="cardInfo">
-                          <h3 class="color-900">4. hely</h3>
-                          <h5 class="color-700 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quibusdam magni suscipit necessitatibus incidunt voluptate quaerat officiis! Similique exercitationem, molestias ipsam et iure voluptates recusandae quae fugit dolores ab ullam.</h5>
-                          <div class="d-flex"><a class="font-xl-bold color-900 link-effect" href="service-1.html">Megtekintés</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>
-                        </div>
-                      </div>
-                    </div>
+                    <?php
+                      $infrastructure_data = sqlQuery("SELECT * FROM infrastructure");
+                      if ($infrastructure_data->num_rows>0) {
+                        while ($infrastructure_e = $infrastructure_data->fetch_assoc()) {
+                          $cover_img = getPicture($infrastructure_e["img"], 1);
+                          echo '<div class="swiper-slide">
+                                  <div class="cardService">
+                                    <div class="cardImage parallax-item"><a href="#"><img class="parallax-image" src="'.$cover_img.'" alt="Kép: '.$infrastructure_e["title"].'"></a></div>
+                                    <div class="cardInfo">
+                                      <h3 class="color-900">'.$infrastructure_e["title"].'</h3>
+                                      <h5 class="color-700 text-opacity">'.$infrastructure_e["short_description"].'</h5>
+                                      <div class="d-flex"><a class="font-xl-bold color-900 link-effect" href="#">Megtekintés</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></div>
+                                    </div>
+                                  </div>
+                                </div>';
+                        }
+                      }
+                    ?>
                   </div>
                 </div>
               </div>
