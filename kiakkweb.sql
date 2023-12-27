@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2023 at 07:07 PM
+-- Generation Time: Dec 27, 2023 at 02:10 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -34,6 +34,16 @@ CREATE TABLE `courses` (
   `long_description` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`id`, `title`, `short_description`, `long_description`) VALUES
+(2, 'Ilyen meg olyan', 'joifdgihjhjklfgjklhlkéfghufjmlkmkléfjsljkfghkdjfshgljdgjdligf gjdfgjdlhj dfh gfkljh kfljghlk fd khjdjlkfhgjkdhfgsjlék df gdfhjifdgl jhgfd. ajsdlkjallhg g sklg hjg dfg phfgh!', ''),
+(3, 'Olyan meg ilyen', 'gdhfgh f. sg dfhfg fgh fgh fgjuhuiz fsd., df sdf sgfdhjgks fg.s fsdujf hsdf isfhsdf.s fds fisdujs f.sdf hjsdf sd.fsdjf sd fs.df sdjfshgh.fj dfhdfgh.', ''),
+(4, 'Ilyen meg olyan', 'joifdgihjhjklfgjklhlkéfghufjmlkmkléfjsljkfghkdjfshgljdgjdligf gjdfgjdlhj dfh gfkljh kfljghlk fd khjdjlkfhgjkdhfgsjlék df gdfhjifdgl jhgfd. ajsdlkjallhg g sklg hjg dfg phfgh!', ''),
+(5, 'Olyan meg ilyen', 'gdhfgh f. sg dfhfg fgh fgh fgjuhuiz fsd., df sdf sgfdhjgks fg.s fsdujf hsdf isfhsdf.s fds fisdujs f.sdf hjsdf sd.fsdjf sd fs.df sdjfshgh.fj dfhdfgh.', '');
+
 -- --------------------------------------------------------
 
 --
@@ -59,6 +69,14 @@ CREATE TABLE `faqs` (
   `answ` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `faqs`
+--
+
+INSERT INTO `faqs` (`id`, `qst`, `answ`) VALUES
+(1, 'Ajdfg kdfg dgdg dg fh?', 'AJskljgdfkl dflégdf gfdlkéh klfgdh klfghlé flkéhg dlkégdflkég dlgké.'),
+(2, 'Asd fgfdkgl dfkjg dklfhglk h?', 'Asdjikjgfl dgéldf gédflég dgsd lékfgdfjkg glksd fgdáég déf géldflkéh kgéldék gdflégk lsdflgéks lléfdlgé kdflégkéldf gldfgl édjhd.');
+
 -- --------------------------------------------------------
 
 --
@@ -80,9 +98,18 @@ CREATE TABLE `gallery` (
 CREATE TABLE `infrastructure` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `description` text NOT NULL,
-  `photos` varchar(255) NOT NULL
+  `short_description` text NOT NULL,
+  `long_description` text NOT NULL,
+  `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `infrastructure`
+--
+
+INSERT INTO `infrastructure` (`id`, `title`, `short_description`, `long_description`, `img`) VALUES
+(1, 'Valami helyiség', 'sgdfgkj dgj djfgj dgfjkdgkdfj lgjldf jgdfj gfdklj gjkdjkgh jkdfhjk dfjkg djkg kljfdkgj dkfjlgkjl dkljg kdjfgjk dfjk gljkdfkjlg jkldgjkl dfljkg', '', ''),
+(2, 'Másik helyiség', ' dg fdg dfg dfg dfg dhfg hadfdsf sadfsfas ddfgfsd gsdf sadfsdfsfasdsfsfdasfsd dsf sdf af asdf asfsdf afdsf afasdasffds gfd gsgfsdfaf as dfdsf af sdf dfs fasffdsfsdfsd dsf sdf df afsd afsdfsgfd gsdgf sdf adfasfasdasddasa', '', '');
 
 -- --------------------------------------------------------
 
@@ -115,12 +142,18 @@ INSERT INTO `news` (`id`, `title`, `description`, `cover_img`, `date`) VALUES
 CREATE TABLE `oktatok` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL DEFAULT 'Nincs név megadva',
-  `post` varchar(255) NOT NULL DEFAULT 'Nincs megadva',
-  `description` text NOT NULL DEFAULT 'Nincs leírás megadva',
-  `email` varchar(255) NOT NULL DEFAULT 'Nincs megadva',
-  `phone` varchar(255) NOT NULL DEFAULT 'Nincs megadva',
+  `short_description` text NOT NULL,
+  `long_description` text NOT NULL DEFAULT '\'Nincs leírás megadva\'',
   `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `oktatok`
+--
+
+INSERT INTO `oktatok` (`id`, `name`, `short_description`, `long_description`, `img`) VALUES
+(1, 'Basz Tamás', 'asdagfg dfg dfg dfg d as da gfdgdfg dadagdfg dgdg dfg adag dfg dfg s sdf sdf gd fafsdf fsadsdfgafdf sdf sd ghd sfsfs', '\'Nincs leírás megadva\'', ''),
+(2, 'Mikorka Kálmán', 'afgfdg dfhg gfh   fsfdf sdfs fdsdgdfh dfg fgs dfsd gfd gsdfg dfgs df sdfsdf sdf afd sfgdfg dfg sfd sfaf sdfsdf sdf sf', '\'Nincs leírás megadva\'', '');
 
 --
 -- Indexes for dumped tables
@@ -176,7 +209,7 @@ ALTER TABLE `oktatok`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `docs`
@@ -188,7 +221,7 @@ ALTER TABLE `docs`
 -- AUTO_INCREMENT for table `faqs`
 --
 ALTER TABLE `faqs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -200,7 +233,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `infrastructure`
 --
 ALTER TABLE `infrastructure`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -212,7 +245,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `oktatok`
 --
 ALTER TABLE `oktatok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
