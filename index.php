@@ -114,39 +114,27 @@
         <section class="section block-section-2 is-mode bg-0" id="kepzesek">
           <div class="container">
             <div class="row">
-              <div class="col-lg-6">
-                <div class="card-feature-3 parallax-item">
-                  <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01.</h2>
-                  <h3 class="card-title color-900 text-up">Képzés 1</h3>
-                  <h5 class="card-desc color-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis cum eius praesentium quibusdam, expedita molestiae impedit ad ex ratione amet id perspiciatis repellendus ut eum vero accusamus reiciendis architecto rerum!</h5>
-                  <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card-feature-3 parallax-item">
-                  <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01.</h2>
-                  <h3 class="card-title color-900 text-up">Képzés 1</h3>
-                  <h5 class="card-desc color-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis cum eius praesentium quibusdam, expedita molestiae impedit ad ex ratione amet id perspiciatis repellendus ut eum vero accusamus reiciendis architecto rerum!</h5>
-                  <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card-feature-3 parallax-item">
-                  <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01.</h2>
-                  <h3 class="card-title color-900 text-up">Képzés 1</h3>
-                  <h5 class="card-desc color-900 text-opacity">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis cum eius praesentium quibusdam, expedita molestiae impedit ad ex ratione amet id perspiciatis repellendus ut eum vero accusamus reiciendis architecto rerum!</h5>
-                  <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
-                </div>
-              </div>
-              <div class="col-lg-6">
-                  <div class="card-feature-3 parallax-item">
-                  <h2 class="card-steps heading-1 stroke stroke-900 grow-up">02.</h2>
-                  <h3 class="card-title color-900 text-up">Képzés 2</h3>
-                  <h5 class="card-desc color-900 text-opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ea dignissimos sequi quisquam quam error! Ex voluptas quas totam beatae eligendi! Aperiam mollitia reprehenderit aliquam. Ad, earum! Esse, obcaecati pariatur.</h5>
-                  <div class="popup-button tobb" id="oktato1" open="oktato1.php">
-                  <span><a></a></span>
-                  </div>
-              </div>
+              <?php
+              $courses = sqlQuery("SELECT * FROM courses");
+              if ($courses->num_rows>0) {
+                $count = 1;
+                while ($courses_e = $courses->fetch_assoc()) {
+                  $to_print_counter = $count;
+                  if ($count < 10) {
+                    $to_print_counter = "0".$count;
+                  }
+                  $count += 1;
+                  echo '<div class="col-lg-6">
+                          <div class="card-feature-3 parallax-item">
+                            <h2 class="card-steps heading-1 stroke stroke-900 grow-up">'.$to_print_counter.'.</h2>
+                            <h3 class="card-title color-900 text-up">'.$courses_e["title"].'</h3>
+                            <h5 class="card-desc color-900 text-opacity">'.$courses_e["short_description"].'</h5>
+                            <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
+                          </div>
+                        </div>';
+                }
+              }
+              ?>
           </div>
         </section>
 <!-- Oktatók -->
