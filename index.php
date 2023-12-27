@@ -311,7 +311,7 @@
           </div>
         </section>
 <!-- Dokumentumok -->
-<section class="section is-mode">
+<section class="section is-mode" id="dokumentumok">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">

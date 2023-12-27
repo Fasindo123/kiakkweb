@@ -30,7 +30,7 @@
                         <li><a href="#">Helyiség 4</a></li>
                       </ul>
                     </li>
-                    <li class="has-children"><a href="#">Dokumentumok</a>
+                    <li class="has-children"><a href="#dokumentumok">Dokumentumok</a>
                       <ul class="sub-menu">
                         <li><a href="#">Dok 1</a></li>
                         <li><a href="#">Dok 2</a></li>
