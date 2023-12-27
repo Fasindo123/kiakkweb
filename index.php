@@ -118,7 +118,7 @@
               $courses = sqlQuery("SELECT * FROM courses");
               if ($courses->num_rows>0) {
                 $count = 1;
-                while ($courses_e = $courses->fetch_assoc()) {
+                while ($course = $courses->fetch_assoc()) {
                   $to_print_counter = $count;
                   if ($count < 10) {
                     $to_print_counter = "0".$count;
@@ -127,8 +127,8 @@
                   echo '<div class="col-lg-6">
                           <div class="card-feature-3 parallax-item">
                             <h2 class="card-steps heading-1 stroke stroke-900 grow-up">'.$to_print_counter.'.</h2>
-                            <h3 class="card-title color-900 text-up">'.$courses_e["title"].'</h3>
-                            <h5 class="card-desc color-900 text-opacity">'.$courses_e["short_description"].'</h5>
+                            <h3 class="card-title color-900 text-up">'.$course["title"].'</h3>
+                            <h5 class="card-desc color-900 text-opacity">'.$course["short_description"].'</h5>
                             <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
                           </div>
                         </div>';
@@ -155,42 +155,23 @@
               <div class="box-swiper">
                 <div class="swiper-container swiper-group-4-center features-slider">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="card-feature card-feature-2">
-                        <div class="card-image"><img class="parallax-image popup-button" id="oktatokep1" open="oktato1.php" src="assets/imgs/page/homepage2/img1.png" alt="neuron"></div>
-                        <div class="card-info">
-                          <h4 class="color-900 card-title">Bloch Tamás</h4>
-                          <p class="card-desc font-xl color-600">A legjobb oktató, nyugdíjas váltóőr!!</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-feature">
-                        <div class="card-info">
-                          <h4 class="color-900 card-title">Szabó Richárd</h4>
-                          <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
-                        </div>
-                        <div class="card-image"><img class="parallax-image" src="assets/imgs/page/homepage2/img2.png" alt="neuron"></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-feature card-feature-2">
-                        <div class="card-image"><img class="parallax-image" src="assets/imgs/page/homepage2/img3.png" alt="neuron"></div>
-                        <div class="card-info">
-                          <h4 class="color-900 card-title">3. oktató</h4>
-                          <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-feature">
-                        <div class="card-info">
-                          <h4 class="color-900 card-title">4. oktató</h4>
-                          <p class="card-desc font-xl color-600">You are always welcome to visit our little den. Professional in teir craft!</p>
-                        </div>
-                        <div class="card-image"><img class="parallax-image" src="assets/imgs/page/homepage2/img4.png" alt="neuron"></div>
-                      </div>
-                    </div>
+                    <?php
+                      $oktatok = sqlQuery("SELECT * FROM oktatok");
+                      if ($oktatok->num_rows>0) {
+                        while ($oktato = $oktatok->fetch_assoc()) {
+                          $cover_img = getPicture($oktato["img"], 1);
+                          echo '<div class="swiper-slide">
+                                  <div class="card-feature card-feature-2">
+                                    <div class="card-image"><img class="parallax-image popup-button" src="'.$cover_img.'" alt="Kép '.$oktato["name"].'-ról/ről"></div>
+                                    <div class="card-info">
+                                      <h4 class="color-900 card-title">'.$oktato["name"].'</h4>
+                                      <p class="card-desc font-xl color-600">'.$oktato["short_description"].'</p>
+                                    </div>
+                                  </div>
+                                </div>';
+                        }
+                      }
+                    ?>
                   </div>
                 </div>
               </div>
