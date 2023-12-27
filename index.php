@@ -2,17 +2,16 @@
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once("dashboard/config.php");
-  function query($query) {
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD);
+  function sqlQuery($sql) {
+    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
-    echo "Connected successfully";
 
-    $result = $conn->query($query);
+    $result = $conn->query($sql);
+
     $conn->close();
-  
     return $result;
   };
 
@@ -78,9 +77,10 @@
                   <div class="swiper-wrapper">
                     <!-- HÍREK LEKÉRÉSE ADATBÁZISBÓL !!! jelenleg az összes létrehozott hírt lekéri !!! -->
                     <?php
-                      $news = query("SELECT * FROM news");
+                      $news = sqlQuery("SELECT * FROM news");
+                      
                       if ($news->num_rows > 0) {
-                        while ($news_e = $news->fetch_row()) {
+                        while ($news_e = $news->fetch_assoc()) {
                           $cover_img = getPicture($news_e["cover_img"], 1);
                           echo '<div class="swiper-slide">
                                   <div class="cardBlog">
