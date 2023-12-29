@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 27, 2023 at 02:10 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.3.27
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2023. Dec 29. 17:27
+-- Kiszolgáló verziója: 10.4.27-MariaDB
+-- PHP verzió: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `kiakkweb`
+-- Adatbázis: `kiakkweb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `courses`
+-- Tábla szerkezet ehhez a táblához `courses`
 --
 
 CREATE TABLE `courses` (
@@ -32,10 +32,10 @@ CREATE TABLE `courses` (
   `title` varchar(255) NOT NULL,
   `short_description` varchar(255) NOT NULL,
   `long_description` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `courses`
+-- A tábla adatainak kiíratása `courses`
 --
 
 INSERT INTO `courses` (`id`, `title`, `short_description`, `long_description`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `courses` (`id`, `title`, `short_description`, `long_description`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `docs`
+-- Tábla szerkezet ehhez a táblához `docs`
 --
 
 CREATE TABLE `docs` (
@@ -55,22 +55,22 @@ CREATE TABLE `docs` (
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `path` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faqs`
+-- Tábla szerkezet ehhez a táblához `faqs`
 --
 
 CREATE TABLE `faqs` (
   `id` int(11) NOT NULL,
   `qst` text NOT NULL,
   `answ` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `faqs`
+-- A tábla adatainak kiíratása `faqs`
 --
 
 INSERT INTO `faqs` (`id`, `qst`, `answ`) VALUES
@@ -80,19 +80,19 @@ INSERT INTO `faqs` (`id`, `qst`, `answ`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallery`
+-- Tábla szerkezet ehhez a táblához `gallery`
 --
 
 CREATE TABLE `gallery` (
   `id` int(11) NOT NULL,
   `img` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `infrastructure`
+-- Tábla szerkezet ehhez a táblához `infrastructure`
 --
 
 CREATE TABLE `infrastructure` (
@@ -101,20 +101,20 @@ CREATE TABLE `infrastructure` (
   `short_description` text NOT NULL,
   `long_description` text NOT NULL,
   `img` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `infrastructure`
+-- A tábla adatainak kiíratása `infrastructure`
 --
 
 INSERT INTO `infrastructure` (`id`, `title`, `short_description`, `long_description`, `img`) VALUES
-(1, 'Valami helyiség', 'sgdfgkj dgj djfgj dgfjkdgkdfj lgjldf jgdfj gfdklj gjkdjkgh jkdfhjk dfjkg djkg kljfdkgj dkfjlgkjl dkljg kdjfgjk dfjk gljkdfkjlg jkldgjkl dfljkg', '', ''),
+(1, 'Valami helyiség', 'sgdfgkj dgj djfgj dgfjkdgkdfj lgjldf jgdfj gfdklj gjkdjkgh jkdfhjk dfjkg djkg kljfdkgj dkfjlgkjl dkljg kdjfgjk dfjk gljkdfkjlg jkldgjkl dfljkg', '', 'uploads/img/tanarok/bloch.png'),
 (2, 'Másik helyiség', ' dg fdg dfg dfg dfg dhfg hadfdsf sadfsfas ddfgfsd gsdf sadfsdfsfasdsfsfdasfsd dsf sdf af asdf asfsdf afdsf afasdasffds gfd gsgfsdfaf as dfdsf af sdf dfs fasffdsfsdfsd dsf sdf df afsd afsdfsgfd gsdgf sdf adfasfasdasddasa', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Tábla szerkezet ehhez a táblához `news`
 --
 
 CREATE TABLE `news` (
@@ -123,20 +123,20 @@ CREATE TABLE `news` (
   `description` longtext NOT NULL,
   `cover_img` varchar(255) NOT NULL,
   `date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `news`
+-- A tábla adatainak kiíratása `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `description`, `cover_img`, `date`) VALUES
-(1, 'asdasdagfsgfg', 'asdadasda', '', '0000-00-00'),
+(1, 'asdasdagfsgfg', 'asdadasda', 'uploads/img/tanarok/bloch.png', '0000-00-00'),
 (2, 'asdasdagfsgfg', 'asdadasda', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oktatok`
+-- Tábla szerkezet ehhez a táblához `oktatok`
 --
 
 CREATE TABLE `oktatok` (
@@ -145,104 +145,104 @@ CREATE TABLE `oktatok` (
   `short_description` text NOT NULL,
   `long_description` text NOT NULL DEFAULT '\'Nincs leírás megadva\'',
   `img` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `oktatok`
+-- A tábla adatainak kiíratása `oktatok`
 --
 
 INSERT INTO `oktatok` (`id`, `name`, `short_description`, `long_description`, `img`) VALUES
-(1, 'Basz Tamás', 'asdagfg dfg dfg dfg d as da gfdgdfg dadagdfg dgdg dfg adag dfg dfg s sdf sdf gd fafsdf fsadsdfgafdf sdf sd ghd sfsfs', '\'Nincs leírás megadva\'', ''),
+(1, 'Bloch Tamás', 'asdagfg dfg dfg dfg d as da gfdgdfg dadagdfg dgdg dfg adag dfg dfg s sdf sdf gd fafsdf fsadsdfgafdf sdf sd ghd sfsfs', '\'Nincs leírás megadva\'', 'uploads/img/tanarok/bloch.png'),
 (2, 'Mikorka Kálmán', 'afgfdg dfhg gfh   fsfdf sdfs fdsdgdfh dfg fgs dfsd gfd gsdfg dfgs df sdfsdf sdf afd sfgdfg dfg sfd sfaf sdfsdf sdf sf', '\'Nincs leírás megadva\'', '');
 
 --
--- Indexes for dumped tables
+-- Indexek a kiírt táblákhoz
 --
 
 --
--- Indexes for table `courses`
+-- A tábla indexei `courses`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `docs`
+-- A tábla indexei `docs`
 --
 ALTER TABLE `docs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `faqs`
+-- A tábla indexei `faqs`
 --
 ALTER TABLE `faqs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gallery`
+-- A tábla indexei `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `infrastructure`
+-- A tábla indexei `infrastructure`
 --
 ALTER TABLE `infrastructure`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `news`
+-- A tábla indexei `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `oktatok`
+-- A tábla indexei `oktatok`
 --
 ALTER TABLE `oktatok`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- A kiírt táblák AUTO_INCREMENT értéke
 --
 
 --
--- AUTO_INCREMENT for table `courses`
+-- AUTO_INCREMENT a táblához `courses`
 --
 ALTER TABLE `courses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `docs`
+-- AUTO_INCREMENT a táblához `docs`
 --
 ALTER TABLE `docs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `faqs`
+-- AUTO_INCREMENT a táblához `faqs`
 --
 ALTER TABLE `faqs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `gallery`
+-- AUTO_INCREMENT a táblához `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `infrastructure`
+-- AUTO_INCREMENT a táblához `infrastructure`
 --
 ALTER TABLE `infrastructure`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `news`
+-- AUTO_INCREMENT a táblához `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `oktatok`
+-- AUTO_INCREMENT a táblához `oktatok`
 --
 ALTER TABLE `oktatok`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
