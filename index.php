@@ -30,7 +30,7 @@
       }
     } else {
       if ($img) {
-        return "dashhboard/".$img;
+        return "dashboard/".$img;
       } else {
         return "assets/imgs/no-img.jpg";
       }
