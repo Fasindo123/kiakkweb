@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 29. 17:27
+-- Létrehozás ideje: 2023. Dec 29. 18:05
 -- Kiszolgáló verziója: 10.4.27-MariaDB
 -- PHP verzió: 7.4.33
 
@@ -108,8 +108,8 @@ CREATE TABLE `infrastructure` (
 --
 
 INSERT INTO `infrastructure` (`id`, `title`, `short_description`, `long_description`, `img`) VALUES
-(1, 'Valami helyiség', 'sgdfgkj dgj djfgj dgfjkdgkdfj lgjldf jgdfj gfdklj gjkdjkgh jkdfhjk dfjkg djkg kljfdkgj dkfjlgkjl dkljg kdjfgjk dfjk gljkdfkjlg jkldgjkl dfljkg', '', 'uploads/img/tanarok/bloch.png'),
-(2, 'Másik helyiség', ' dg fdg dfg dfg dfg dhfg hadfdsf sadfsfas ddfgfsd gsdf sadfsdfsfasdsfsfdasfsd dsf sdf af asdf asfsdf afdsf afasdasffds gfd gsgfsdfaf as dfdsf af sdf dfs fasffdsfsdfsd dsf sdf df afsd afsdfsgfd gsdgf sdf adfasfasdasddasa', '', '');
+(1, 'Valami helyiség', 'sgdfgkj dgj djfgj dgfjkdgkdfj lgjldf jgdfj gfdklj gjkdjkgh jkdfhjk dfjkg djkg kljfdkgj dkfjlgkjl dkljg kdjfgjk dfjk gljkdfkjlg jkldgjkl dfljkg', '', 'uploads/img/infrastruktura/hely1.png'),
+(2, 'Másik helyiség', ' dg fdg dfg dfg dfg dhfg hadfdsf sadfsfas ddfgfsd gsdf sadfsdfsfasdsfsfdasfsd dsf sdf af asdf asfsdf afdsf afasdasffds gfd gsgfsdfaf as dfdsf af sdf dfs fasffdsfsdfsd dsf sdf df afsd afsdfsgfd gsdgf sdf adfasfasdasddasa', '', 'uploads/img/infrastruktura/hely2.png');
 
 -- --------------------------------------------------------
 
@@ -130,8 +130,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `description`, `cover_img`, `date`) VALUES
-(1, 'asdasdagfsgfg', 'asdadasda', 'uploads/img/tanarok/bloch.png', '0000-00-00'),
-(2, 'asdasdagfsgfg', 'asdadasda', '', '0000-00-00');
+(1, 'asdasdagfsgfg', 'asdadasda', 'uploads/img/hirek/hir1.png', '0000-00-00'),
+(2, 'asdasdagfsgfg', 'asdadasda', 'uploads/img/hirek/hir2.png', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -152,8 +152,8 @@ CREATE TABLE `oktatok` (
 --
 
 INSERT INTO `oktatok` (`id`, `name`, `short_description`, `long_description`, `img`) VALUES
-(1, 'Bloch Tamás', 'asdagfg dfg dfg dfg d as da gfdgdfg dadagdfg dgdg dfg adag dfg dfg s sdf sdf gd fafsdf fsadsdfgafdf sdf sd ghd sfsfs', '\'Nincs leírás megadva\'', 'uploads/img/tanarok/bloch.png'),
-(2, 'Mikorka Kálmán', 'afgfdg dfhg gfh   fsfdf sdfs fdsdgdfh dfg fgs dfsd gfd gsdfg dfgs df sdfsdf sdf afd sfgdfg dfg sfd sfaf sdfsdf sdf sf', '\'Nincs leírás megadva\'', '');
+(1, 'Bloch Tamás', 'asdagfg dfg dfg dfg d as da gfdgdfg dadagdfg dgdg dfg adag dfg dfg s sdf sdf gd fafsdf fsadsdfgafdf sdf sd ghd sfsfs', '\'Nincs leírás megadva\'', 'uploads/img/oktatok/bloch.png'),
+(2, 'Szabó Tamás', 'afgfdg dfhg gfh   fsfdf sdfs fdsdgdfh dfg fgs dfsd gfd gsdfg dfgs df sdfsdf sdf afd sfgdfg dfg sfd sfaf sdfsdf sdf sf', '\'Nincs leírás megadva\'', 'uploads/img/oktatok/norbi.jpg');
 
 --
 -- Indexek a kiírt táblákhoz
