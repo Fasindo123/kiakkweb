@@ -41,15 +41,15 @@
                   <div class="swiper-wrapper">
                     <!-- HÍREK LEKÉRÉSE ADATBÁZISBÓL !!! jelenleg az összes létrehozott hírt lekéri !!! -->
                     <?php
-                      $news = sqlQuery("SELECT * FROM news");
+                      $news = sqlQuery("SELECT `id`, `title`, `cover_img`, `date` FROM `news`");
                       
                       if ($news->num_rows > 0) {
                         while ($news_e = $news->fetch_assoc()) {
                           $cover_img = getPicture($news_e["cover_img"], 1);
                           echo '<div class="swiper-slide">
                                   <div class="cardBlog">
-                                    <div class="cardImage"><a href="#"><img class="parallax-image" src="'.$cover_img.'" alt="'.$news_e["title"].' cikk borítóképe"></a></div>
-                                    <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="#">'.$news_e["date"].'</a><a class="link-blog" href="#">
+                                    <div class="cardImage"><a href="pages/news.php?news_id='.$news_e["id"].'"><img class="parallax-image" src="'.$cover_img.'" alt="'.$news_e["title"].' cikk borítóképe"></a></div>
+                                    <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="pages/news.php?news_id='.$news_e["id"].'">'.$news_e["date"].'</a><a class="link-blog" href="pages/news.php?news_id='.$news_e["id"].'">
                                     <h4 class="color-light-900 text-opacity">'.$news_e["title"].'</h4></a></div>
                                   </div>
                                 </div>';
