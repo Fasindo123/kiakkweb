@@ -12015,3 +12015,11 @@ ul{
 .tobb span a:hover{
   transform: translateZ(-25px) rotateX(-90deg);
 }
+
+/* Kereső */
+.search-txt {
+  font-size: 1.5em;
+  margin-top: 150px;
+  text-align: center;
+  font-weight: 600;
+}

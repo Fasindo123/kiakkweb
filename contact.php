@@ -33,7 +33,7 @@
               <div class="col-lg-8">
                 <div class="form-in-touch position-relative">
                   <div class="image-mark-scroll"></div>
-                  <form action="contact.php" method="post">
+                  <form action="email.php" method="post">
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="form-group">
@@ -63,7 +63,7 @@
                       <div class="col-lg-12">
                         <div class="box-button-touch">
                           <div class="form-group">
-                            <button class="btn btn-black" type="submit" name="Submit" onclick="return sendForm();">Üzenet küldése<img src="assets/imgs/template/icons/arrow.svg" alt="küldés icon"></button>
+                            <button class="btn btn-black" type="submit" name="kuldes" id="kuldes" onclick="return sendForm();">Üzenet küldése<img src="assets/imgs/template/icons/arrow.svg" alt="küldés icon"></button>
                           </div>
                           <div class="agree-cb fw-bold color-0">
                             <input class="cb-agree" type="checkbox">A kapcsolatfelvétel gombra kattintva Ön elfogadja feltételeinket és szabályzatunkat.
