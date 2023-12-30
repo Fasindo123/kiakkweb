@@ -1,10 +1,14 @@
+<?php
+require_once('email/email.php')
+?>
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once('components/head.php'); ?>
 <body>
       <?php require_once('components/loader.php'); ?>
       <?php require_once('components/mobile-menu.php'); ?>
-      <?php require_once('components/header.php'); ?>
+      <?php require_once('components/header.php');
+      ?>
       <main class="main">
       <section class="section banner-mode-4 bg-900">
           <div class="contact-banner">
@@ -33,7 +37,7 @@
               <div class="col-lg-8">
                 <div class="form-in-touch position-relative">
                   <div class="image-mark-scroll"></div>
-                  <form action="email.php" method="post">
+                  <form action="contact.php" method="post">
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="form-group">
