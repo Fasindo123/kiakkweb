@@ -14,7 +14,7 @@
                     $result = $result->fetch_row();
                     echo($result[0]);
                 } else {
-                    echo '<h3>Hiba törtébt a betöltés közben! (A hír azonosítója üres!)</h3>';
+                    echo '<h3>Hiba történt a betöltés közben! (A hír azonosítója üres!)</h3>';
                 }
             ?>
         </section>
