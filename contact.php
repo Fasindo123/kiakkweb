@@ -1,5 +1,5 @@
 <?php
-require_once('email/email.php')
+require_once('email.php')
 ?>
 <!DOCTYPE html>
 <html lang="hu">

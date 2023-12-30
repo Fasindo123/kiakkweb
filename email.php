@@ -1,21 +1,22 @@
-<?PHP
+<?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer;
+use PHPMailer\SMTP;
+use PHPMailer\Exception;
 
-require 'Exception.php';
-require 'PHPMailer.php';
-require 'SMTP.php';
-
+require 'dashboard/libs/PHPMailer/class.phpmailer.php';
+require 'dashboard/libs/PHPMailer/class.pop3.php';
+require 'dashboard/libs/PHPMailer/class.smtp.php';
+require 'dashboard/libs/PHPMailer/PHPMailerAutoload.php';
 
 $MAIL_TYPE = "null";
-
 
 if(isset($_POST['kuldes'])) {
 
     // ügyfélnek
-    $mail2 = new PHPMailer();
+    $mail2 = new \PHPMailer();
     $mail2->IsSMTP();     
+    // $mail2->SMTPDebug = 2;                                     // SMTP-n keresztuli kuldes
     $mail2->Host     = 'smtp.office365.com';                     // SMTP szerverek
     $mail2->Port = 587;
     $mail2->SMTPAuth = true;                                   // SMTP

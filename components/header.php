@@ -8,13 +8,13 @@
                   <ul class="main-menu">
                     <li><a href="index.php">Kezdőlap</a></li>
                     <li><a href="#">Szervezetünk</a></li>
-                    <li class="has-children"><a href="#kepzesek">Képzéseink</a>
+                    <li class="has-children"><a href="/kiakkweb/index.php#kepzesek">Képzéseink</a>
                       <ul class="sub-menu">
                         <li><a href="#">Képzés 1</a></li>
                         <li><a href="#">Képzés 2</a></li>
                       </ul>
                     </li>
-                    <li class="has-children"><a href="#oktatok">Oktatóink</a>
+                    <li class="has-children"><a href="/kiakkweb/index.php#oktatok">Oktatóink</a>
                         <ul class="sub-menu">
                           <li><a href="#">Oktató 1</a></li>
                           <li><a href="#">Oktató 2</a></li>
@@ -22,7 +22,7 @@
                           <li><a href="#">Oktató 4</a></li>
                         </ul>
                     </li>
-                    <li class="has-children"><a href="#infrastruktura">Infrastruktúránk</a>
+                    <li class="has-children"><a href="/kiakkweb/index.php#infrastruktura">Infrastruktúránk</a>
                       <ul class="sub-menu">
                         <li><a href="#">Helyiség 1</a></li>
                         <li><a href="#">Helyiség 2</a></li>
@@ -30,7 +30,7 @@
                         <li><a href="#">Helyiség 4</a></li>
                       </ul>
                     </li>
-                    <li class="has-children"><a href="#dokumentumok">Dokumentumok</a>
+                    <li class="has-children"><a href="/kiakkweb/index.php#dokumentumok">Dokumentumok</a>
                       <ul class="sub-menu">
                         <li><a href="#">Dok 1</a></li>
                         <li><a href="#">Dok 2</a></li>
