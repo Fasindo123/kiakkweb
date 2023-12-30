@@ -5,10 +5,10 @@
               <h4><i class="fa-solid fa-folder-open"></i> Menü</h4>
               <ul>
                 <li><a href="#">Szervezetünk</a></li>
-                <li><a href="#">Képzéseink</a></li>
-                <li><a href="#">Oktatóink</a></li>
-                <li><a href="#">Infrastruktúránk</a></li>
-                <li><a href="#">Dokumentumok</a></li>
+                <li><a href="#kepzesek">Képzéseink</a></li>
+                <li><a href="#oktatok">Oktatóink</a></li>
+                <li><a href="#infrastruktura">Infrastruktúránk</a></li>
+                <li><a href="#dokumentumok">Dokumentumok</a></li>
               </ul>
             </div>
             <div class="footer-col">
