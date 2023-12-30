@@ -1,42 +1,6 @@
 <!-- itt vannak .html-ek, de még nem kell javítani -->
 <!DOCTYPE html>
 <html lang="hu">
-<?php require_once("dashboard/config.php");
-  function sqlQuery($sql) {
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
-
-    $result = $conn->query($sql);
-
-    $conn->close();
-    return $result;
-  };
-
-  function getPicture($img, $count) {
-    if ($count != 1){
-      if ($img) {
-        for ($i = 0; count($img)-1; $i++) {
-          $img[$i] = "dashboard/".$img[$i];
-        }
-        return $img;
-      } else {
-        for ($i = 0; count($img)-1; $i++) {
-          $img[$i] = "assets/imgs/no-img.jpg";
-        }
-        return $img;
-      }
-    } else {
-      if ($img) {
-        return "dashboard/".$img;
-      } else {
-        return "assets/imgs/no-img.jpg";
-      }
-    }
-  };
-?>
 <?php require_once('components/head.php'); ?>
 <body>
       <?php require_once('components/loader.php'); ?>
