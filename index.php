@@ -1,4 +1,3 @@
-<!-- itt vannak .html-ek, de még nem kell javítani -->
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once('components/head.php'); ?>
@@ -200,32 +199,32 @@
           <div class="box-recent-work block-recent-work-4 bg-0">
             <div class="container">
               <div class="head-recent-work">
-                <h1 class="color-900 text-up">Gal<span class="stroke-900 no-stroke">éria</span></h1><a class="btn btn-default parallax-item" href="#">Több kép<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></a>
+                <h1 class="color-900 text-up">Gal<span class="stroke-900 no-stroke">éria</span></h1><a class="btn btn-default parallax-item" href="pages/kepek.php">Több kép<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></a>
               </div>
-              <h4 class="color-900 text-opacity">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ab minima iusto corporis magnam ad dolorum dolor hic nulla voluptatum nemo aperiam quae, ipsum ullam, eius eveniet! Officia, quae vitae.</h4>
+              <!-- <h4 class="color-900 text-opacity">Pár kép eddigi tanulókról</h4> -->
             </div>
             <div class="container-fluid">
               <div class="mt-100 position-relative box-recent-work-4">
                 <div class="cardRecentBoxLists">
                   <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><a href="portfolio-detail-2.html"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/page/homepage4/work.png" alt="neuron"></a></div>
+                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9695.jpg" alt="neuron"></div>
                   </div>
                   <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><a href="portfolio-detail-2.html"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/page/homepage4/work2.png" alt="neuron"></a></div>
+                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9708.jpg" alt="neuron"></div>
                   </div>
                   <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><a href="portfolio-detail-2.html"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/page/homepage4/work3.png" alt="neuron"></a></div>
+                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9723.jpg" alt="neuron"></div>
                   </div>
                 </div>
                 <div class="cardRecentBoxLists">
                   <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><a href="portfolio-detail-2.html"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/page/homepage4/work4.png" alt="neuron"></a></div>
+                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9737.jpg" alt="neuron"></div>
                   </div>
                   <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><a href="portfolio-detail-2.html"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/page/homepage4/work5.png" alt="neuron"></a></div>
+                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9774.jpg" alt="neuron"></div>
                   </div>
                   <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><a href="portfolio-detail-2.html"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/page/homepage4/work6.png" alt="neuron"></a></div>
+                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9755.jpg" alt="neuron"></div>
                   </div>
                 </div>
               </div>
