@@ -12047,20 +12047,8 @@ ul{
   max-width: 700px;
 }
 
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
