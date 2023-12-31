@@ -134,7 +134,6 @@ class CoursesController extends BaseController{
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 			);
 			$this->filter_vals = true; //set whether to remove empty fields
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
@@ -175,7 +174,6 @@ class CoursesController extends BaseController{
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 			);
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
@@ -235,7 +233,6 @@ class CoursesController extends BaseController{
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 			);
 			$this->filter_rules = true; //filter validation rules by excluding fields not in the formdata
 			$modeldata = $this->modeldata = $this->validate_form($postdata);

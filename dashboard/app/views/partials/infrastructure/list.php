@@ -116,8 +116,8 @@ $show_pagination = $this->show_pagination;
                                                 <th  class="td-id"> Id</th>
                                                 <th  class="td-title"> Title</th>
                                                 <th  class="td-short_description"> Short Description</th>
-                                                <th  class="td-long_description"> Long Description</th>
                                                 <th  class="td-img"> Img</th>
+                                                <th  class="td-more_imgs"> More Imgs</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -169,20 +169,6 @@ $show_pagination = $this->show_pagination;
                                                             <?php echo $data['short_description']; ?> 
                                                         </span>
                                                     </td>
-                                                    <td class="td-long_description">
-                                                        <span  data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("infrastructure/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="long_description" 
-                                                            data-title="Enter Long Description" 
-                                                            data-placement="left" 
-                                                            data-toggle="dblclick" 
-                                                            data-type="textarea" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['long_description']; ?> 
-                                                        </span>
-                                                    </td>
                                                     <td class="td-img">
                                                         <span  data-value="<?php echo $data['img']; ?>" 
                                                             data-pk="<?php echo $data['id'] ?>" 
@@ -196,6 +182,21 @@ $show_pagination = $this->show_pagination;
                                                             data-showbuttons="left" 
                                                             class="is-editable" >
                                                             <?php echo $data['img']; ?> 
+                                                        </span>
+                                                    </td>
+                                                    <td class="td-more_imgs">
+                                                        <span  data-value="<?php echo $data['more_imgs']; ?>" 
+                                                            data-pk="<?php echo $data['id'] ?>" 
+                                                            data-url="<?php print_link("infrastructure/editfield/" . urlencode($data['id'])); ?>" 
+                                                            data-name="more_imgs" 
+                                                            data-title="Browse..." 
+                                                            data-placement="left" 
+                                                            data-toggle="click" 
+                                                            data-type="text" 
+                                                            data-mode="popover" 
+                                                            data-showbuttons="left" 
+                                                            class="is-editable" >
+                                                            <?php echo $data['more_imgs']; ?> 
                                                         </span>
                                                     </td>
                                                     <th class="td-btn">

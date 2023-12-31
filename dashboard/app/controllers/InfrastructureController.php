@@ -21,8 +21,8 @@ class InfrastructureController extends BaseController{
 		$fields = array("id", 
 			"title", 
 			"short_description", 
-			"long_description", 
-			"img");
+			"img", 
+			"more_imgs");
 		$pagination = $this->get_pagination(MAX_RECORD_COUNT); // get current pagination e.g array(page_number, page_limit)
 		//search table record
 		if(!empty($request->search)){
@@ -31,8 +31,8 @@ class InfrastructureController extends BaseController{
 				infrastructure.id LIKE ? OR 
 				infrastructure.title LIKE ? OR 
 				infrastructure.short_description LIKE ? OR 
-				infrastructure.long_description LIKE ? OR 
-				infrastructure.img LIKE ?
+				infrastructure.img LIKE ? OR 
+				infrastructure.more_imgs LIKE ?
 			)";
 			$search_params = array(
 				"%$text%","%$text%","%$text%","%$text%","%$text%"
@@ -89,8 +89,8 @@ class InfrastructureController extends BaseController{
 		$fields = array("id", 
 			"title", 
 			"short_description", 
-			"long_description", 
-			"img");
+			"img", 
+			"more_imgs");
 		if($value){
 			$db->where($rec_id, urldecode($value)); //select record based on field name
 		}
@@ -127,19 +127,19 @@ class InfrastructureController extends BaseController{
 			$tablename = $this->tablename;
 			$request = $this->request;
 			//fillable fields
-			$fields = $this->fields = array("title","short_description","long_description","img");
+			$fields = $this->fields = array("title","short_description","img","more_imgs");
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'title' => 'required',
 				'short_description' => 'required',
-				'long_description' => 'required',
 				'img' => 'required',
+				'more_imgs' => 'required',
 			);
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 				'img' => 'sanitize_string',
+				'more_imgs' => 'sanitize_string',
 			);
 			$this->filter_vals = true; //set whether to remove empty fields
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
@@ -169,20 +169,20 @@ class InfrastructureController extends BaseController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		 //editable fields
-		$fields = $this->fields = array("id","title","short_description","long_description","img");
+		$fields = $this->fields = array("id","title","short_description","img","more_imgs");
 		if($formdata){
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'title' => 'required',
 				'short_description' => 'required',
-				'long_description' => 'required',
 				'img' => 'required',
+				'more_imgs' => 'required',
 			);
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 				'img' => 'sanitize_string',
+				'more_imgs' => 'sanitize_string',
 			);
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
@@ -226,7 +226,7 @@ class InfrastructureController extends BaseController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		//editable fields
-		$fields = $this->fields = array("id","title","short_description","long_description","img");
+		$fields = $this->fields = array("id","title","short_description","img","more_imgs");
 		$page_error = null;
 		if($formdata){
 			$postdata = array();
@@ -237,14 +237,14 @@ class InfrastructureController extends BaseController{
 			$this->rules_array = array(
 				'title' => 'required',
 				'short_description' => 'required',
-				'long_description' => 'required',
 				'img' => 'required',
+				'more_imgs' => 'required',
 			);
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 				'img' => 'sanitize_string',
+				'more_imgs' => 'sanitize_string',
 			);
 			$this->filter_rules = true; //filter validation rules by excluding fields not in the formdata
 			$modeldata = $this->modeldata = $this->validate_form($postdata);

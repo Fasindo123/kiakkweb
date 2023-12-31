@@ -113,11 +113,10 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th  class="td-id"> Id</th>
-                                                <th  class="td-name"> Name</th>
-                                                <th  class="td-short_description"> Short Description</th>
-                                                <th  class="td-long_description"> Long Description</th>
-                                                <th  class="td-img"> Img</th>
+                                                <th  class="td-id"> Azonosító</th>
+                                                <th  class="td-name"> Név</th>
+                                                <th  class="td-short_description"> Rövid leírás</th>
+                                                <th  class="td-img"> Kép</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -145,7 +144,7 @@ $show_pagination = $this->show_pagination;
                                                             data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("oktatok/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="name" 
-                                                            data-title="Enter Name" 
+                                                            data-title="Adj meg nevet!" 
                                                             data-placement="left" 
                                                             data-toggle="dblclick" 
                                                             data-type="text" 
@@ -159,7 +158,7 @@ $show_pagination = $this->show_pagination;
                                                         <span  data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("oktatok/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="short_description" 
-                                                            data-title="Enter Short Description" 
+                                                            data-title="Adj meg rövid leírást!" 
                                                             data-placement="left" 
                                                             data-toggle="dblclick" 
                                                             data-type="textarea" 
@@ -167,20 +166,6 @@ $show_pagination = $this->show_pagination;
                                                             data-showbuttons="left" 
                                                             class="is-editable" >
                                                             <?php echo $data['short_description']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-long_description">
-                                                        <span  data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("oktatok/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="long_description" 
-                                                            data-title="Enter Long Description" 
-                                                            data-placement="left" 
-                                                            data-toggle="dblclick" 
-                                                            data-type="textarea" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['long_description']; ?> 
                                                         </span>
                                                     </td>
                                                     <td class="td-img">

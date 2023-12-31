@@ -34,12 +34,12 @@
   function getPicture($img, $count) {
     if ($count != 1){
       if ($img) {
-        for ($i = 0; count($img)-1; $i++) {
+        for ($i = 0; $count-1; $i++) {
           $img[$i] = "dashboard/".$img[$i];
         }
         return $img;
       } else {
-        for ($i = 0; count($img)-1; $i++) {
+        for ($i = 0; $count-1; $i++) {
           $img[$i] = "assets/imgs/no-img.jpg";
         }
         return $img;

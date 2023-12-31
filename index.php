@@ -79,7 +79,7 @@
           <div class="container">
             <div class="row">
               <?php
-              $courses = sqlQuery("SELECT * FROM courses");
+              $courses = sqlQuery("SELECT `id`, `title`, `short_description` FROM courses");
               if ($courses->num_rows>0) {
                 $count = 1;
                 while ($course = $courses->fetch_assoc()) {
@@ -88,12 +88,12 @@
                     $to_print_counter = "0".$count;
                   }
                   $count += 1;
-                  echo '<div class="col-lg-6">
+                  echo '<div class="col-lg-6 text-break">
                           <div class="card-feature-3 parallax-item">
                             <h2 class="card-steps heading-1 stroke stroke-900 grow-up">'.$to_print_counter.'.</h2>
                             <h3 class="card-title color-900 text-up">'.$course["title"].'</h3>
                             <h5 class="card-desc color-900 text-opacity">'.$course["short_description"].'</h5>
-                            <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
+                            <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
                           </div>
                         </div>';
                 }
@@ -124,7 +124,7 @@
                       if ($oktatok->num_rows>0) {
                         while ($oktato = $oktatok->fetch_assoc()) {
                           $cover_img = getPicture($oktato["img"], 1);
-                          echo '<div class="swiper-slide">
+                          echo '<div class="swiper-slide text-break">
                                   <div class="card-feature card-feature-2">
                                     <div class="card-image"><img class="parallax-image popup-button" src="'.$cover_img.'" alt="Kép '.$oktato["name"].'-ról/ről"></div>
                                     <div class="card-info">
@@ -176,13 +176,13 @@
                       if ($infrastructure_data->num_rows>0) {
                         while ($infrastructure_e = $infrastructure_data->fetch_assoc()) {
                           $cover_img = getPicture($infrastructure_e["img"], 1);
-                          echo '<div class="swiper-slide">
+                          echo '<div class="swiper-slide text-break">
                                   <div class="cardService">
                                     <div class="cardImage parallax-item"><a href="#"><img class="parallax-image" src="'.$cover_img.'" alt="Kép: '.$infrastructure_e["title"].'"></a></div>
                                     <div class="cardInfo">
                                       <h3 class="color-900">'.$infrastructure_e["title"].'</h3>
                                       <h5 class="color-700 text-opacity">'.$infrastructure_e["short_description"].'</h5>
-                                      <div class="d-flex"><a class="font-xl-bold color-900 link-effect" href="#">Megtekintés</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></div>
+                                      <div class="d-flex"><a class="font-xl-bold color-900 link-effect more-picture-button" href="#" data-more-imgs="'.$infrastructure_e["more_imgs"].'">További képek</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></div>
                                     </div>
                                   </div>
                                 </div>';
@@ -375,7 +375,12 @@
             </div>      
           </div>
         </section>
-        
+
+        <!-- Képnézegető -->
+        <div id="myModal" class="modal">
+          <span class="close" id="closeIcon">&times;</span>
+          <div id="more-picture-container"></div>
+        </div>     
   <?php require_once("components/footer.php"); ?>
   </div>
   <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>

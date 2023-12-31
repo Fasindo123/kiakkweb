@@ -7,8 +7,8 @@
     <?php require_once('../components/header.php'); ?>
 
     <main class="main">
-        <section id="custom-content" class="section block-section-2 is-mode bg-0">
-            <div class="container" style="max-width: 50%">
+        <section id="custom-content" class="section block-section-2 is-mode bg-0 text-break">
+            <div class="container" style="max-width: 70%">
                 <?php
                 if (isset($_GET["news_id"])) {
                     $result = sqlQuery("SELECT `title`, `description`, `date` FROM `news` WHERE `id`=".$_GET["news_id"]." LIMIT 1");
@@ -16,10 +16,10 @@
                         $result = $result->fetch_assoc();
                         echo    '<div class="row">
                                     <div class="col-6">
-                                        <h6>'.$result["title"].'</h6>
+                                        <h5>'.$result["title"].'</h5>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <h6>'.$result["date"].'</h6>
+                                        <h5>'.$result["date"].'</h5>
                                     </div>
                                 </div>
                                 <hr>

@@ -21,7 +21,6 @@ class OktatokController extends BaseController{
 		$fields = array("id", 
 			"name", 
 			"short_description", 
-			"long_description", 
 			"img");
 		$pagination = $this->get_pagination(MAX_RECORD_COUNT); // get current pagination e.g array(page_number, page_limit)
 		//search table record
@@ -31,11 +30,10 @@ class OktatokController extends BaseController{
 				oktatok.id LIKE ? OR 
 				oktatok.name LIKE ? OR 
 				oktatok.short_description LIKE ? OR 
-				oktatok.long_description LIKE ? OR 
 				oktatok.img LIKE ?
 			)";
 			$search_params = array(
-				"%$text%","%$text%","%$text%","%$text%","%$text%"
+				"%$text%","%$text%","%$text%","%$text%"
 			);
 			//setting search conditions
 			$db->where($search_condition, $search_params);
@@ -89,7 +87,6 @@ class OktatokController extends BaseController{
 		$fields = array("id", 
 			"name", 
 			"short_description", 
-			"long_description", 
 			"img");
 		if($value){
 			$db->where($rec_id, urldecode($value)); //select record based on field name
@@ -127,18 +124,15 @@ class OktatokController extends BaseController{
 			$tablename = $this->tablename;
 			$request = $this->request;
 			//fillable fields
-			$fields = $this->fields = array("name","short_description","long_description","img");
+			$fields = $this->fields = array("name","short_description","img");
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'name' => 'required',
 				'short_description' => 'required',
-				'long_description' => 'required',
-				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'name' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 				'img' => 'sanitize_string',
 			);
 			$this->filter_vals = true; //set whether to remove empty fields
@@ -169,19 +163,16 @@ class OktatokController extends BaseController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		 //editable fields
-		$fields = $this->fields = array("id","name","short_description","long_description","img");
+		$fields = $this->fields = array("id","name","short_description","img");
 		if($formdata){
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'name' => 'required',
 				'short_description' => 'required',
-				'long_description' => 'required',
-				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'name' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 				'img' => 'sanitize_string',
 			);
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
@@ -226,7 +217,7 @@ class OktatokController extends BaseController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		//editable fields
-		$fields = $this->fields = array("id","name","short_description","long_description","img");
+		$fields = $this->fields = array("id","name","short_description","img");
 		$page_error = null;
 		if($formdata){
 			$postdata = array();
@@ -237,13 +228,10 @@ class OktatokController extends BaseController{
 			$this->rules_array = array(
 				'name' => 'required',
 				'short_description' => 'required',
-				'long_description' => 'required',
-				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'name' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
-				'long_description' => 'sanitize_string',
 				'img' => 'sanitize_string',
 			);
 			$this->filter_rules = true; //filter validation rules by excluding fields not in the formdata

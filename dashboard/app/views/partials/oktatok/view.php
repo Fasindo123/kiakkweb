@@ -46,17 +46,17 @@ $show_export_btn = $this->show_export_btn;
                                 <!-- Table Body Start -->
                                 <tbody class="page-data" id="page-data-<?php echo $page_element_id; ?>">
                                     <tr  class="td-id">
-                                        <th class="title"> Id: </th>
+                                        <th class="title"> Azonosító: </th>
                                         <td class="value"> <?php echo $data['id']; ?></td>
                                     </tr>
                                     <tr  class="td-name">
-                                        <th class="title"> Name: </th>
+                                        <th class="title"> Név: </th>
                                         <td class="value">
                                             <span  data-value="<?php echo $data['name']; ?>" 
                                                 data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("oktatok/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="name" 
-                                                data-title="Enter Name" 
+                                                data-title="Adj meg nevet!" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="text" 
@@ -68,12 +68,12 @@ $show_export_btn = $this->show_export_btn;
                                         </td>
                                     </tr>
                                     <tr  class="td-short_description">
-                                        <th class="title"> Short Description: </th>
+                                        <th class="title"> Rövid leírás: </th>
                                         <td class="value">
                                             <span  data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("oktatok/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="short_description" 
-                                                data-title="Enter Short Description" 
+                                                data-title="Adj meg rövid leírást!" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="textarea" 
@@ -84,25 +84,8 @@ $show_export_btn = $this->show_export_btn;
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr  class="td-long_description">
-                                        <th class="title"> Long Description: </th>
-                                        <td class="value">
-                                            <span  data-pk="<?php echo $data['id'] ?>" 
-                                                data-url="<?php print_link("oktatok/editfield/" . urlencode($data['id'])); ?>" 
-                                                data-name="long_description" 
-                                                data-title="Enter Long Description" 
-                                                data-placement="left" 
-                                                data-toggle="click" 
-                                                data-type="textarea" 
-                                                data-mode="popover" 
-                                                data-showbuttons="left" 
-                                                class="is-editable" >
-                                                <?php echo $data['long_description']; ?> 
-                                            </span>
-                                        </td>
-                                    </tr>
                                     <tr  class="td-img">
-                                        <th class="title"> Img: </th>
+                                        <th class="title"> Kép: </th>
                                         <td class="value">
                                             <span  data-value="<?php echo $data['img']; ?>" 
                                                 data-pk="<?php echo $data['id'] ?>" 

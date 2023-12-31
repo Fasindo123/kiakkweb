@@ -84,23 +84,6 @@ $show_export_btn = $this->show_export_btn;
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr  class="td-long_description">
-                                        <th class="title"> Long Description: </th>
-                                        <td class="value">
-                                            <span  data-pk="<?php echo $data['id'] ?>" 
-                                                data-url="<?php print_link("infrastructure/editfield/" . urlencode($data['id'])); ?>" 
-                                                data-name="long_description" 
-                                                data-title="Enter Long Description" 
-                                                data-placement="left" 
-                                                data-toggle="click" 
-                                                data-type="textarea" 
-                                                data-mode="popover" 
-                                                data-showbuttons="left" 
-                                                class="is-editable" >
-                                                <?php echo $data['long_description']; ?> 
-                                            </span>
-                                        </td>
-                                    </tr>
                                     <tr  class="td-img">
                                         <th class="title"> Img: </th>
                                         <td class="value">
@@ -116,6 +99,24 @@ $show_export_btn = $this->show_export_btn;
                                                 data-showbuttons="left" 
                                                 class="is-editable" >
                                                 <?php echo $data['img']; ?> 
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr  class="td-more_imgs">
+                                        <th class="title"> More Imgs: </th>
+                                        <td class="value">
+                                            <span  data-value="<?php echo $data['more_imgs']; ?>" 
+                                                data-pk="<?php echo $data['id'] ?>" 
+                                                data-url="<?php print_link("infrastructure/editfield/" . urlencode($data['id'])); ?>" 
+                                                data-name="more_imgs" 
+                                                data-title="Browse..." 
+                                                data-placement="left" 
+                                                data-toggle="click" 
+                                                data-type="text" 
+                                                data-mode="popover" 
+                                                data-showbuttons="left" 
+                                                class="is-editable" >
+                                                <?php echo $data['more_imgs']; ?> 
                                             </span>
                                         </td>
                                     </tr>

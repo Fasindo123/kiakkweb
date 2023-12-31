@@ -62,19 +62,6 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="long_description">Long Description <span class="text-danger">*</span></label>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="">
-                                                    <textarea placeholder="Enter Long Description" id="ctrl-long_description"  required="" rows="5" name="long_description" class=" form-control"><?php  echo $data['long_description']; ?></textarea>
-                                                    <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group ">
-                                        <div class="row">
-                                            <div class="col-sm-4">
                                                 <label class="control-label" for="img">Img <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
@@ -89,18 +76,35 @@ $redirect_to = $this->redirect_to;
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-ajax-status"></div>
-                                    <div class="form-group text-center">
-                                        <button class="btn btn-primary" type="submit">
-                                            Szerkeszt
-                                            <i class="fa fa-send"></i>
-                                        </button>
-                                    </div>
-                                </form>
+                                        <div class="form-group ">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label class="control-label" for="more_imgs">More Imgs <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <div class="">
+                                                        <div class="dropzone required" input="#ctrl-more_imgs" fieldname="more_imgs"    data-multiple="false" dropmsg="Válassz fájlt vagy húzd ide!"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
+                                                            <input name="more_imgs" id="ctrl-more_imgs" required="" class="dropzone-input form-control" value="<?php  echo $data['more_imgs']; ?>" type="text"  />
+                                                                <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
+                                                                <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
+                                                            </div>
+                                                        </div>
+                                                        <?php Html :: uploaded_files_list($data['more_imgs'], '#ctrl-more_imgs'); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-ajax-status"></div>
+                                        <div class="form-group text-center">
+                                            <button class="btn btn-primary" type="submit">
+                                                Szerkeszt
+                                                <i class="fa fa-send"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>

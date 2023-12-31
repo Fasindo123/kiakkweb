@@ -46,17 +46,17 @@ $show_export_btn = $this->show_export_btn;
                                 <!-- Table Body Start -->
                                 <tbody class="page-data" id="page-data-<?php echo $page_element_id; ?>">
                                     <tr  class="td-id">
-                                        <th class="title"> Id: </th>
+                                        <th class="title"> Azonosító: </th>
                                         <td class="value"> <?php echo $data['id']; ?></td>
                                     </tr>
                                     <tr  class="td-title">
-                                        <th class="title"> Title: </th>
+                                        <th class="title"> Cím: </th>
                                         <td class="value">
                                             <span  data-value="<?php echo $data['title']; ?>" 
                                                 data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="title" 
-                                                data-title="Enter Title" 
+                                                data-title="Adj elnevezést a képzésnek!" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="text" 
@@ -68,13 +68,13 @@ $show_export_btn = $this->show_export_btn;
                                         </td>
                                     </tr>
                                     <tr  class="td-short_description">
-                                        <th class="title"> Short Description: </th>
+                                        <th class="title"> Rövid leírás: </th>
                                         <td class="value">
                                             <span  data-value="<?php echo $data['short_description']; ?>" 
                                                 data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="short_description" 
-                                                data-title="Enter Short Description" 
+                                                data-title="Adj meg rövid leírást!" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="text" 
@@ -85,23 +85,7 @@ $show_export_btn = $this->show_export_btn;
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr  class="td-long_description">
-                                        <th class="title"> Long Description: </th>
-                                        <td class="value">
-                                            <span  data-pk="<?php echo $data['id'] ?>" 
-                                                data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
-                                                data-name="long_description" 
-                                                data-title="Enter Long Description" 
-                                                data-placement="left" 
-                                                data-toggle="click" 
-                                                data-type="textarea" 
-                                                data-mode="popover" 
-                                                data-showbuttons="left" 
-                                                class="is-editable" >
-                                                <?php echo $data['long_description']; ?> 
-                                            </span>
-                                        </td>
-                                    </tr>
+                                    <div><?php echo $data['long_description']; ?></div>
                                 </tbody>
                                 <!-- Table Body End -->
                             </table>

@@ -34,11 +34,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="title">Title <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="title">Cím <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <input id="ctrl-title"  value="<?php  echo $this->set_field_value('title',""); ?>" type="text" placeholder="Enter Title"  required="" name="title"  class="form-control " />
+                                                <input id="ctrl-title"  value="<?php  echo $this->set_field_value('title',""); ?>" type="text" placeholder="Adj elnevezést a képzésnek!"  required="" name="title"  class="form-control " />
                                                 </div>
                                             </div>
                                         </div>
@@ -46,11 +46,11 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="short_description">Short Description <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="short_description">Rövid leírás <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <input id="ctrl-short_description"  value="<?php  echo $this->set_field_value('short_description',""); ?>" type="text" placeholder="Enter Short Description"  required="" name="short_description"  class="form-control " />
+                                                    <input id="ctrl-short_description"  value="<?php  echo $this->set_field_value('short_description',""); ?>" type="text" placeholder="Adj meg rövid leírást!"  required="" name="short_description"  class="form-control " />
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,11 +58,11 @@ $redirect_to = $this->redirect_to;
                                         <div class="form-group ">
                                             <div class="row">
                                                 <div class="col-sm-4">
-                                                    <label class="control-label" for="long_description">Long Description <span class="text-danger">*</span></label>
+                                                    <label class="control-label" for="long_description">Hosszú leírás <span class="text-danger">*</span></label>
                                                 </div>
                                                 <div class="col-sm-8">
                                                     <div class="">
-                                                        <textarea placeholder="Enter Long Description" id="ctrl-long_description"  required="" rows="5" name="long_description" class=" form-control"><?php  echo $this->set_field_value('long_description',""); ?></textarea>
+                                                        <textarea placeholder="Készítsd el a hosszú leírás oldalát!" id="ctrl-long_description"  required="" rows="5" name="long_description" class="htmleditor form-control"><?php  echo $this->set_field_value('long_description',""); ?></textarea>
                                                         <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                                     </div>
                                                 </div>

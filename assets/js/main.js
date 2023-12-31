@@ -444,4 +444,22 @@
         _parent.addClass("active");
     });
 
+    $(".more-picture-button").click(function(e){
+        let moreImgs = $(this).attr("data-more-imgs");
+        if (moreImgs) {
+            moreImgs = moreImgs.split(",");
+            for (let i = 0; i < moreImgs.length; i++) {
+             $("#more-picture-container").append('<img src="dashboard/'+ moreImgs[i] +'" alt ="Kép"></img>');
+            }
+        } else {
+            $("#more-picture-container").append('<img src="assets/imgs/no-img.jpg" alt ="Kép"></img>');
+        }
+        $("#myModal").css("display", "block");
+    });
+
+    $("#closeIcon").click(function(e){
+        $("#myModal").css("display", "none");
+        $("#more-picture-container").empty();
+    });
+
 })(jQuery);

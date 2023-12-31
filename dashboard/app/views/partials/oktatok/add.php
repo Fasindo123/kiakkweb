@@ -34,11 +34,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="name">Name <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="name">Név <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <input id="ctrl-name"  value="<?php  echo $this->set_field_value('name',"Nincs név megadva"); ?>" type="text" placeholder="Enter Name"  required="" name="name"  class="form-control " />
+                                                <input id="ctrl-name"  value="<?php  echo $this->set_field_value('name',""); ?>" type="text" placeholder="Adj meg nevet!"  required="" name="name"  class="form-control " />
                                                 </div>
                                             </div>
                                         </div>
@@ -46,11 +46,11 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="short_description">Short Description <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="short_description">Rövid leírás <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <textarea placeholder="Enter Short Description" id="ctrl-short_description"  required="" rows="5" name="short_description" class=" form-control"><?php  echo $this->set_field_value('short_description',""); ?></textarea>
+                                                    <textarea placeholder="Adj meg rövid leírást!" id="ctrl-short_description"  required="" rows="5" name="short_description" class=" form-control"><?php  echo $this->set_field_value('short_description',""); ?></textarea>
                                                     <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                                 </div>
                                             </div>
@@ -59,25 +59,12 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="long_description">Long Description <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="img">Kép </label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <textarea placeholder="Enter Long Description" id="ctrl-long_description"  required="" rows="5" name="long_description" class=" form-control"><?php  echo $this->set_field_value('long_description','\'Nincs leírás megadva\''); ?></textarea>
-                                                    <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group ">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <label class="control-label" for="img">Img <span class="text-danger">*</span></label>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="">
-                                                    <div class="dropzone required" input="#ctrl-img" fieldname="img"    data-multiple="false" dropmsg="Choose files or drag and drop files to upload"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
-                                                        <input name="img" id="ctrl-img" required="" class="dropzone-input form-control" value="<?php  echo $this->set_field_value('img',""); ?>" type="text"  />
+                                                    <div class="dropzone " input="#ctrl-img" fieldname="img"    data-multiple="false" dropmsg="Válassz képet vagy húzd ide!"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="1" maximum="1">
+                                                        <input name="img" id="ctrl-img" class="dropzone-input form-control" value="<?php  echo $this->set_field_value('img',""); ?>" type="text"  />
                                                             <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
                                                             <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
                                                         </div>
