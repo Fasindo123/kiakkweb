@@ -92,7 +92,7 @@ $show_export_btn = $this->show_export_btn;
                         <div class="p-3 d-flex">
                             <div class="dropup export-btn-holder mx-1">
                                 <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-save"></i> Export
+                                    <i class="fa fa-save"></i> Letöltés
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <?php $export_print_link = $this->set_current_page_link(array('format' => 'print')); ?>
@@ -118,10 +118,10 @@ $show_export_btn = $this->show_export_btn;
                                                     </div>
                                                 </div>
                                                 <a class="btn btn-sm btn-info"  href="<?php print_link("gallery/edit/$rec_id"); ?>">
-                                                    <i class="fa fa-edit"></i> Edit
+                                                    <i class="fa fa-edit"></i> Szerkeszt
                                                 </a>
-                                                <a class="btn btn-sm btn-danger record-delete-btn mx-1"  href="<?php print_link("gallery/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Are you sure you want to delete this record?" data-display-style="modal">
-                                                    <i class="fa fa-times"></i> Delete
+                                                <a class="btn btn-sm btn-danger record-delete-btn mx-1"  href="<?php print_link("gallery/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
+                                                    <i class="fa fa-times"></i> Törlés
                                                 </a>
                                             </div>
                                             <?php

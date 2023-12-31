@@ -37,11 +37,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="title">Title <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="title">Cím <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <input id="ctrl-title"  value="<?php  echo $data['title']; ?>" type="text" placeholder="Enter Title"  required="" name="title"  class="form-control " />
+                                                <input id="ctrl-title"  value="<?php  echo $data['title']; ?>" type="text" placeholder="Adj meg címet!"  required="" name="title"  class="form-control " />
                                                 </div>
                                             </div>
                                         </div>
@@ -49,11 +49,11 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="description">Description <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="description">Tartalom <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <textarea placeholder="Enter Description" id="ctrl-description"  required="" rows="5" name="description" class=" form-control"><?php  echo $data['description']; ?></textarea>
+                                                    <textarea placeholder="Cikk tartalma" id="ctrl-description"  required="" rows="5" name="description" class="htmleditor form-control"><?php  echo $data['description']; ?></textarea>
                                                     <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                                 </div>
                                             </div>
@@ -62,12 +62,12 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="cover_img">Cover Img <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="cover_img">Borítókép </label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <div class="dropzone required" input="#ctrl-cover_img" fieldname="cover_img"    data-multiple="false" dropmsg="Choose files or drag and drop files to upload"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
-                                                        <input name="cover_img" id="ctrl-cover_img" required="" class="dropzone-input form-control" value="<?php  echo $data['cover_img']; ?>" type="text"  />
+                                                    <div class="dropzone " input="#ctrl-cover_img" fieldname="cover_img"    data-multiple="false" dropmsg="Válassz képet vagy húzd ide!"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="1" maximum="1">
+                                                        <input name="cover_img" id="ctrl-cover_img" class="dropzone-input form-control" value="<?php  echo $data['cover_img']; ?>" type="text"  />
                                                             <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
                                                             <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
                                                         </div>
@@ -76,33 +76,18 @@ $redirect_to = $this->redirect_to;
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group ">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <label class="control-label" for="date">Date <span class="text-danger">*</span></label>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <div class="input-group">
-                                                        <input id="ctrl-date" class="form-control datepicker  datepicker"  required="" value="<?php  echo $data['date']; ?>" type="datetime" name="date" placeholder="Enter Date" data-enable-time="false" data-min-date="" data-max-date="" data-date-format="Y-m-d" data-alt-format="F j, Y" data-inline="false" data-no-calendar="false" data-mode="single" />
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-ajax-status"></div>
-                                        <div class="form-group text-center">
-                                            <button class="btn btn-primary" type="submit">
-                                                Update
-                                                <i class="fa fa-send"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <div class="form-ajax-status"></div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-primary" type="submit">
+                                            Szerkeszt
+                                            <i class="fa fa-send"></i>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>

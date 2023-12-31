@@ -75,7 +75,7 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-ajax-status"></div>
                                     <div class="form-group text-center">
                                         <button class="btn btn-primary" type="submit">
-                                            Update
+                                            Szerkeszt
                                             <i class="fa fa-send"></i>
                                         </button>
                                     </div>

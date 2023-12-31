@@ -49,11 +49,24 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="description">Description <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="short_description">Short Description <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <textarea placeholder="Enter Description" id="ctrl-description"  required="" rows="5" name="description" class=" form-control"><?php  echo $data['description']; ?></textarea>
+                                                    <textarea placeholder="Enter Short Description" id="ctrl-short_description"  required="" rows="5" name="short_description" class=" form-control"><?php  echo $data['short_description']; ?></textarea>
+                                                    <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label class="control-label" for="long_description">Long Description <span class="text-danger">*</span></label>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="">
+                                                    <textarea placeholder="Enter Long Description" id="ctrl-long_description"  required="" rows="5" name="long_description" class=" form-control"><?php  echo $data['long_description']; ?></textarea>
                                                     <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                                 </div>
                                             </div>
@@ -76,24 +89,11 @@ $redirect_to = $this->redirect_to;
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group ">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <label class="control-label" for="short_description">Short Description <span class="text-danger">*</span></label>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <div class="">
-                                                        <textarea placeholder="Enter Short Description" id="ctrl-short_description"  required="" rows="5" name="short_description" class=" form-control"><?php  echo $data['short_description']; ?></textarea>
-                                                        <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="form-ajax-status"></div>
                                     <div class="form-group text-center">
                                         <button class="btn btn-primary" type="submit">
-                                            Update
+                                            Szerkeszt
                                             <i class="fa fa-send"></i>
                                         </button>
                                     </div>

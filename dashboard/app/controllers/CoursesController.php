@@ -3,7 +3,7 @@
  * Courses Page Controller
  * @category  Controller
  */
-class CoursesController extends SecureController{
+class CoursesController extends BaseController{
 	function __construct(){
 		parent::__construct();
 		$this->tablename = "courses";
@@ -27,12 +27,13 @@ class CoursesController extends SecureController{
 		if(!empty($request->search)){
 			$text = trim($request->search); 
 			$search_condition = "(
+				courses.id LIKE ? OR 
 				courses.title LIKE ? OR 
 				courses.short_description LIKE ? OR 
 				courses.long_description LIKE ?
 			)";
 			$search_params = array(
-				"%$text%","%$text%","%$text%"
+				"%$text%","%$text%","%$text%","%$text%"
 			);
 			//setting search conditions
 			$db->where($search_condition, $search_params);
@@ -64,7 +65,7 @@ class CoursesController extends SecureController{
 		if($db->getLastError()){
 			$this->set_page_error();
 		}
-		$page_title = $this->view->page_title = "Képzések";
+		$page_title = $this->view->page_title = "Courses";
 		$this->view->report_filename = date('Y-m-d') . '-' . $page_title;
 		$this->view->report_title = $page_title;
 		$this->view->report_layout = "report_layout.php";
@@ -95,7 +96,7 @@ class CoursesController extends SecureController{
 		}
 		$record = $db->getOne($tablename, $fields );
 		if($record){
-			$page_title = $this->view->page_title = "Képzések";
+			$page_title = $this->view->page_title = "View  Courses";
 		$this->view->report_filename = date('Y-m-d') . '-' . $page_title;
 		$this->view->report_title = $page_title;
 		$this->view->report_layout = "report_layout.php";
@@ -125,7 +126,6 @@ class CoursesController extends SecureController{
 			//fillable fields
 			$fields = $this->fields = array("title","short_description","long_description");
 			$postdata = $this->format_request_data($formdata);
-			$this->validate_captcha = true; //will check for captcha validation
 			$this->rules_array = array(
 				'title' => 'required',
 				'short_description' => 'required',
@@ -134,13 +134,14 @@ class CoursesController extends SecureController{
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
+				'long_description' => 'sanitize_string',
 			);
 			$this->filter_vals = true; //set whether to remove empty fields
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
 				$rec_id = $this->rec_id = $db->insert($tablename, $modeldata);
 				if($rec_id){
-					$this->set_flash_msg("Képzés sikeresen létrehozva!", "success");
+					$this->set_flash_msg("Sikeres létrehozás!", "success");
 					return	$this->redirect("courses");
 				}
 				else{
@@ -148,7 +149,7 @@ class CoursesController extends SecureController{
 				}
 			}
 		}
-		$page_title = $this->view->page_title = "Képzés létrehozása";
+		$page_title = $this->view->page_title = "Add New Courses";
 		$this->render_view("courses/add.php");
 	}
 	/**
@@ -166,7 +167,6 @@ class CoursesController extends SecureController{
 		$fields = $this->fields = array("id","title","short_description","long_description");
 		if($formdata){
 			$postdata = $this->format_request_data($formdata);
-			$this->validate_captcha = true; //will check for captcha validation
 			$this->rules_array = array(
 				'title' => 'required',
 				'short_description' => 'required',
@@ -175,6 +175,7 @@ class CoursesController extends SecureController{
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
+				'long_description' => 'sanitize_string',
 			);
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
@@ -201,11 +202,70 @@ class CoursesController extends SecureController{
 		}
 		$db->where("courses.id", $rec_id);;
 		$data = $db->getOne($tablename, $fields);
-		$page_title = $this->view->page_title = "Képzés szerkesztése";
+		$page_title = $this->view->page_title = "Edit  Courses";
 		if(!$data){
 			$this->set_page_error();
 		}
 		return $this->render_view("courses/edit.php", $data);
+	}
+	/**
+     * Update single field
+	 * @param $rec_id (select record by table primary key)
+	 * @param $formdata array() from $_POST
+     * @return array
+     */
+	function editfield($rec_id = null, $formdata = null){
+		$db = $this->GetModel();
+		$this->rec_id = $rec_id;
+		$tablename = $this->tablename;
+		//editable fields
+		$fields = $this->fields = array("id","title","short_description","long_description");
+		$page_error = null;
+		if($formdata){
+			$postdata = array();
+			$fieldname = $formdata['name'];
+			$fieldvalue = $formdata['value'];
+			$postdata[$fieldname] = $fieldvalue;
+			$postdata = $this->format_request_data($postdata);
+			$this->rules_array = array(
+				'title' => 'required',
+				'short_description' => 'required',
+				'long_description' => 'required',
+			);
+			$this->sanitize_array = array(
+				'title' => 'sanitize_string',
+				'short_description' => 'sanitize_string',
+				'long_description' => 'sanitize_string',
+			);
+			$this->filter_rules = true; //filter validation rules by excluding fields not in the formdata
+			$modeldata = $this->modeldata = $this->validate_form($postdata);
+			if($this->validated()){
+				$db->where("courses.id", $rec_id);;
+				$bool = $db->update($tablename, $modeldata);
+				$numRows = $db->getRowCount();
+				if($bool && $numRows){
+					return render_json(
+						array(
+							'num_rows' =>$numRows,
+							'rec_id' =>$rec_id,
+						)
+					);
+				}
+				else{
+					if($db->getLastError()){
+						$page_error = $db->getLastError();
+					}
+					elseif(!$numRows){
+						$page_error = "No record updated";
+					}
+					render_error($page_error);
+				}
+			}
+			else{
+				render_error($this->view->page_error);
+			}
+		}
+		return null;
 	}
 	/**
      * Delete record from the database

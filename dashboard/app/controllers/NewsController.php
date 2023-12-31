@@ -3,7 +3,7 @@
  * News Page Controller
  * @category  Controller
  */
-class NewsController extends SecureController{
+class NewsController extends BaseController{
 	function __construct(){
 		parent::__construct();
 		$this->tablename = "news";
@@ -127,26 +127,22 @@ class NewsController extends SecureController{
 			$tablename = $this->tablename;
 			$request = $this->request;
 			//fillable fields
-			$fields = $this->fields = array("title","description","cover_img","date");
+			$fields = $this->fields = array("title","description","cover_img");
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'title' => 'required',
 				'description' => 'required',
-				'cover_img' => 'required',
-				'date' => 'required',
 			);
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
-				'description' => 'sanitize_string',
 				'cover_img' => 'sanitize_string',
-				'date' => 'sanitize_string',
 			);
 			$this->filter_vals = true; //set whether to remove empty fields
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
 				$rec_id = $this->rec_id = $db->insert($tablename, $modeldata);
 				if($rec_id){
-					$this->set_flash_msg("Record added successfully", "success");
+					$this->set_flash_msg("Sikeres létrehozás!", "success");
 					return	$this->redirect("news");
 				}
 				else{
@@ -169,20 +165,16 @@ class NewsController extends SecureController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		 //editable fields
-		$fields = $this->fields = array("id","title","description","cover_img","date");
+		$fields = $this->fields = array("id","title","description","cover_img");
 		if($formdata){
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'title' => 'required',
 				'description' => 'required',
-				'cover_img' => 'required',
-				'date' => 'required',
 			);
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
-				'description' => 'sanitize_string',
 				'cover_img' => 'sanitize_string',
-				'date' => 'sanitize_string',
 			);
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
@@ -190,7 +182,7 @@ class NewsController extends SecureController{
 				$bool = $db->update($tablename, $modeldata);
 				$numRows = $db->getRowCount(); //number of affected rows. 0 = no record field updated
 				if($bool && $numRows){
-					$this->set_flash_msg("Record updated successfully", "success");
+					$this->set_flash_msg("Sikeres szerkesztés!", "success");
 					return $this->redirect("news");
 				}
 				else{
@@ -226,7 +218,7 @@ class NewsController extends SecureController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		//editable fields
-		$fields = $this->fields = array("id","title","description","cover_img","date");
+		$fields = $this->fields = array("id","title","description","cover_img");
 		$page_error = null;
 		if($formdata){
 			$postdata = array();
@@ -237,14 +229,10 @@ class NewsController extends SecureController{
 			$this->rules_array = array(
 				'title' => 'required',
 				'description' => 'required',
-				'cover_img' => 'required',
-				'date' => 'required',
 			);
 			$this->sanitize_array = array(
 				'title' => 'sanitize_string',
-				'description' => 'sanitize_string',
 				'cover_img' => 'sanitize_string',
-				'date' => 'sanitize_string',
 			);
 			$this->filter_rules = true; //filter validation rules by excluding fields not in the formdata
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
@@ -292,7 +280,7 @@ class NewsController extends SecureController{
 		$db->where("news.id", $arr_rec_id, "in");
 		$bool = $db->delete($tablename);
 		if($bool){
-			$this->set_flash_msg("Record deleted successfully", "success");
+			$this->set_flash_msg("Sikeres törlés!", "success");
 		}
 		elseif($db->getLastError()){
 			$page_error = $db->getLastError();

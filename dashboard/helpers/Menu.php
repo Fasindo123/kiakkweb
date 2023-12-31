@@ -11,55 +11,99 @@ class Menu{
 			public static $navbartopleft = array(
 		array(
 			'path' => 'home', 
-			'label' => 'Kezdőlap', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'news', 
-			'label' => 'Hírek', 
+			'label' => 'Home', 
 			'icon' => ''
 		),
 		
 		array(
 			'path' => 'courses', 
-			'label' => 'Képzések', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'oktatok', 
-			'label' => 'Oktatók', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'infrastructure', 
-			'label' => 'Infrastruktúra', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'gallery', 
-			'label' => 'Galéria', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'faqs', 
-			'label' => 'Kérdések', 
+			'label' => 'Courses', 
 			'icon' => ''
 		),
 		
 		array(
 			'path' => 'docs', 
-			'label' => 'Dokumentumok', 
+			'label' => 'Docs', 
 			'icon' => ''
 		),
 		
 		array(
-			'path' => 'users', 
-			'label' => 'Felhasználók', 
+			'path' => 'faqs', 
+			'label' => 'Faqs', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'gallery', 
+			'label' => 'Gallery', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'infrastructure', 
+			'label' => 'Infrastructure', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'news', 
+			'label' => 'News', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'oktatok', 
+			'label' => 'Oktatok', 
+			'icon' => ''
+		)
+	);
+		
+			public static $navbarsideleft = array(
+		array(
+			'path' => 'home', 
+			'label' => 'Home', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'courses', 
+			'label' => 'Courses', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'docs', 
+			'label' => 'Docs', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'faqs', 
+			'label' => 'Faqs', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'gallery', 
+			'label' => 'Gallery', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'infrastructure', 
+			'label' => 'Infrastructure', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'news', 
+			'label' => 'News', 
+			'icon' => ''
+		),
+		
+		array(
+			'path' => 'oktatok', 
+			'label' => 'Oktatok', 
 			'icon' => ''
 		)
 	);

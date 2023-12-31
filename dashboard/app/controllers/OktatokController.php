@@ -3,7 +3,7 @@
  * Oktatok Page Controller
  * @category  Controller
  */
-class OktatokController extends SecureController{
+class OktatokController extends BaseController{
 	function __construct(){
 		parent::__construct();
 		$this->tablename = "oktatok";
@@ -20,9 +20,9 @@ class OktatokController extends SecureController{
 		$tablename = $this->tablename;
 		$fields = array("id", 
 			"name", 
-			"description", 
-			"img", 
-			"short_description");
+			"short_description", 
+			"long_description", 
+			"img");
 		$pagination = $this->get_pagination(MAX_RECORD_COUNT); // get current pagination e.g array(page_number, page_limit)
 		//search table record
 		if(!empty($request->search)){
@@ -30,9 +30,9 @@ class OktatokController extends SecureController{
 			$search_condition = "(
 				oktatok.id LIKE ? OR 
 				oktatok.name LIKE ? OR 
-				oktatok.description LIKE ? OR 
-				oktatok.img LIKE ? OR 
-				oktatok.short_description LIKE ?
+				oktatok.short_description LIKE ? OR 
+				oktatok.long_description LIKE ? OR 
+				oktatok.img LIKE ?
 			)";
 			$search_params = array(
 				"%$text%","%$text%","%$text%","%$text%","%$text%"
@@ -88,9 +88,9 @@ class OktatokController extends SecureController{
 		$tablename = $this->tablename;
 		$fields = array("id", 
 			"name", 
-			"description", 
-			"img", 
-			"short_description");
+			"short_description", 
+			"long_description", 
+			"img");
 		if($value){
 			$db->where($rec_id, urldecode($value)); //select record based on field name
 		}
@@ -127,26 +127,26 @@ class OktatokController extends SecureController{
 			$tablename = $this->tablename;
 			$request = $this->request;
 			//fillable fields
-			$fields = $this->fields = array("name","description","img","short_description");
+			$fields = $this->fields = array("name","short_description","long_description","img");
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'name' => 'required',
-				'description' => 'required',
-				'img' => 'required',
 				'short_description' => 'required',
+				'long_description' => 'required',
+				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'name' => 'sanitize_string',
-				'description' => 'sanitize_string',
-				'img' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
+				'long_description' => 'sanitize_string',
+				'img' => 'sanitize_string',
 			);
 			$this->filter_vals = true; //set whether to remove empty fields
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
 				$rec_id = $this->rec_id = $db->insert($tablename, $modeldata);
 				if($rec_id){
-					$this->set_flash_msg("Record added successfully", "success");
+					$this->set_flash_msg("Sikeres létrehozás!", "success");
 					return	$this->redirect("oktatok");
 				}
 				else{
@@ -169,20 +169,20 @@ class OktatokController extends SecureController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		 //editable fields
-		$fields = $this->fields = array("id","name","description","img","short_description");
+		$fields = $this->fields = array("id","name","short_description","long_description","img");
 		if($formdata){
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'name' => 'required',
-				'description' => 'required',
-				'img' => 'required',
 				'short_description' => 'required',
+				'long_description' => 'required',
+				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'name' => 'sanitize_string',
-				'description' => 'sanitize_string',
-				'img' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
+				'long_description' => 'sanitize_string',
+				'img' => 'sanitize_string',
 			);
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
@@ -190,7 +190,7 @@ class OktatokController extends SecureController{
 				$bool = $db->update($tablename, $modeldata);
 				$numRows = $db->getRowCount(); //number of affected rows. 0 = no record field updated
 				if($bool && $numRows){
-					$this->set_flash_msg("Record updated successfully", "success");
+					$this->set_flash_msg("Sikeres szerkesztés!", "success");
 					return $this->redirect("oktatok");
 				}
 				else{
@@ -226,7 +226,7 @@ class OktatokController extends SecureController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		//editable fields
-		$fields = $this->fields = array("id","name","description","img","short_description");
+		$fields = $this->fields = array("id","name","short_description","long_description","img");
 		$page_error = null;
 		if($formdata){
 			$postdata = array();
@@ -236,15 +236,15 @@ class OktatokController extends SecureController{
 			$postdata = $this->format_request_data($postdata);
 			$this->rules_array = array(
 				'name' => 'required',
-				'description' => 'required',
-				'img' => 'required',
 				'short_description' => 'required',
+				'long_description' => 'required',
+				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'name' => 'sanitize_string',
-				'description' => 'sanitize_string',
-				'img' => 'sanitize_string',
 				'short_description' => 'sanitize_string',
+				'long_description' => 'sanitize_string',
+				'img' => 'sanitize_string',
 			);
 			$this->filter_rules = true; //filter validation rules by excluding fields not in the formdata
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
@@ -292,7 +292,7 @@ class OktatokController extends SecureController{
 		$db->where("oktatok.id", $arr_rec_id, "in");
 		$bool = $db->delete($tablename);
 		if($bool){
-			$this->set_flash_msg("Record deleted successfully", "success");
+			$this->set_flash_msg("Sikeres törlés!", "success");
 		}
 		elseif($db->getLastError()){
 			$page_error = $db->getLastError();

@@ -8,7 +8,8 @@ define("ROOT", str_replace("\\", "/", dirname(__FILE__)) . "/");
 // return the application directory name.
 define("ROOT_DIR_NAME", basename(ROOT));
 
-define("SITE_NAME", "KIAKK - Dashboard");
+define("SITE_NAME", "dashboard");
+
 
 // Get Site Address Dynamically
 $site_addr = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] !== "off" ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["SCRIPT_NAME"]);
@@ -62,7 +63,7 @@ define("HOME_PAGE", "Home");
 define("DEFAULT_PAGE", "index"); //Default Controller Class
 define("DEFAULT_PAGE_ACTION", "index"); //Default Controller Action
 define("DEFAULT_LAYOUT", LAYOUTS_DIR . "main_layout.php");
-define("DEFAULT_LANGUAGE", "hungarian"); //Default Language
+define("DEFAULT_LANGUAGE", "english"); //Default Language
 
 // Page Meta Information
 define("META_AUTHOR", "");
@@ -95,7 +96,7 @@ define("MAX_RECORD_COUNT", 20); //Default Max Records to Retrieve  per Page
 define("ORDER_TYPE", "DESC");  //Default Order Type
 
 // Active User Profile Details
-define('USER_ID',(isset($_SESSION[APP_ID.'user_data']) ? $_SESSION[APP_ID.'user_data']['id'] : null ));
-define('USER_NAME',(isset($_SESSION[APP_ID.'user_data']) ? $_SESSION[APP_ID.'user_data']['username'] : null ));
-define('USER_EMAIL',(isset($_SESSION[APP_ID.'user_data']) ? $_SESSION[APP_ID.'user_data']['email'] : null ));
-define('USER_PHOTO',(isset($_SESSION[APP_ID.'user_data']) ? $_SESSION[APP_ID.'user_data']['photo'] : null ));
+
+
+
+

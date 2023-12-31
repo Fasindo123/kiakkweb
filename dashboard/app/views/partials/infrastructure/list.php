@@ -113,12 +113,11 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th class="td-sno">#</th>
                                                 <th  class="td-id"> Id</th>
                                                 <th  class="td-title"> Title</th>
                                                 <th  class="td-short_description"> Short Description</th>
                                                 <th  class="td-long_description"> Long Description</th>
-                                                <th  class="td-cover_img"> Cover Img</th>
+                                                <th  class="td-img"> Img</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -140,7 +139,6 @@ $show_pagination = $this->show_pagination;
                                                             <span class="custom-control-label"></span>
                                                         </label>
                                                     </th>
-                                                    <th class="td-sno"><?php echo $counter; ?></th>
                                                     <td class="td-id"><a href="<?php print_link("infrastructure/view/$data[id]") ?>"><?php echo $data['id']; ?></a></td>
                                                     <td class="td-title">
                                                         <span  data-value="<?php echo $data['title']; ?>" 
@@ -149,7 +147,7 @@ $show_pagination = $this->show_pagination;
                                                             data-name="title" 
                                                             data-title="Enter Title" 
                                                             data-placement="left" 
-                                                            data-toggle="click" 
+                                                            data-toggle="dblclick" 
                                                             data-type="text" 
                                                             data-mode="popover" 
                                                             data-showbuttons="left" 
@@ -163,7 +161,7 @@ $show_pagination = $this->show_pagination;
                                                             data-name="short_description" 
                                                             data-title="Enter Short Description" 
                                                             data-placement="left" 
-                                                            data-toggle="click" 
+                                                            data-toggle="dblclick" 
                                                             data-type="textarea" 
                                                             data-mode="popover" 
                                                             data-showbuttons="left" 
@@ -177,7 +175,7 @@ $show_pagination = $this->show_pagination;
                                                             data-name="long_description" 
                                                             data-title="Enter Long Description" 
                                                             data-placement="left" 
-                                                            data-toggle="click" 
+                                                            data-toggle="dblclick" 
                                                             data-type="textarea" 
                                                             data-mode="popover" 
                                                             data-showbuttons="left" 
@@ -185,31 +183,31 @@ $show_pagination = $this->show_pagination;
                                                             <?php echo $data['long_description']; ?> 
                                                         </span>
                                                     </td>
-                                                    <td class="td-cover_img">
-                                                        <span  data-value="<?php echo $data['cover_img']; ?>" 
+                                                    <td class="td-img">
+                                                        <span  data-value="<?php echo $data['img']; ?>" 
                                                             data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("infrastructure/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="cover_img" 
+                                                            data-name="img" 
                                                             data-title="Browse..." 
                                                             data-placement="left" 
-                                                            data-toggle="click" 
+                                                            data-toggle="dblclick" 
                                                             data-type="text" 
                                                             data-mode="popover" 
                                                             data-showbuttons="left" 
                                                             class="is-editable" >
-                                                            <?php echo $data['cover_img']; ?> 
+                                                            <?php echo $data['img']; ?> 
                                                         </span>
                                                     </td>
                                                     <th class="td-btn">
                                                         <a class="btn btn-sm btn-success has-tooltip" title="View Record" href="<?php print_link("infrastructure/view/$rec_id"); ?>">
-                                                            <i class="fa fa-eye"></i> View
+                                                            <i class="fa fa-eye"></i> Megtekint
                                                         </a>
                                                         <a class="btn btn-sm btn-info has-tooltip" title="Edit This Record" href="<?php print_link("infrastructure/edit/$rec_id"); ?>">
-                                                            <i class="fa fa-edit"></i> Edit
+                                                            <i class="fa fa-edit"></i> Szerkeszt
                                                         </a>
-                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("infrastructure/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Are you sure you want to delete this record?" data-display-style="modal">
+                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("infrastructure/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
                                                             <i class="fa fa-times"></i>
-                                                            Delete
+                                                            Törlés
                                                         </a>
                                                     </th>
                                                 </tr>
@@ -227,7 +225,7 @@ $show_pagination = $this->show_pagination;
                                         if(empty($records)){
                                         ?>
                                         <h4 class="bg-light text-center border-top text-muted animated bounce  p-3">
-                                            <i class="fa fa-ban"></i> No record found
+                                            <i class="fa fa-ban"></i> Nem található adat!
                                         </h4>
                                         <?php
                                         }
@@ -245,7 +243,7 @@ $show_pagination = $this->show_pagination;
                                                     </button>
                                                     <div class="dropup export-btn-holder mx-1">
                                                         <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fa fa-save"></i> Export
+                                                            <i class="fa fa-save"></i> Letöltés
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                             <?php $export_print_link = $this->set_current_page_link(array('format' => 'print')); ?>

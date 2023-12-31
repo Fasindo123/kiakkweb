@@ -61,7 +61,7 @@ $redirect_to = $this->redirect_to;
                             <div class="form-group form-submit-btn-holder text-center mt-3">
                                 <div class="form-ajax-status"></div>
                                 <button class="btn btn-primary" type="submit">
-                                    Submit
+                                    Létrehozás
                                     <i class="fa fa-send"></i>
                                 </button>
                             </div>

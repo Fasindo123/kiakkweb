@@ -113,12 +113,10 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th class="td-sno">#</th>
-                                                <th  class="td-id"> Id</th>
-                                                <th  class="td-title"> Title</th>
-                                                <th  class="td-description"> Description</th>
-                                                <th  class="td-cover_img"> Cover Img</th>
-                                                <th  class="td-date"> Date</th>
+                                                <th  class="td-id"> Azonosító</th>
+                                                <th  class="td-title"> Cím</th>
+                                                <th  class="td-cover_img"> Borítókép</th>
+                                                <th  class="td-date"> Dátum</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -140,16 +138,15 @@ $show_pagination = $this->show_pagination;
                                                             <span class="custom-control-label"></span>
                                                         </label>
                                                     </th>
-                                                    <th class="td-sno"><?php echo $counter; ?></th>
                                                     <td class="td-id"><a href="<?php print_link("news/view/$data[id]") ?>"><?php echo $data['id']; ?></a></td>
                                                     <td class="td-title">
                                                         <span  data-value="<?php echo $data['title']; ?>" 
                                                             data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("news/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="title" 
-                                                            data-title="Enter Title" 
+                                                            data-title="Adj meg címet!" 
                                                             data-placement="left" 
-                                                            data-toggle="click" 
+                                                            data-toggle="dblclick" 
                                                             data-type="text" 
                                                             data-mode="popover" 
                                                             data-showbuttons="left" 
@@ -157,61 +154,18 @@ $show_pagination = $this->show_pagination;
                                                             <?php echo $data['title']; ?> 
                                                         </span>
                                                     </td>
-                                                    <td class="td-description">
-                                                        <span  data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("news/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="description" 
-                                                            data-title="Enter Description" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="textarea" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['description']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-cover_img">
-                                                        <span  data-value="<?php echo $data['cover_img']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("news/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="cover_img" 
-                                                            data-title="Browse..." 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['cover_img']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-date">
-                                                        <span  data-flatpickr="{ enableTime: false, minDate: '', maxDate: ''}" 
-                                                            data-value="<?php echo $data['date']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("news/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="date" 
-                                                            data-title="Enter Date" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="flatdatetimepicker" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['date']; ?> 
-                                                        </span>
-                                                    </td>
+                                                    <td class="td-cover_img"><?php Html :: page_img($data['cover_img'],50,50,1); ?></td>
+                                                    <td class="td-date"> <?php echo $data['date']; ?></td>
                                                     <th class="td-btn">
                                                         <a class="btn btn-sm btn-success has-tooltip" title="View Record" href="<?php print_link("news/view/$rec_id"); ?>">
-                                                            <i class="fa fa-eye"></i> View
+                                                            <i class="fa fa-eye"></i> Megtekint
                                                         </a>
                                                         <a class="btn btn-sm btn-info has-tooltip" title="Edit This Record" href="<?php print_link("news/edit/$rec_id"); ?>">
-                                                            <i class="fa fa-edit"></i> Edit
+                                                            <i class="fa fa-edit"></i> Szerkeszt
                                                         </a>
-                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("news/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Are you sure you want to delete this record?" data-display-style="modal">
+                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("news/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
                                                             <i class="fa fa-times"></i>
-                                                            Delete
+                                                            Törlés
                                                         </a>
                                                     </th>
                                                 </tr>
@@ -229,7 +183,7 @@ $show_pagination = $this->show_pagination;
                                         if(empty($records)){
                                         ?>
                                         <h4 class="bg-light text-center border-top text-muted animated bounce  p-3">
-                                            <i class="fa fa-ban"></i> No record found
+                                            <i class="fa fa-ban"></i> Nem található adat!
                                         </h4>
                                         <?php
                                         }
@@ -247,7 +201,7 @@ $show_pagination = $this->show_pagination;
                                                     </button>
                                                     <div class="dropup export-btn-holder mx-1">
                                                         <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fa fa-save"></i> Export
+                                                            <i class="fa fa-save"></i> Letöltés
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                             <?php $export_print_link = $this->set_current_page_link(array('format' => 'print')); ?>

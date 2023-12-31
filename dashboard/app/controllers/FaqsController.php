@@ -3,7 +3,7 @@
  * Faqs Page Controller
  * @category  Controller
  */
-class FaqsController extends SecureController{
+class FaqsController extends BaseController{
 	function __construct(){
 		parent::__construct();
 		$this->tablename = "faqs";
@@ -136,7 +136,7 @@ class FaqsController extends SecureController{
 			if($this->validated()){
 				$rec_id = $this->rec_id = $db->insert($tablename, $modeldata);
 				if($rec_id){
-					$this->set_flash_msg("Record added successfully", "success");
+					$this->set_flash_msg("Sikeres létrehozás!", "success");
 					return	$this->redirect("faqs");
 				}
 				else{
@@ -176,7 +176,7 @@ class FaqsController extends SecureController{
 				$bool = $db->update($tablename, $modeldata);
 				$numRows = $db->getRowCount(); //number of affected rows. 0 = no record field updated
 				if($bool && $numRows){
-					$this->set_flash_msg("Record updated successfully", "success");
+					$this->set_flash_msg("Sikeres szerkesztés!", "success");
 					return $this->redirect("faqs");
 				}
 				else{
@@ -274,7 +274,7 @@ class FaqsController extends SecureController{
 		$db->where("faqs.id", $arr_rec_id, "in");
 		$bool = $db->delete($tablename);
 		if($bool){
-			$this->set_flash_msg("Record deleted successfully", "success");
+			$this->set_flash_msg("Sikeres törlés!", "success");
 		}
 		elseif($db->getLastError()){
 			$page_error = $db->getLastError();

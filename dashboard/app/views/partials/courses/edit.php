@@ -18,7 +18,7 @@ $redirect_to = $this->redirect_to;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Képzés szerkesztése</h4>
+                    <h4 class="record-title">Edit  Courses</h4>
                 </div>
             </div>
         </div>
@@ -29,73 +29,60 @@ $redirect_to = $this->redirect_to;
     <div  class="">
         <div class="container">
             <div class="row ">
-                <div class="col-md-12 comp-grid">
+                <div class="col-md-7 comp-grid">
                     <?php $this :: display_page_errors(); ?>
                     <div  class="bg-light p-3 animated fadeIn page-content">
                         <form novalidate  id="" role="form" enctype="multipart/form-data"  class="form page-form form-horizontal needs-validation" action="<?php print_link("courses/edit/$page_id/?csrf_token=$csrf_token"); ?>" method="post">
                             <div>
-                                <div class="row">
-                                    <div class="form-group col-md-12">
+                                <div class="form-group ">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label class="control-label" for="title">Title <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="">
+                                                <input id="ctrl-title"  value="<?php  echo $data['title']; ?>" type="text" placeholder="Enter Title"  required="" name="title"  class="form-control " />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="title">Cím <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="short_description">Short Description <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <input id="ctrl-title"  value="<?php  echo $data['title']; ?>" type="text" placeholder="Adj meg címet!"  required="" name="title"  class="form-control " />
+                                                    <input id="ctrl-short_description"  value="<?php  echo $data['short_description']; ?>" type="text" placeholder="Enter Short Description"  required="" name="short_description"  class="form-control " />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-12">
+                                        <div class="form-group ">
                                             <div class="row">
                                                 <div class="col-sm-4">
-                                                    <label class="control-label" for="short_description">Rövid leírás <span class="text-danger">*</span></label>
+                                                    <label class="control-label" for="long_description">Long Description <span class="text-danger">*</span></label>
                                                 </div>
                                                 <div class="col-sm-8">
                                                     <div class="">
-                                                        <input id="ctrl-short_description"  value="<?php  echo $data['short_description']; ?>" type="text" placeholder="Adj meg leírást!"  required="" name="short_description"  class="form-control " />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <div class="row">
-                                                    <div class="col-sm-4">
-                                                        <label class="control-label" for="long_description">Hosszú leírás <span class="text-danger">*</span></label>
-                                                    </div>
-                                                    <div class="col-sm-8">
-                                                        <div class="">
-                                                            <textarea placeholder="Adj meg leírást!" id="ctrl-long_description"  required="" rows="10" name="long_description" class="htmleditor form-control"><?php  echo $data['long_description']; ?></textarea>
-                                                            <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-4">
-                                                        <label class="control-label" for="user_role_id">Enter the code <span class="text-danger">*</span></label>
-                                                    </div>
-                                                    <div class="col-sm-8">
-                                                        <div class="">
-                                                            <?php Html::captcha_field(); ?>
-                                                        </div>
+                                                        <textarea placeholder="Enter Long Description" id="ctrl-long_description"  required="" rows="5" name="long_description" class=" form-control"><?php  echo $data['long_description']; ?></textarea>
+                                                        <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-ajax-status"></div>
-                                        <div class="form-group text-center">
-                                            <button class="btn btn-primary" type="submit">
-                                                Kész
-                                                <i class="fa fa-send"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <div class="form-ajax-status"></div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-primary" type="submit">
+                                            Szerkeszt
+                                            <i class="fa fa-send"></i>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>

@@ -28,20 +28,13 @@
 			Html ::  page_css('custom-style.css');
 		?>
 		<?php
-			Html ::  page_css('flatpickr.min.css');
 			Html::page_css('summernote.min.css');
 			Html ::  page_css('bootstrap-editable.css');
 			Html ::  page_css('dropzone.min.css');
 			Html ::  page_js('jquery-3.3.1.min.js');
 		?>
 	</head>
-	<?php 
-		$page_id = "index";
-		if(user_login_status() == true){
-			$page_id = "main";
-		}
-	?>
-	<body id="<?php echo $page_id ?>" class="with-login <?php echo $body_class ?>">
+	<body id="main" class="<?php echo $body_class ?>">
 		<div id="page-wrapper">
 			<!-- Show progress bar when ajax upload-->
 			<div class="progress ajax-progress-bar">
@@ -133,7 +126,6 @@
 			Html ::  page_js('bootstrap-4.3.1.min.js');
 		?>
 		<?php
-			Html ::  page_js('flatpickr.min.js');
 			Html::page_js('summernote.min.js');
 			Html ::  page_js('bootstrap-editable.js');
 			Html ::  page_js('dropzone.min.js');

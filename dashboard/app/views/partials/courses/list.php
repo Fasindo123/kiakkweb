@@ -23,18 +23,18 @@ $show_pagination = $this->show_pagination;
         <div class="container-fluid">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Képzések</h4>
+                    <h4 class="record-title">Courses</h4>
                 </div>
                 <div class="col-sm-3 ">
                     <a  class="btn btn btn-primary my-1" href="<?php print_link("courses/add") ?>">
                         <i class="fa fa-plus"></i>                              
-                        Új képzés létrehozása 
+                        Add New Courses 
                     </a>
                 </div>
                 <div class="col-sm-4 ">
                     <form  class="search" action="<?php print_link('courses'); ?>" method="get">
                         <div class="input-group">
-                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Keresés" />
+                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Search" />
                                 <div class="input-group-append">
                                     <button class="btn btn-primary"><i class="fa fa-search"></i></button>
                                 </div>
@@ -113,10 +113,10 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th  class="td-id"> ID</th>
-                                                <th  class="td-title"> Cím</th>
-                                                <th  class="td-short_description"> Rövid leírás</th>
-                                                <th  class="td-long_description"> Hosszú leírás</th>
+                                                <th  class="td-id"> Id</th>
+                                                <th  class="td-title"> Title</th>
+                                                <th  class="td-short_description"> Short Description</th>
+                                                <th  class="td-long_description"> Long Description</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -138,10 +138,51 @@ $show_pagination = $this->show_pagination;
                                                             <span class="custom-control-label"></span>
                                                         </label>
                                                     </th>
-                                                    <td class="td-id"> <?php echo $data['id']; ?></td>
-                                                    <td class="td-title"> <?php echo $data['title']; ?></td>
-                                                    <td class="td-short_description"> <?php echo $data['short_description']; ?></td>
-                                                    <td class="td-long_description"> <?php echo $data['long_description']; ?></td>
+                                                    <td class="td-id"><a href="<?php print_link("courses/view/$data[id]") ?>"><?php echo $data['id']; ?></a></td>
+                                                    <td class="td-title">
+                                                        <span  data-value="<?php echo $data['title']; ?>" 
+                                                            data-pk="<?php echo $data['id'] ?>" 
+                                                            data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
+                                                            data-name="title" 
+                                                            data-title="Enter Title" 
+                                                            data-placement="left" 
+                                                            data-toggle="dblclick" 
+                                                            data-type="text" 
+                                                            data-mode="popover" 
+                                                            data-showbuttons="left" 
+                                                            class="is-editable" >
+                                                            <?php echo $data['title']; ?> 
+                                                        </span>
+                                                    </td>
+                                                    <td class="td-short_description">
+                                                        <span  data-value="<?php echo $data['short_description']; ?>" 
+                                                            data-pk="<?php echo $data['id'] ?>" 
+                                                            data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
+                                                            data-name="short_description" 
+                                                            data-title="Enter Short Description" 
+                                                            data-placement="left" 
+                                                            data-toggle="dblclick" 
+                                                            data-type="text" 
+                                                            data-mode="popover" 
+                                                            data-showbuttons="left" 
+                                                            class="is-editable" >
+                                                            <?php echo $data['short_description']; ?> 
+                                                        </span>
+                                                    </td>
+                                                    <td class="td-long_description">
+                                                        <span  data-pk="<?php echo $data['id'] ?>" 
+                                                            data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
+                                                            data-name="long_description" 
+                                                            data-title="Enter Long Description" 
+                                                            data-placement="left" 
+                                                            data-toggle="dblclick" 
+                                                            data-type="textarea" 
+                                                            data-mode="popover" 
+                                                            data-showbuttons="left" 
+                                                            class="is-editable" >
+                                                            <?php echo $data['long_description']; ?> 
+                                                        </span>
+                                                    </td>
                                                     <th class="td-btn">
                                                         <a class="btn btn-sm btn-success has-tooltip" title="View Record" href="<?php print_link("courses/view/$rec_id"); ?>">
                                                             <i class="fa fa-eye"></i> Megtekint
@@ -149,7 +190,7 @@ $show_pagination = $this->show_pagination;
                                                         <a class="btn btn-sm btn-info has-tooltip" title="Edit This Record" href="<?php print_link("courses/edit/$rec_id"); ?>">
                                                             <i class="fa fa-edit"></i> Szerkeszt
                                                         </a>
-                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("courses/delete/$rec_id/?csrf_token=$csrf_token"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
+                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("courses/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
                                                             <i class="fa fa-times"></i>
                                                             Törlés
                                                         </a>
@@ -169,7 +210,7 @@ $show_pagination = $this->show_pagination;
                                         if(empty($records)){
                                         ?>
                                         <h4 class="bg-light text-center border-top text-muted animated bounce  p-3">
-                                            <i class="fa fa-ban"></i> Nincsenek mentett képzések!
+                                            <i class="fa fa-ban"></i> Nem található adat!
                                         </h4>
                                         <?php
                                         }
@@ -182,7 +223,7 @@ $show_pagination = $this->show_pagination;
                                         <div class="row justify-content-center">    
                                             <div class="col-md-auto justify-content-center">    
                                                 <div class="p-3 d-flex justify-content-between">    
-                                                    <button data-prompt-msg="Are you sure you want to delete these records?" data-display-style="modal" data-url="<?php print_link("courses/delete/{sel_ids}/?csrf_token=$csrf_token"); ?>" class="btn btn-sm btn-danger btn-delete-selected d-none">
+                                                    <button data-prompt-msg="Are you sure you want to delete these records?" data-display-style="modal" data-url="<?php print_link("courses/delete/{sel_ids}/?csrf_token=$csrf_token&redirect=$current_page"); ?>" class="btn btn-sm btn-danger btn-delete-selected d-none">
                                                         <i class="fa fa-times"></i> Delete Selected
                                                     </button>
                                                     <div class="dropup export-btn-holder mx-1">

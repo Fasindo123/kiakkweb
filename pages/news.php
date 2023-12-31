@@ -8,15 +8,34 @@
 
     <main class="main">
         <section id="custom-content" class="section block-section-2 is-mode bg-0">
-            <?php 
+            <div class="container" style="max-width: 50%">
+                <?php
                 if (isset($_GET["news_id"])) {
-                    $result = sqlQuery("SELECT `description` FROM `news` WHERE `id`=".$_GET["news_id"]." LIMIT 1");
-                    $result = $result->fetch_row();
-                    echo($result[0]);
+                    $result = sqlQuery("SELECT `title`, `description`, `date` FROM `news` WHERE `id`=".$_GET["news_id"]." LIMIT 1");
+                    if ($result) {
+                        $result = $result->fetch_assoc();
+                        echo    '<div class="row">
+                                    <div class="col-6">
+                                        <h6>'.$result["title"].'</h6>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <h6>'.$result["date"].'</h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-12">
+                                        '.$result["description"].'
+                                    </div>
+                                </div>';
+                    } else {
+                        echo "<h3>Hiba történt a betöltés közben! (Adatbázis hiba)</h3>";
+                    }
                 } else {
                     echo '<h3>Hiba történt a betöltés közben! (A hír azonosítója üres!)</h3>';
                 }
-            ?>
+                ?>
+            </div>
         </section>
     </main>
 

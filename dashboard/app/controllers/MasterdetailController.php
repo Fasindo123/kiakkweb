@@ -3,7 +3,7 @@
  * Display master detail pages
  * @return View
  */
-class MasterdetailController extends SecureController
+class MasterdetailController extends BaseController
 {
 	function index($master_page, $detail_page, $field_name = null, $field_value = null)
 	{

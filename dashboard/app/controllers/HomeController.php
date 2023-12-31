@@ -4,7 +4,7 @@
  * Home Page Controller
  * @category  Controller
  */
-class HomeController extends SecureController{
+class HomeController extends BaseController{
 	/**
      * Index Action
      * @return View

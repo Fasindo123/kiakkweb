@@ -21,7 +21,7 @@ $show_export_btn = $this->show_export_btn;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Képzés megtekintése</h4>
+                    <h4 class="record-title">View  Courses</h4>
                 </div>
             </div>
         </div>
@@ -46,20 +46,61 @@ $show_export_btn = $this->show_export_btn;
                                 <!-- Table Body Start -->
                                 <tbody class="page-data" id="page-data-<?php echo $page_element_id; ?>">
                                     <tr  class="td-id">
-                                        <th class="title"> ID: </th>
+                                        <th class="title"> Id: </th>
                                         <td class="value"> <?php echo $data['id']; ?></td>
                                     </tr>
                                     <tr  class="td-title">
-                                        <th class="title"> Cím: </th>
-                                        <td class="value"> <?php echo $data['title']; ?></td>
+                                        <th class="title"> Title: </th>
+                                        <td class="value">
+                                            <span  data-value="<?php echo $data['title']; ?>" 
+                                                data-pk="<?php echo $data['id'] ?>" 
+                                                data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
+                                                data-name="title" 
+                                                data-title="Enter Title" 
+                                                data-placement="left" 
+                                                data-toggle="click" 
+                                                data-type="text" 
+                                                data-mode="popover" 
+                                                data-showbuttons="left" 
+                                                class="is-editable" >
+                                                <?php echo $data['title']; ?> 
+                                            </span>
+                                        </td>
                                     </tr>
                                     <tr  class="td-short_description">
-                                        <th class="title"> Rövid leírás: </th>
-                                        <td class="value"> <?php echo $data['short_description']; ?></td>
+                                        <th class="title"> Short Description: </th>
+                                        <td class="value">
+                                            <span  data-value="<?php echo $data['short_description']; ?>" 
+                                                data-pk="<?php echo $data['id'] ?>" 
+                                                data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
+                                                data-name="short_description" 
+                                                data-title="Enter Short Description" 
+                                                data-placement="left" 
+                                                data-toggle="click" 
+                                                data-type="text" 
+                                                data-mode="popover" 
+                                                data-showbuttons="left" 
+                                                class="is-editable" >
+                                                <?php echo $data['short_description']; ?> 
+                                            </span>
+                                        </td>
                                     </tr>
                                     <tr  class="td-long_description">
-                                        <th class="title"> Hosszú leírás: </th>
-                                        <td class="value"><?php echo $data['long_description']; ?></td>
+                                        <th class="title"> Long Description: </th>
+                                        <td class="value">
+                                            <span  data-pk="<?php echo $data['id'] ?>" 
+                                                data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
+                                                data-name="long_description" 
+                                                data-title="Enter Long Description" 
+                                                data-placement="left" 
+                                                data-toggle="click" 
+                                                data-type="textarea" 
+                                                data-mode="popover" 
+                                                data-showbuttons="left" 
+                                                class="is-editable" >
+                                                <?php echo $data['long_description']; ?> 
+                                            </span>
+                                        </td>
                                     </tr>
                                 </tbody>
                                 <!-- Table Body End -->
@@ -96,7 +137,7 @@ $show_export_btn = $this->show_export_btn;
                                                 <a class="btn btn-sm btn-info"  href="<?php print_link("courses/edit/$rec_id"); ?>">
                                                     <i class="fa fa-edit"></i> Szerkeszt
                                                 </a>
-                                                <a class="btn btn-sm btn-danger record-delete-btn mx-1"  href="<?php print_link("courses/delete/$rec_id/?csrf_token=$csrf_token"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
+                                                <a class="btn btn-sm btn-danger record-delete-btn mx-1"  href="<?php print_link("courses/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
                                                     <i class="fa fa-times"></i> Törlés
                                                 </a>
                                             </div>
