@@ -43,7 +43,7 @@ $search_results = searchNews($search_query);
     <?php require_once('components/loader.php'); ?>
     <?php require_once('components/mobile-menu.php'); ?>
     <?php require_once('components/header.php'); ?>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
     <div class="search-txt">
         <p>Keresett szó: <?php echo $search_query; ?></p>
         <?php
@@ -56,8 +56,8 @@ $search_results = searchNews($search_query);
                 $cover_img = "dashboard/" . $result['cover_img'];
                 echo '<div class="col-lg-6">
                         <div class="cardBlog">
-                            <div class="cardImage"><a href="#"><img class="parallax-image" src="' . $cover_img . '" alt="' . $result['title'] . ' cikk borítóképe"></a></div>
-                            <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="#">' . $result['date'] . '</a><a class="link-blog" href="#">
+                            <div class="cardImage"><a href="pages/news.php?news_id=' . $result['id'] . '"><img class="parallax-image" src="' . $cover_img . '" alt="' . $result['title'] . ' cikk borítóképe"></a></div>
+                            <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="pages/news.php?news_id=' . $result['id'] . '">' . $result['date'] . '</a><a class="link-blog" href="pages/news.php?news_id=' . $result['id'] . '">
                             <h4 class="color-light-900 text-opacity">' . $result['title'] . '</h4></a></div>
                         </div>
                     </div>';

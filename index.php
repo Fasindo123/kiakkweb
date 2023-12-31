@@ -238,14 +238,14 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-3">
-                  <h2 class="color-900 mb-75 text-up">FAQs</h2>
+                  <h2 class="color-900 mb-75 text-up">Gyakori kérdések</h2>
                   <div class="parallax-item"><img class="parallax-image" src="assets/imgs/page/homepage1/faq1.png" alt="neuron"></div>
                   <div class="mt-105">
-                    <h6 class="color-900 mb-15">Still no luck? We can help!</h6>
-                    <p class="font-md color-600">Contact us and we’ll get back to youas soon as possible.</p>
+                    <h6 class="color-900 mb-15">Elakatt</h6>
+                    <p class="font-md color-600">Vegye fel velünk a kapcsolatot, és mi a lehető leghamarabb jelentkezünk.</p>
                   </div>
                   <div class="mt-40">
-                    <div class="grow-up"><a class="btn btn-default btn-default-sm" href="contact.php">Contact Us<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></a></div>
+                    <div class="grow-up"><a class="btn btn-default btn-default-sm" href="contact.php">Kapcsolat<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -297,16 +297,7 @@
                 
                 <!-- Letölthető rész jobb oldalra -->
                 <div class="col-lg-4 mt-2">
-                  <p>A hosszabb változatért kérem töltse le "Letöltés" vagy nyissa meg a "Több" gombra kattintva</p><br>
-                  <p class="color-900 mb-15">Letöltés</p>
-                  <p class="font-md color-600">Több</p>
-
-                  <!-- vagy:
-                <div class="col-lg-4 mt-2">
-                  <p>A hosszabb változatért kérem töltse le "Letöltés és Több információ" vagy nyissa meg a "Több" gombra kattintva</p><br>
-                  <p class="color-900 mb-15"><a href="download_doc1.php">Letöltés és Több információ</a></p>
-                </div>
-                -->
+                  <div class="grow-up"><a class="btn btn-default btn-default-sm" href="#" target="_blank">Letöltés<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></a></div>
                 </div>
               </div>
             </div>
@@ -320,7 +311,7 @@
             <div class="accordion-collapse collapse" id="docCollapseTwo" aria-labelledby="docHeadingTwo" data-bs-parent="#accordionDocs">
               <div class="row">
                 <!-- Tartalom bal oldalra -->
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                   <div class="accordion-body font-lg color-600">
                     Dokumentum 2 tartalma...
                   </div>
@@ -328,9 +319,7 @@
                 
                 <!-- Letölthető rész jobb oldalra -->
                 <div class="col-lg-4 mt-2">
-                  <h6 class="color-900 mb-15">Letöltés</h6>
-                  <p class="font-md color-600">Töltse le a Dokumentumot.</p>
-                  <div class="grow-up"><a class="btn btn-default btn-default-sm" href="download_doc2.php">Letöltés<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></a></div>
+                  <div class="grow-up"><a class="btn btn-default btn-default-sm" href="#" target="_blank">Letöltés<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></a></div>
                 </div>
               </div>
             </div>
@@ -380,10 +369,12 @@
         <div id="myModal" class="modal">
           <span class="close" id="closeIcon">&times;</span>
           <div id="more-picture-container"></div>
-        </div>     
+        </div>
+     
   <?php require_once("components/footer.php"); ?>
   </div>
   <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>
   <?php require_once("components/scripts.php"); ?>
-  </body>
+
+</body>
 </html>
