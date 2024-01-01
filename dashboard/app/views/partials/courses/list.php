@@ -116,7 +116,6 @@ $show_pagination = $this->show_pagination;
                                                 <th  class="td-id"> Azonosító</th>
                                                 <th  class="td-title"> Cím</th>
                                                 <th  class="td-short_description"> Rövid leírás</th>
-                                                <th  class="td-long_description"> Hosszú leírás</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -168,8 +167,6 @@ $show_pagination = $this->show_pagination;
                                                             class="is-editable" >
                                                             <?php echo $data['short_description']; ?> 
                                                         </span>
-                                                    </td>
-                                                    <td class="td-long_description"><div><?php echo $data['long_description']; ?></div>
                                                     </td>
                                                     <th class="td-btn">
                                                         <a class="btn btn-sm btn-success has-tooltip" title="View Record" href="<?php print_link("courses/view/$rec_id"); ?>">
