@@ -41,14 +41,24 @@
                     </li>
                     <li><a href="contact.php">Kapcsolat</a></li>
                   </ul>
+                  
                 </nav>
               </div>
             </div>
             <div  id="navbarSupportedContent" id="search">
-              <form role="search" method="get" action="search.php">
+              <!-- <form role="search" method="get" action="search.php">
                 <input name="s" id="search-text" type="search" placeholder="Keresés..." aria-label="Search">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form> -->
+
+              <form role="search" method="get" action="search.php">
+                <div class="search-box">
+                  <button class="btn-search"><i class="fas fa-search"></i></button>
+                  <input type="search" class="input-search" name="s" id="search-text" placeholder="Keresés..." aria-label="Search">
+                </div>
               </form>
+
+
             </div>
             <div class="header-account d-flex"><a class="dark-light-mode dark-mode" href="#"></a>
             <a class="menu-mobile mobile-nav-toggle d-xl-none" href="javascript:void(0);"><span class="item-menu"><span class="font-lg text-white">MENU</span><img class="hover-rotate" alt="neuron" src="assets/imgs/template/icons/menu1.svg"></span></a>

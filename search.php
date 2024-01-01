@@ -43,8 +43,10 @@ $search_results = searchNews($search_query);
     <?php require_once('components/loader.php'); ?>
     <?php require_once('components/mobile-menu.php'); ?>
     <?php require_once('components/header.php'); ?>
+
     <br><br><br><br><br><br>
-    <div class="search-txt">
+
+    <div class="container search-txt">
         <p>Keresett szó: <?php echo $search_query; ?></p>
         <?php
         // Ellenőrizze, hogy vannak-e találatok
@@ -64,7 +66,7 @@ $search_results = searchNews($search_query);
             }
             echo '</div></div>';
         } else {
-            echo '<p style="color: red; border: 2px solid red; padding: 10px; width: 50%; margin: 0 auto; text-align: center;">Nincs találat.</p>';
+            echo '<p class="fw-bold" style="color: red; border: 2px solid red; padding: 10px; width: 50%; margin: 0 auto; text-align: center;">Nincs találat.</p>';
         }
         ?>
     </div>

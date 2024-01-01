@@ -1,5 +1,5 @@
 <footer class="footer">
-        <div class="container">
+        <div class="footer-container">
           <div class="row">
             <div class="footer-col">
               <h4><i class="fa-solid fa-folder-open"></i> Menü</h4>
