@@ -107,6 +107,12 @@ $show_pagination = $this->show_pagination;
                                     <table class="table  table-striped table-sm text-left">
                                         <thead class="table-header bg-light">
                                             <tr>
+                                                <th class="td-checkbox">
+                                                    <label class="custom-control custom-checkbox custom-control-inline">
+                                                        <input class="toggle-check-all custom-control-input" type="checkbox" />
+                                                        <span class="custom-control-label"></span>
+                                                    </label>
+                                                </th>
                                                 <th  class="td-id"> Azonosító</th>
                                                 <th  class="td-username"> Felhasználónév</th>
                                                 <th  class="td-name"> Név</th>
@@ -127,120 +133,141 @@ $show_pagination = $this->show_pagination;
                                             $counter++;
                                             ?>
                                             <tr>
-                                                <td class="td-id"><a href="<?php print_link("users/view/$data[id]") ?>"><?php echo $data['id']; ?></a></td>
-                                                <td class="td-username">
-                                                    <span  data-value="<?php echo $data['username']; ?>" 
-                                                        data-pk="<?php echo $data['id'] ?>" 
-                                                        data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
-                                                        data-name="username" 
-                                                        data-title="Adj meg felhasználónevet" 
-                                                        data-placement="left" 
-                                                        data-toggle="click" 
-                                                        data-type="text" 
-                                                        data-mode="popover" 
-                                                        data-showbuttons="left" 
-                                                        class="is-editable" >
-                                                        <?php echo $data['username']; ?> 
-                                                    </span>
-                                                </td>
-                                                <td class="td-name">
-                                                    <span  data-value="<?php echo $data['name']; ?>" 
-                                                        data-pk="<?php echo $data['id'] ?>" 
-                                                        data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
-                                                        data-name="name" 
-                                                        data-title="Adj meg nevet!" 
-                                                        data-placement="left" 
-                                                        data-toggle="click" 
-                                                        data-type="text" 
-                                                        data-mode="popover" 
-                                                        data-showbuttons="left" 
-                                                        class="is-editable" >
-                                                        <?php echo $data['name']; ?> 
-                                                    </span>
-                                                </td>
-                                                <td class="td-email"><a href="<?php print_link("mailto:$data[email]") ?>"><?php echo $data['email']; ?></a></td>
-                                                <td class="td-img"><?php Html :: page_img($data['img'],50,50,1); ?></td>
-                                            </tr>
-                                            <?php 
+                                                <th class=" td-checkbox">
+                                                    <label class="custom-control custom-checkbox custom-control-inline">
+                                                        <input class="optioncheck custom-control-input" name="optioncheck[]" value="<?php echo $data['id'] ?>" type="checkbox" />
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </th>
+                                                    <td class="td-id"><a href="<?php print_link("users/view/$data[id]") ?>"><?php echo $data['id']; ?></a></td>
+                                                    <td class="td-username">
+                                                        <span  data-value="<?php echo $data['username']; ?>" 
+                                                            data-pk="<?php echo $data['id'] ?>" 
+                                                            data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
+                                                            data-name="username" 
+                                                            data-title="Adj meg felhasználónevet" 
+                                                            data-placement="left" 
+                                                            data-toggle="click" 
+                                                            data-type="text" 
+                                                            data-mode="popover" 
+                                                            data-showbuttons="left" 
+                                                            class="is-editable" >
+                                                            <?php echo $data['username']; ?> 
+                                                        </span>
+                                                    </td>
+                                                    <td class="td-name">
+                                                        <span  data-value="<?php echo $data['name']; ?>" 
+                                                            data-pk="<?php echo $data['id'] ?>" 
+                                                            data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
+                                                            data-name="name" 
+                                                            data-title="Adj meg nevet!" 
+                                                            data-placement="left" 
+                                                            data-toggle="click" 
+                                                            data-type="text" 
+                                                            data-mode="popover" 
+                                                            data-showbuttons="left" 
+                                                            class="is-editable" >
+                                                            <?php echo $data['name']; ?> 
+                                                        </span>
+                                                    </td>
+                                                    <td class="td-email"><a href="<?php print_link("mailto:$data[email]") ?>"><?php echo $data['email']; ?></a></td>
+                                                    <td class="td-img"><?php Html :: page_img($data['img'],50,50,1); ?></td>
+                                                    <th class="td-btn">
+                                                        <a class="btn btn-sm btn-success has-tooltip" title="View Record" href="<?php print_link("users/view/$rec_id"); ?>">
+                                                            <i class="fa fa-eye"></i> Megtekint
+                                                        </a>
+                                                        <a class="btn btn-sm btn-info has-tooltip" title="Edit This Record" href="<?php print_link("users/edit/$rec_id"); ?>">
+                                                            <i class="fa fa-edit"></i> Szerkeszt
+                                                        </a>
+                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("users/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
+                                                            <i class="fa fa-times"></i>
+                                                            Törlés
+                                                        </a>
+                                                    </th>
+                                                </tr>
+                                                <?php 
+                                                }
+                                                ?>
+                                                <!--endrecord-->
+                                            </tbody>
+                                            <tbody class="search-data" id="search-data-<?php echo $page_element_id; ?>"></tbody>
+                                            <?php
                                             }
                                             ?>
-                                            <!--endrecord-->
-                                        </tbody>
-                                        <tbody class="search-data" id="search-data-<?php echo $page_element_id; ?>"></tbody>
+                                        </table>
+                                        <?php 
+                                        if(empty($records)){
+                                        ?>
+                                        <h4 class="bg-light text-center border-top text-muted animated bounce  p-3">
+                                            <i class="fa fa-ban"></i> Nem található adat!
+                                        </h4>
                                         <?php
                                         }
                                         ?>
-                                    </table>
-                                    <?php 
-                                    if(empty($records)){
-                                    ?>
-                                    <h4 class="bg-light text-center border-top text-muted animated bounce  p-3">
-                                        <i class="fa fa-ban"></i> Nem található adat!
-                                    </h4>
+                                    </div>
                                     <?php
-                                    }
+                                    if( $show_footer && !empty($records)){
                                     ?>
-                                </div>
-                                <?php
-                                if( $show_footer && !empty($records)){
-                                ?>
-                                <div class=" border-top mt-2">
-                                    <div class="row justify-content-center">    
-                                        <div class="col-md-auto justify-content-center">    
-                                            <div class="p-3 d-flex justify-content-between">    
-                                                <div class="dropup export-btn-holder mx-1">
-                                                    <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fa fa-save"></i> Letöltés
+                                    <div class=" border-top mt-2">
+                                        <div class="row justify-content-center">    
+                                            <div class="col-md-auto justify-content-center">    
+                                                <div class="p-3 d-flex justify-content-between">    
+                                                    <button data-prompt-msg="Are you sure you want to delete these records?" data-display-style="modal" data-url="<?php print_link("users/delete/{sel_ids}/?csrf_token=$csrf_token&redirect=$current_page"); ?>" class="btn btn-sm btn-danger btn-delete-selected d-none">
+                                                        <i class="fa fa-times"></i> Delete Selected
                                                     </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <?php $export_print_link = $this->set_current_page_link(array('format' => 'print')); ?>
-                                                        <a class="dropdown-item export-link-btn" data-format="print" href="<?php print_link($export_print_link); ?>" target="_blank">
-                                                            <img src="<?php print_link('assets/images/print.png') ?>" class="mr-2" /> PRINT
-                                                            </a>
-                                                            <?php $export_pdf_link = $this->set_current_page_link(array('format' => 'pdf')); ?>
-                                                            <a class="dropdown-item export-link-btn" data-format="pdf" href="<?php print_link($export_pdf_link); ?>" target="_blank">
-                                                                <img src="<?php print_link('assets/images/pdf.png') ?>" class="mr-2" /> PDF
+                                                    <div class="dropup export-btn-holder mx-1">
+                                                        <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fa fa-save"></i> Letöltés
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <?php $export_print_link = $this->set_current_page_link(array('format' => 'print')); ?>
+                                                            <a class="dropdown-item export-link-btn" data-format="print" href="<?php print_link($export_print_link); ?>" target="_blank">
+                                                                <img src="<?php print_link('assets/images/print.png') ?>" class="mr-2" /> PRINT
                                                                 </a>
-                                                                <?php $export_word_link = $this->set_current_page_link(array('format' => 'word')); ?>
-                                                                <a class="dropdown-item export-link-btn" data-format="word" href="<?php print_link($export_word_link); ?>" target="_blank">
-                                                                    <img src="<?php print_link('assets/images/doc.png') ?>" class="mr-2" /> WORD
+                                                                <?php $export_pdf_link = $this->set_current_page_link(array('format' => 'pdf')); ?>
+                                                                <a class="dropdown-item export-link-btn" data-format="pdf" href="<?php print_link($export_pdf_link); ?>" target="_blank">
+                                                                    <img src="<?php print_link('assets/images/pdf.png') ?>" class="mr-2" /> PDF
                                                                     </a>
-                                                                    <?php $export_csv_link = $this->set_current_page_link(array('format' => 'csv')); ?>
-                                                                    <a class="dropdown-item export-link-btn" data-format="csv" href="<?php print_link($export_csv_link); ?>" target="_blank">
-                                                                        <img src="<?php print_link('assets/images/csv.png') ?>" class="mr-2" /> CSV
+                                                                    <?php $export_word_link = $this->set_current_page_link(array('format' => 'word')); ?>
+                                                                    <a class="dropdown-item export-link-btn" data-format="word" href="<?php print_link($export_word_link); ?>" target="_blank">
+                                                                        <img src="<?php print_link('assets/images/doc.png') ?>" class="mr-2" /> WORD
                                                                         </a>
-                                                                        <?php $export_excel_link = $this->set_current_page_link(array('format' => 'excel')); ?>
-                                                                        <a class="dropdown-item export-link-btn" data-format="excel" href="<?php print_link($export_excel_link); ?>" target="_blank">
-                                                                            <img src="<?php print_link('assets/images/xsl.png') ?>" class="mr-2" /> EXCEL
+                                                                        <?php $export_csv_link = $this->set_current_page_link(array('format' => 'csv')); ?>
+                                                                        <a class="dropdown-item export-link-btn" data-format="csv" href="<?php print_link($export_csv_link); ?>" target="_blank">
+                                                                            <img src="<?php print_link('assets/images/csv.png') ?>" class="mr-2" /> CSV
                                                                             </a>
+                                                                            <?php $export_excel_link = $this->set_current_page_link(array('format' => 'excel')); ?>
+                                                                            <a class="dropdown-item export-link-btn" data-format="excel" href="<?php print_link($export_excel_link); ?>" target="_blank">
+                                                                                <img src="<?php print_link('assets/images/xsl.png') ?>" class="mr-2" /> EXCEL
+                                                                                </a>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col">   
-                                                                <?php
-                                                                if($show_pagination == true){
-                                                                $pager = new Pagination($total_records, $record_count);
-                                                                $pager->route = $this->route;
-                                                                $pager->show_page_count = true;
-                                                                $pager->show_record_count = true;
-                                                                $pager->show_page_limit =true;
-                                                                $pager->limit_count = $this->limit_count;
-                                                                $pager->show_page_number_list = true;
-                                                                $pager->pager_link_range=5;
-                                                                $pager->render();
-                                                                }
-                                                                ?>
+                                                                <div class="col">   
+                                                                    <?php
+                                                                    if($show_pagination == true){
+                                                                    $pager = new Pagination($total_records, $record_count);
+                                                                    $pager->route = $this->route;
+                                                                    $pager->show_page_count = true;
+                                                                    $pager->show_record_count = true;
+                                                                    $pager->show_page_limit =true;
+                                                                    $pager->limit_count = $this->limit_count;
+                                                                    $pager->show_page_number_list = true;
+                                                                    $pager->pager_link_range=5;
+                                                                    $pager->render();
+                                                                    }
+                                                                    ?>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                        <?php
+                                                        }
+                                                        ?>
                                                     </div>
-                                                    <?php
-                                                    }
-                                                    ?>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
