@@ -23,7 +23,7 @@ class AccountController extends SecureController{
 			"email");
 		$user = $db->getOne($tablename , $fields);
 		if(!empty($user)){
-			$page_title = $this->view->page_title = "My Account";
+			$page_title = $this->view->page_title = "Fiókom";
 			$this->render_view("account/view.php", $user);
 		}
 		else{
@@ -88,7 +88,7 @@ class AccountController extends SecureController{
 		}
 		$db->where("users.id", $rec_id);;
 		$data = $db->getOne($tablename, $fields);
-		$page_title = $this->view->page_title = "My Account";
+		$page_title = $this->view->page_title = "Fiókom";
 		if(!$data){
 			$this->set_page_error();
 		}

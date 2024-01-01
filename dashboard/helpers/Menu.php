@@ -43,6 +43,12 @@ class Menu{
 			'path' => 'oktatok', 
 			'label' => 'Oktatók', 
 			'icon' => '<i class="fa fa-users "></i>'
+		),
+		
+		array(
+			'path' => 'users', 
+			'label' => 'Felhasználók', 
+			'icon' => '<i class="fa fa-user "></i>'
 		)
 	);
 		

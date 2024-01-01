@@ -18,7 +18,7 @@ $redirect_to = $this->redirect_to;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">My Account</h4>
+                    <h4 class="record-title">Fiókom</h4>
                 </div>
             </div>
         </div>
@@ -37,11 +37,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="username">Username <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="username">Felhasználónév <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <input id="ctrl-username"  value="<?php  echo $data['username']; ?>" type="text" placeholder="Enter Username"  required="" name="username"  data-url="api/json/account_username_value_exist/" data-loading-msg="Checking availability ..." data-available-msg="Available" data-unavailable-msg="Not available" class="form-control  ctrl-check-duplicate" />
+                                                <input id="ctrl-username"  value="<?php  echo $data['username']; ?>" type="text" placeholder="Adj meg felhasználónevet"  required="" name="username"  data-url="api/json/account_username_value_exist/" data-loading-msg="Checking availability ..." data-available-msg="Available" data-unavailable-msg="Not available" class="form-control  ctrl-check-duplicate" />
                                                     <div class="check-status"></div> 
                                                 </div>
                                             </div>
@@ -50,11 +50,11 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="name">Name <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="name">Név <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <input id="ctrl-name"  value="<?php  echo $data['name']; ?>" type="text" placeholder="Enter Name"  required="" name="name"  class="form-control " />
+                                                    <input id="ctrl-name"  value="<?php  echo $data['name']; ?>" type="text" placeholder="Adj meg nevet!"  required="" name="name"  class="form-control " />
                                                     </div>
                                                 </div>
                                             </div>
@@ -62,7 +62,7 @@ $redirect_to = $this->redirect_to;
                                         <div class="form-group ">
                                             <div class="row">
                                                 <div class="col-sm-4">
-                                                    <label class="control-label" for="img">Img <span class="text-danger">*</span></label>
+                                                    <label class="control-label" for="img">Kép <span class="text-danger">*</span></label>
                                                 </div>
                                                 <div class="col-sm-8">
                                                     <div class="">
