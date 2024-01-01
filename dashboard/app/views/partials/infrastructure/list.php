@@ -23,18 +23,18 @@ $show_pagination = $this->show_pagination;
         <div class="container-fluid">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Infrastructure</h4>
+                    <h4 class="record-title">Infrastruktúra</h4>
                 </div>
                 <div class="col-sm-3 ">
                     <a  class="btn btn btn-primary my-1" href="<?php print_link("infrastructure/add") ?>">
                         <i class="fa fa-plus"></i>                              
-                        Add New Infrastructure 
+                        Hozzáadás 
                     </a>
                 </div>
                 <div class="col-sm-4 ">
                     <form  class="search" action="<?php print_link('infrastructure'); ?>" method="get">
                         <div class="input-group">
-                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Search" />
+                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Keresés" />
                                 <div class="input-group-append">
                                     <button class="btn btn-primary"><i class="fa fa-search"></i></button>
                                 </div>
@@ -113,11 +113,11 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th  class="td-id"> Id</th>
-                                                <th  class="td-title"> Title</th>
-                                                <th  class="td-short_description"> Short Description</th>
-                                                <th  class="td-img"> Img</th>
-                                                <th  class="td-more_imgs"> More Imgs</th>
+                                                <th  class="td-id"> Azonosító</th>
+                                                <th  class="td-title"> Cím</th>
+                                                <th  class="td-short_description"> Rövid leírás</th>
+                                                <th  class="td-img"> Borítókép</th>
+                                                <th  class="td-more_imgs"> További képek</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -145,7 +145,7 @@ $show_pagination = $this->show_pagination;
                                                             data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("infrastructure/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="title" 
-                                                            data-title="Enter Title" 
+                                                            data-title="Adj meg címet!" 
                                                             data-placement="left" 
                                                             data-toggle="dblclick" 
                                                             data-type="text" 
@@ -159,7 +159,7 @@ $show_pagination = $this->show_pagination;
                                                         <span  data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("infrastructure/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="short_description" 
-                                                            data-title="Enter Short Description" 
+                                                            data-title="Adj meg rövid leírást!" 
                                                             data-placement="left" 
                                                             data-toggle="dblclick" 
                                                             data-type="textarea" 

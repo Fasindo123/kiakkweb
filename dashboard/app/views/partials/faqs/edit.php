@@ -18,7 +18,7 @@ $redirect_to = $this->redirect_to;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Edit  Faqs</h4>
+                    <h4 class="record-title">Kérdés szerkesztése</h4>
                 </div>
             </div>
         </div>
@@ -37,11 +37,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="qst">Qst <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="qst">Kérdés <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <textarea placeholder="Enter Qst" id="ctrl-qst"  required="" rows="5" name="qst" class=" form-control"><?php  echo $data['qst']; ?></textarea>
+                                                <textarea placeholder="Adj meg kérdést!" id="ctrl-qst"  required="" rows="5" name="qst" class=" form-control"><?php  echo $data['qst']; ?></textarea>
                                                 <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                             </div>
                                         </div>
@@ -50,11 +50,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="answ">Answ <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="answ">Válasz <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <textarea placeholder="Enter Answ" id="ctrl-answ"  required="" rows="5" name="answ" class=" form-control"><?php  echo $data['answ']; ?></textarea>
+                                                <textarea placeholder="Adj meg választ!" id="ctrl-answ"  required="" rows="5" name="answ" class=" form-control"><?php  echo $data['answ']; ?></textarea>
                                                 <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                             </div>
                                         </div>

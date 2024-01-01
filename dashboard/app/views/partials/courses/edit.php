@@ -18,7 +18,7 @@ $redirect_to = $this->redirect_to;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Edit  Courses</h4>
+                    <h4 class="record-title">Képzés szerkesztése</h4>
                 </div>
             </div>
         </div>

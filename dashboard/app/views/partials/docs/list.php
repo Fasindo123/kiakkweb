@@ -23,18 +23,18 @@ $show_pagination = $this->show_pagination;
         <div class="container-fluid">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Docs</h4>
+                    <h4 class="record-title">Dokumentumok</h4>
                 </div>
                 <div class="col-sm-3 ">
                     <a  class="btn btn btn-primary my-1" href="<?php print_link("docs/add") ?>">
                         <i class="fa fa-plus"></i>                              
-                        Add New Docs 
+                        Dokumentom feltöltése 
                     </a>
                 </div>
                 <div class="col-sm-4 ">
                     <form  class="search" action="<?php print_link('docs'); ?>" method="get">
                         <div class="input-group">
-                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Search" />
+                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Keresés" />
                                 <div class="input-group-append">
                                     <button class="btn btn-primary"><i class="fa fa-search"></i></button>
                                 </div>
@@ -113,10 +113,10 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th  class="td-id"> Id</th>
-                                                <th  class="td-title"> Title</th>
-                                                <th  class="td-description"> Description</th>
-                                                <th  class="td-path"> Path</th>
+                                                <th  class="td-id"> Azonosító</th>
+                                                <th  class="td-title"> Cím</th>
+                                                <th  class="td-description"> Leírás</th>
+                                                <th  class="td-path"> Elérési út</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -144,7 +144,7 @@ $show_pagination = $this->show_pagination;
                                                             data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("docs/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="title" 
-                                                            data-title="Enter Title" 
+                                                            data-title="Adj meg címet!" 
                                                             data-placement="left" 
                                                             data-toggle="dblclick" 
                                                             data-type="text" 
@@ -158,7 +158,7 @@ $show_pagination = $this->show_pagination;
                                                         <span  data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("docs/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="description" 
-                                                            data-title="Enter Description" 
+                                                            data-title="Adj meg leírást!" 
                                                             data-placement="left" 
                                                             data-toggle="dblclick" 
                                                             data-type="textarea" 

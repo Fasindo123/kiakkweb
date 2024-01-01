@@ -23,18 +23,18 @@ $show_pagination = $this->show_pagination;
         <div class="container-fluid">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Courses</h4>
+                    <h4 class="record-title">Képzések</h4>
                 </div>
                 <div class="col-sm-3 ">
                     <a  class="btn btn btn-primary my-1" href="<?php print_link("courses/add") ?>">
                         <i class="fa fa-plus"></i>                              
-                        Add New Courses 
+                        Képzés hozzáadása 
                     </a>
                 </div>
                 <div class="col-sm-4 ">
                     <form  class="search" action="<?php print_link('courses'); ?>" method="get">
                         <div class="input-group">
-                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Search" />
+                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Keresés" />
                                 <div class="input-group-append">
                                     <button class="btn btn-primary"><i class="fa fa-search"></i></button>
                                 </div>

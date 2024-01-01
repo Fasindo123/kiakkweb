@@ -103,6 +103,24 @@ $show_export_btn = $this->show_export_btn;
                                                             </span>
                                                         </td>
                                                     </tr>
+                                                    <tr  class="td-name">
+                                                        <th class="title"> Name: </th>
+                                                        <td class="value">
+                                                            <span  data-value="<?php echo $data['name']; ?>" 
+                                                                data-pk="<?php echo $data['id'] ?>" 
+                                                                data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
+                                                                data-name="name" 
+                                                                data-title="Enter Name" 
+                                                                data-placement="left" 
+                                                                data-toggle="click" 
+                                                                data-type="text" 
+                                                                data-mode="popover" 
+                                                                data-showbuttons="left" 
+                                                                class="is-editable" >
+                                                                <?php echo $data['name']; ?> 
+                                                            </span>
+                                                        </td>
+                                                    </tr>
                                                     <tr  class="td-email">
                                                         <th class="title"> Email: </th>
                                                         <td class="value"> <?php echo $data['email']; ?></td>

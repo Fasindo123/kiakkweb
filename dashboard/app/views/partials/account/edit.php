@@ -50,33 +50,45 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="photo">Photo <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="name">Name <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <div class="dropzone required" input="#ctrl-photo" fieldname="photo"    data-multiple="false" dropmsg="Choose files or drag and drop files to upload"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
-                                                        <input name="photo" id="ctrl-photo" required="" class="dropzone-input form-control" value="<?php  echo $data['photo']; ?>" type="text"  />
-                                                            <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
-                                                            <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
-                                                        </div>
+                                                    <input id="ctrl-name"  value="<?php  echo $data['name']; ?>" type="text" placeholder="Enter Name"  required="" name="name"  class="form-control " />
                                                     </div>
-                                                    <?php Html :: uploaded_files_list($data['photo'], '#ctrl-photo'); ?>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-ajax-status"></div>
-                                    <div class="form-group text-center">
-                                        <button class="btn btn-primary" type="submit">
-                                            Update
-                                            <i class="fa fa-send"></i>
-                                        </button>
-                                    </div>
-                                </form>
+                                        <div class="form-group ">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label class="control-label" for="img">Img <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <div class="">
+                                                        <div class="dropzone required" input="#ctrl-img" fieldname="img"    data-multiple="false" dropmsg="Válassz fájlt vagy húzd ide!"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
+                                                            <input name="img" id="ctrl-img" required="" class="dropzone-input form-control" value="<?php  echo $data['img']; ?>" type="text"  />
+                                                                <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
+                                                                <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
+                                                            </div>
+                                                        </div>
+                                                        <?php Html :: uploaded_files_list($data['img'], '#ctrl-img'); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-ajax-status"></div>
+                                        <div class="form-group text-center">
+                                            <button class="btn btn-primary" type="submit">
+                                                Szerkeszt
+                                                <i class="fa fa-send"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
+            </section>
+            

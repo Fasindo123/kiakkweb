@@ -18,7 +18,7 @@ $redirect_to = $this->redirect_to;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Edit  Infrastructure</h4>
+                    <h4 class="record-title">Infrastruktúra</h4>
                 </div>
             </div>
         </div>
@@ -37,11 +37,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="title">Title <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="title">Cím <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <input id="ctrl-title"  value="<?php  echo $data['title']; ?>" type="text" placeholder="Enter Title"  required="" name="title"  class="form-control " />
+                                                <input id="ctrl-title"  value="<?php  echo $data['title']; ?>" type="text" placeholder="Adj meg címet!"  required="" name="title"  class="form-control " />
                                                 </div>
                                             </div>
                                         </div>
@@ -49,11 +49,11 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="short_description">Short Description <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="short_description">Rövid leírás <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <textarea placeholder="Enter Short Description" id="ctrl-short_description"  required="" rows="5" name="short_description" class=" form-control"><?php  echo $data['short_description']; ?></textarea>
+                                                    <textarea placeholder="Adj meg rövid leírást!" id="ctrl-short_description"  required="" rows="5" name="short_description" class=" form-control"><?php  echo $data['short_description']; ?></textarea>
                                                     <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                                 </div>
                                             </div>
@@ -62,34 +62,34 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="img">Img <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="img">Borítókép <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <div class="dropzone required" input="#ctrl-img" fieldname="img"    data-multiple="false" dropmsg="Choose files or drag and drop files to upload"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
+                                                    <div class="dropzone required" input="#ctrl-img" fieldname="img"    data-multiple="false" dropmsg="Válassz képet vagy húzd ide!"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="1" maximum="1">
                                                         <input name="img" id="ctrl-img" required="" class="dropzone-input form-control" value="<?php  echo $data['img']; ?>" type="text"  />
                                                             <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
                                                             <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
                                                         </div>
                                                     </div>
-                                                    <?php Html :: uploaded_files_list($data['img'], '#ctrl-img'); ?>
+                                                    <?php Html :: uploaded_files_list($data['img'], '#ctrl-img', 'true'); ?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group ">
                                             <div class="row">
                                                 <div class="col-sm-4">
-                                                    <label class="control-label" for="more_imgs">More Imgs <span class="text-danger">*</span></label>
+                                                    <label class="control-label" for="more_imgs">További képek <span class="text-danger">*</span></label>
                                                 </div>
                                                 <div class="col-sm-8">
                                                     <div class="">
-                                                        <div class="dropzone required" input="#ctrl-more_imgs" fieldname="more_imgs"    data-multiple="false" dropmsg="Válassz fájlt vagy húzd ide!"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
+                                                        <div class="dropzone required" input="#ctrl-more_imgs" fieldname="more_imgs"    data-multiple="false" dropmsg="Válassz képet vagy húzd ide!"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1000">
                                                             <input name="more_imgs" id="ctrl-more_imgs" required="" class="dropzone-input form-control" value="<?php  echo $data['more_imgs']; ?>" type="text"  />
                                                                 <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
                                                                 <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
                                                             </div>
                                                         </div>
-                                                        <?php Html :: uploaded_files_list($data['more_imgs'], '#ctrl-more_imgs'); ?>
+                                                        <?php Html :: uploaded_files_list($data['more_imgs'], '#ctrl-more_imgs', 'true'); ?>
                                                     </div>
                                                 </div>
                                             </div>

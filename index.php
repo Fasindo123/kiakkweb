@@ -237,10 +237,10 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-3">
-                  <h2 class="color-900 mb-75 text-up">Gyakori kérdések</h2>
+                  <h2 class="color-900 mb-75 text-up">FAQs</h2>
                   <div class="parallax-item"><img class="parallax-image" src="assets/imgs/page/homepage1/faq1.png" alt="neuron"></div>
                   <div class="mt-105">
-                    <h6 class="color-900 mb-15">Elakatt</h6>
+                    <h6 class="color-900 mb-15">Kérdése akadt?</h6>
                     <p class="font-md color-600">Vegye fel velünk a kapcsolatot, és mi a lehető leghamarabb jelentkezünk.</p>
                   </div>
                   <div class="mt-40">

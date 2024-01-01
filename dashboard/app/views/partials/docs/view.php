@@ -21,7 +21,7 @@ $show_export_btn = $this->show_export_btn;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">View  Docs</h4>
+                    <h4 class="record-title">Dokumentum megtekintése</h4>
                 </div>
             </div>
         </div>
@@ -46,17 +46,17 @@ $show_export_btn = $this->show_export_btn;
                                 <!-- Table Body Start -->
                                 <tbody class="page-data" id="page-data-<?php echo $page_element_id; ?>">
                                     <tr  class="td-id">
-                                        <th class="title"> Id: </th>
+                                        <th class="title"> Azonosító: </th>
                                         <td class="value"> <?php echo $data['id']; ?></td>
                                     </tr>
                                     <tr  class="td-title">
-                                        <th class="title"> Title: </th>
+                                        <th class="title"> Cím: </th>
                                         <td class="value">
                                             <span  data-value="<?php echo $data['title']; ?>" 
                                                 data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("docs/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="title" 
-                                                data-title="Enter Title" 
+                                                data-title="Adj meg címet!" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="text" 
@@ -68,12 +68,12 @@ $show_export_btn = $this->show_export_btn;
                                         </td>
                                     </tr>
                                     <tr  class="td-description">
-                                        <th class="title"> Description: </th>
+                                        <th class="title"> Leírás: </th>
                                         <td class="value">
                                             <span  data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("docs/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="description" 
-                                                data-title="Enter Description" 
+                                                data-title="Adj meg leírást!" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="textarea" 
@@ -85,7 +85,7 @@ $show_export_btn = $this->show_export_btn;
                                         </td>
                                     </tr>
                                     <tr  class="td-path">
-                                        <th class="title"> Path: </th>
+                                        <th class="title"> Elérési út: </th>
                                         <td class="value">
                                             <span  data-value="<?php echo $data['path']; ?>" 
                                                 data-pk="<?php echo $data['id'] ?>" 

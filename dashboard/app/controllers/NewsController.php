@@ -3,7 +3,7 @@
  * News Page Controller
  * @category  Controller
  */
-class NewsController extends BaseController{
+class NewsController extends SecureController{
 	function __construct(){
 		parent::__construct();
 		$this->tablename = "news";
@@ -67,7 +67,7 @@ class NewsController extends BaseController{
 		if($db->getLastError()){
 			$this->set_page_error();
 		}
-		$page_title = $this->view->page_title = "News";
+		$page_title = $this->view->page_title = "Hírek";
 		$this->view->report_filename = date('Y-m-d') . '-' . $page_title;
 		$this->view->report_title = $page_title;
 		$this->view->report_layout = "report_layout.php";
@@ -99,7 +99,7 @@ class NewsController extends BaseController{
 		}
 		$record = $db->getOne($tablename, $fields );
 		if($record){
-			$page_title = $this->view->page_title = "View  News";
+			$page_title = $this->view->page_title = "Hír megtekintése";
 		$this->view->report_filename = date('Y-m-d') . '-' . $page_title;
 		$this->view->report_title = $page_title;
 		$this->view->report_layout = "report_layout.php";
@@ -150,7 +150,7 @@ class NewsController extends BaseController{
 				}
 			}
 		}
-		$page_title = $this->view->page_title = "Add New News";
+		$page_title = $this->view->page_title = "Hír hozzáadása";
 		$this->render_view("news/add.php");
 	}
 	/**
@@ -178,10 +178,26 @@ class NewsController extends BaseController{
 			);
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			if($this->validated()){
+				//get files link to be deleted before updating records
+				$file_fields = array('cover_img'); //list of file fields
+				$db->where("news.id", $rec_id);;
+				$fields_file_paths = $db->getOne($tablename, $file_fields);
 				$db->where("news.id", $rec_id);;
 				$bool = $db->update($tablename, $modeldata);
 				$numRows = $db->getRowCount(); //number of affected rows. 0 = no record field updated
 				if($bool && $numRows){
+					if(!empty($fields_file_paths)){
+						foreach($file_fields as $field){
+							$files = explode(',', $fields_file_paths[$field]); // for list of files separated by comma
+							foreach($files as $file){
+								//delete files which are not among the submited post data
+								if(stripos($modeldata[$field], $file) === false ){
+									$file_dir_path = str_ireplace( SITE_ADDR , "" , $file ) ;
+									@unlink($file_dir_path);
+								}
+							}
+						}
+					}
 					$this->set_flash_msg("Sikeres szerkesztés!", "success");
 					return $this->redirect("news");
 				}
@@ -201,7 +217,7 @@ class NewsController extends BaseController{
 		}
 		$db->where("news.id", $rec_id);;
 		$data = $db->getOne($tablename, $fields);
-		$page_title = $this->view->page_title = "Edit  News";
+		$page_title = $this->view->page_title = "Hír szerkesztése";
 		if(!$data){
 			$this->set_page_error();
 		}
@@ -277,9 +293,20 @@ class NewsController extends BaseController{
 		$this->rec_id = $rec_id;
 		//form multiple delete, split record id separated by comma into array
 		$arr_rec_id = array_map('trim', explode(",", $rec_id));
+		//list of file fields
+		$file_fields = array('cover_img'); 
+		foreach( $arr_id as $rec_id ){
+			$db->where("news.id", $arr_rec_id, "in");;
+		}
+		//get files link to be deleted before deleting records
+		$files = $db->get($tablename, null , $file_fields); 
 		$db->where("news.id", $arr_rec_id, "in");
 		$bool = $db->delete($tablename);
 		if($bool){
+			//delete files after record has been deleted
+			foreach($file_fields as $field){
+				$this->delete_record_files($files, $field);
+			}
 			$this->set_flash_msg("Sikeres törlés!", "success");
 		}
 		elseif($db->getLastError()){

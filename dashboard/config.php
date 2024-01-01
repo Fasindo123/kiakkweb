@@ -8,7 +8,7 @@ define("ROOT", str_replace("\\", "/", dirname(__FILE__)) . "/");
 // return the application directory name.
 define("ROOT_DIR_NAME", basename(ROOT));
 
-define("SITE_NAME", "dashboard");
+define("SITE_NAME", "KIAKKWEB - Kezelőfelület");
 
 
 // Get Site Address Dynamically
@@ -34,8 +34,8 @@ define("FORBIDDEN", 403);
 // Application Files and Directories 
 define("IMG_DIR",  "assets/images/");
 define("FONTS_DIR",  "assets/fonts/");
-define("SITE_FAVICON", IMG_DIR . "favicon.png");
-define("SITE_LOGO", IMG_DIR . "logo.png");
+define("SITE_FAVICON", IMG_DIR . "favicon.svg");
+define("SITE_LOGO", IMG_DIR . "logo.svg");
 
 define("CSS_DIR", SITE_ADDR . "assets/css/");
 define("JS_DIR", SITE_ADDR . "assets/js/");
@@ -96,7 +96,7 @@ define("MAX_RECORD_COUNT", 20); //Default Max Records to Retrieve  per Page
 define("ORDER_TYPE", "DESC");  //Default Order Type
 
 // Active User Profile Details
-
-
-
-
+define('USER_ID',(isset($_SESSION[APP_ID.'user_data']) ? $_SESSION[APP_ID.'user_data']['id'] : null ));
+define('USER_NAME',(isset($_SESSION[APP_ID.'user_data']) ? $_SESSION[APP_ID.'user_data']['username'] : null ));
+define('USER_EMAIL',(isset($_SESSION[APP_ID.'user_data']) ? $_SESSION[APP_ID.'user_data']['email'] : null ));
+define('USER_PHOTO',(isset($_SESSION[APP_ID.'user_data']) ? $_SESSION[APP_ID.'user_data']['img'] : null ));

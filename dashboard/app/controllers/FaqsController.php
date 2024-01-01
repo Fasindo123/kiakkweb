@@ -3,7 +3,7 @@
  * Faqs Page Controller
  * @category  Controller
  */
-class FaqsController extends BaseController{
+class FaqsController extends SecureController{
 	function __construct(){
 		parent::__construct();
 		$this->tablename = "faqs";
@@ -63,7 +63,7 @@ class FaqsController extends BaseController{
 		if($db->getLastError()){
 			$this->set_page_error();
 		}
-		$page_title = $this->view->page_title = "Faqs";
+		$page_title = $this->view->page_title = "Gyakori kérdések";
 		$this->view->report_filename = date('Y-m-d') . '-' . $page_title;
 		$this->view->report_title = $page_title;
 		$this->view->report_layout = "report_layout.php";
@@ -93,7 +93,7 @@ class FaqsController extends BaseController{
 		}
 		$record = $db->getOne($tablename, $fields );
 		if($record){
-			$page_title = $this->view->page_title = "View  Faqs";
+			$page_title = $this->view->page_title = "Kérdés megtekintése";
 		$this->view->report_filename = date('Y-m-d') . '-' . $page_title;
 		$this->view->report_title = $page_title;
 		$this->view->report_layout = "report_layout.php";
@@ -144,7 +144,7 @@ class FaqsController extends BaseController{
 				}
 			}
 		}
-		$page_title = $this->view->page_title = "Add New Faqs";
+		$page_title = $this->view->page_title = "Kérdés hozzáadása";
 		$this->render_view("faqs/add.php");
 	}
 	/**
@@ -195,7 +195,7 @@ class FaqsController extends BaseController{
 		}
 		$db->where("faqs.id", $rec_id);;
 		$data = $db->getOne($tablename, $fields);
-		$page_title = $this->view->page_title = "Edit  Faqs";
+		$page_title = $this->view->page_title = "Kérdés szerkesztése";
 		if(!$data){
 			$this->set_page_error();
 		}

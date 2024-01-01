@@ -902,9 +902,19 @@ $('.ajax-page.infinite-scroll').bind('scroll', function(){
 		appendPageData(ajaxPage);
 	}
 });
-$(function(){
-	var navTopHeight = $('#topbar').outerHeight();
-	document.body.style.paddingTop = navTopHeight + 'px';
+$(document).ready(function () {
+	$('#btn-dismiss-sidebar, .overlay').on('click', function () {
+		$('#sidebar').removeClass('active');
+		$('.overlay').removeClass('active');
+	});
+	$('#sidebarCollapse').on('click', function () {
+		$('#sidebar').toggleClass('active');
+		$('.overlay').toggleClass('active');
+	});
+	var navTopHeight = $('#topbar').outerHeight() + 'px';
+	$('#sidebar').css('top', navTopHeight);
+	$('#sidebar').css('height', 'calc(100vh - ' +  navTopHeight + ')');
+	document.body.style.paddingTop = navTopHeight;
 });
 /*
 * Custom Javascript | Jquery codes

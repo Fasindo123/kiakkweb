@@ -18,7 +18,7 @@ $redirect_to = $this->redirect_to;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Edit  News</h4>
+                    <h4 class="record-title">Hír szerkesztése</h4>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@ $redirect_to = $this->redirect_to;
                                                             <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
                                                         </div>
                                                     </div>
-                                                    <?php Html :: uploaded_files_list($data['cover_img'], '#ctrl-cover_img'); ?>
+                                                    <?php Html :: uploaded_files_list($data['cover_img'], '#ctrl-cover_img', 'true'); ?>
                                                 </div>
                                             </div>
                                         </div>

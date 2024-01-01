@@ -160,10 +160,10 @@ class BaseController{
 		);
 		
 		$this->file_upload_settings['path'] = array(
-			"title" => "{{random}}",
+			"title" => "{{file_name}}",
 			"extensions" => "",
 			"limit" => "1",
-			"filesize" => "3",
+			"filesize" => "50",
 			"returnfullpath" => false,
 			"filenameprefix" => "",
 			"uploadDir" => "uploads/files/"
@@ -174,21 +174,21 @@ class BaseController{
 			"title" => "{{random}}",
 			"extensions" => ".jpg,.png,.gif,.jpeg",
 			"limit" => "1",
-			"filesize" => "3",
+			"filesize" => "1",
 			"returnfullpath" => true,
 			"filenameprefix" => "",
-			"uploadDir" => "uploads/files/"
+			"uploadDir" => "uploads/photos/"
 		);
 	
 
 		$this->file_upload_settings['more_imgs'] = array(
 			"title" => "{{random}}",
 			"extensions" => ".jpg,.png,.gif,.jpeg",
-			"limit" => "1",
+			"limit" => "1000",
 			"filesize" => "3",
 			"returnfullpath" => true,
 			"filenameprefix" => "",
-			"uploadDir" => "uploads/files/"
+			"uploadDir" => "uploads/photos/"
 		);
 	
 
@@ -207,10 +207,10 @@ class BaseController{
 			"title" => "{{random}}",
 			"extensions" => ".jpg,.png,.gif,.jpeg",
 			"limit" => "1",
-			"filesize" => "1",
+			"filesize" => "3",
 			"returnfullpath" => true,
 			"filenameprefix" => "",
-			"uploadDir" => "uploads/photos/"
+			"uploadDir" => "uploads/files/"
 		);
 	
 
