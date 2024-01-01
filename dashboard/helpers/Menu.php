@@ -34,12 +34,6 @@ class Menu{
 		),
 		
 		array(
-			'path' => 'gallery', 
-			'label' => 'Gallery', 
-			'icon' => ''
-		),
-		
-		array(
 			'path' => 'infrastructure', 
 			'label' => 'Infrastructure', 
 			'icon' => ''
@@ -80,12 +74,6 @@ class Menu{
 		array(
 			'path' => 'faqs', 
 			'label' => 'Faqs', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'gallery', 
-			'label' => 'Gallery', 
 			'icon' => ''
 		),
 		

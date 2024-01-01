@@ -280,51 +280,28 @@
       <div class="col-lg-12">
         <h2 class="color-900 mb-75 text-up">Dokumentumok</h2>
         <div class="accordion" id="accordionDocs">
-          <!-- Dokumentum 1 -->
-          <div class="accordion-item scroll-move-up-2">
-            <h5 class="accordion-header" id="docHeadingOne">
-              <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapseOne" aria-expanded="false" aria-controls="docCollapseOne">Dokumentum 1 címe</button>
-            </h5>
-            <div class="accordion-collapse collapse" id="docCollapseOne" aria-labelledby="docHeadingOne" data-bs-parent="#accordionDocs">
-              <div class="row">
-                <!-- Tartalom bal oldalra -->
-                <div class="col-lg-8">
-                  <div class="accordion-body font-lg color-600">
-                    Dokumentum 1 tartalma...
-                  </div>
-                </div>
-                
-                <!-- Letölthető rész jobb oldalra -->
-                <div class="col-lg-4 mt-2">
-                  <div class="grow-up"><a class="btn btn-default btn-default-sm" href="#" target="_blank">Letöltés<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Dokumentum 2 -->
-          <div class="accordion-item scroll-move-up-2">
-            <h5 class="accordion-header" id="docHeadingTwo">
-              <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapseTwo" aria-expanded="false" aria-controls="docCollapseTwo">Dokumentum 2 címe</button>
-            </h5>
-            <div class="accordion-collapse collapse" id="docCollapseTwo" aria-labelledby="docHeadingTwo" data-bs-parent="#accordionDocs">
-              <div class="row">
-                <!-- Tartalom bal oldalra -->
-                <div class="col-lg-8">
-                  <div class="accordion-body font-lg color-600">
-                    Dokumentum 2 tartalma...
-                  </div>
-                </div>
-                
-                <!-- Letölthető rész jobb oldalra -->
-                <div class="col-lg-4 mt-2">
-                  <div class="grow-up"><a class="btn btn-default btn-default-sm" href="#" target="_blank">Letöltés<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- További dokumentumok... -->
+        <?php 
+          $docs = sqlQuery("SELECT * FROM docs");
+          while ($doc = $docs->fetch_assoc()) {
+            echo '<div class="accordion-item scroll-move-up-2">
+                    <h5 class="accordion-header" id="docHeadingOne">
+                      <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapse'.$doc["id"].'" aria-expanded="false" aria-controls="docCollapse'.$doc["id"].'">'.$doc["title"].'</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="docCollapse'.$doc["id"].'" aria-labelledby="docHeadingOne" data-bs-parent="#accordionDocs">
+                      <div class="row">
+                        <div class="col-lg-8">
+                          <div class="accordion-body font-lg color-600">
+                            '.$doc["description"].'
+                          </div>
+                        </div>
+                        <div class="col-lg-4 mt-2">
+                          <div class="grow-up"><a class="btn btn-default btn-default-sm" href="dashboard/'.$doc["path"].'" target="_blank">Megnyitás<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>';
+          }
+        ?>
         </div>
       </div>
     </div>

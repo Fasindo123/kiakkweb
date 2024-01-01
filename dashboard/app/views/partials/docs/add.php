@@ -63,7 +63,11 @@ $redirect_to = $this->redirect_to;
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <input id="ctrl-path"  value="<?php  echo $this->set_field_value('path',""); ?>" type="text" placeholder="Enter Path"  required="" name="path"  class="form-control " />
+                                                    <div class="dropzone required" input="#ctrl-path" fieldname="path"    data-multiple="false" dropmsg="Choose files or drag and drop files to upload"    btntext="Browse" filesize="3" maximum="1">
+                                                        <input name="path" id="ctrl-path" required="" class="dropzone-input form-control" value="<?php  echo $this->set_field_value('path',""); ?>" type="text"  />
+                                                            <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
+                                                            <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
