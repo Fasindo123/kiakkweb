@@ -195,42 +195,63 @@
           </div>
         </section>
 <!-- Galéria -->
-        <section class="section is-mode">
-          <div class="box-recent-work block-recent-work-4 bg-0">
-            <div class="container">
-              <div class="head-recent-work">
-                <h1 class="color-900 text-up">Gal<span class="stroke-900 no-stroke">éria</span></h1><a class="btn btn-default parallax-item" href="pages/kepek.php">Több kép<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></a>
-              </div>
-              <!-- <h4 class="color-900 text-opacity">Pár kép eddigi tanulókról</h4> -->
+<?php
+// Képek mappái
+$imageFolders = [
+    'assets/imgs/KÉPEK/',
+    'assets/imgs/KÉPEK/Cisco Labor/'
+];
+
+// Képek kiterjesztése
+$allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+// Képek listája
+$imageFiles = [];
+
+// Képek kiválasztása a mappákból
+foreach ($imageFolders as $folder) {
+    foreach (scandir($folder) as $file) {
+        $extension = pathinfo($file, PATHINFO_EXTENSION);
+        if (in_array(strtolower($extension), $allowedExtensions)) {
+            $imageFiles[] = $folder . $file;
+        }
+    }
+}
+
+// Képek véletlenszerű keverése
+shuffle($imageFiles);
+
+// Az random 6 kép kiválasztása
+$selectedImages = array_slice($imageFiles, 0, 6);
+?>
+
+<section class="section is-mode">
+    <div class="box-recent-work block-recent-work-4 bg-0">
+        <div class="container">
+            <div class="head-recent-work">
+                <h1 class="color-900 text-up">Gal<span class="stroke-900 no-stroke">éria</span></h1>
+                <a class="btn btn-default parallax-item" href="pages/kepek.php">Több kép<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="Galéria képek"></a>
             </div>
-            <div class="container-fluid">
-              <div class="mt-100 position-relative box-recent-work-4">
+        </div>
+        <div class="container-fluid">
+            <div class="mt-100 position-relative box-recent-work-4">
                 <div class="cardRecentBoxLists">
-                  <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9695.jpg" alt="neuron"></div>
-                  </div>
-                  <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9708.jpg" alt="neuron"></div>
-                  </div>
-                  <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9723.jpg" alt="neuron"></div>
-                  </div>
+                    <?php $counter = 0; ?>
+                    <?php foreach ($selectedImages as $image) : ?>
+                        <div class="cardRecentStyle3 cursor-view">
+                            <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="<?php echo $image; ?>" alt="Galéria képek"></div>
+                        </div>
+                        <?php $counter++; ?>
+                        <?php if ($counter % 3 == 0) : ?>
+                            </div><div class="cardRecentBoxLists">
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
-                <div class="cardRecentBoxLists">
-                  <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9737.jpg" alt="neuron"></div>
-                  </div>
-                  <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9774.jpg" alt="neuron"></div>
-                  </div>
-                  <div class="cardRecentStyle3 cursor-view">
-                    <div class="cardImage"><img class="parallax-image scoll-reduce-border-radius" src="assets/imgs/KÉPEK/DSC_9755.jpg" alt="neuron"></div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </section>
+        </div>
+    </div>
+</section>
+
 <!-- Gyakori kérdések -->
         <section class="section is-mode">
           <div class="box-faqs bg-100">

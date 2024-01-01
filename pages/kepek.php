@@ -24,22 +24,31 @@
     <!-- Képek megjelenítése -->
     <div class="image-container">
         <?php
-        $imageFolder1 = '../assets/imgs/KÉPEK/';
-        $imageFolder2 = '../assets/imgs/KÉPEK/Cisco Labor/';
+            // Képek mappái
+            $imageFolders = [
+                '../assets/imgs/KÉPEK/',
+                '../assets/imgs/KÉPEK/Cisco Labor/'
+            ];
 
-        // Képek bejárása és megjelenítése
-        function displayImages($folder) {
-            $files = glob($folder . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
-            foreach ($files as $file) {
-                echo '<img src="' . $file . '" alt="Kép">';
+            // Képek kiterjesztése
+            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+            // Képek listája
+            $imageFiles = [];
+
+            // Képek kiválasztása a mappákból
+            foreach ($imageFolders as $folder) {
+                foreach (scandir($folder) as $file) {
+                    $extension = pathinfo($file, PATHINFO_EXTENSION);
+                    if (in_array(strtolower($extension), $allowedExtensions)) {
+                        $imageFiles[] = $folder . $file;
+                    }
+                }
             }
-        }
 
-        // Az első mappa képeinek megjelenítése
-        displayImages($imageFolder1);
-
-        // A második mappa képeinek megjelenítése
-        displayImages($imageFolder2);
+            foreach ($imageFiles as $image) {
+                echo '<img src="' . $image . '" alt="Galéria további képei">';
+            }
         ?>
     </div>
 
