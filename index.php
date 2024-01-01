@@ -181,7 +181,7 @@
                                     <div class="cardInfo">
                                       <h3 class="color-900">'.$infrastructure_e["title"].'</h3>
                                       <h5 class="color-700 text-opacity">'.$infrastructure_e["short_description"].'</h5>
-                                      <div class="d-flex"><a class="font-xl-bold color-900 link-effect more-picture-button" href="#" data-more-imgs="'.$infrastructure_e["more_imgs"].'">További képek</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></div>
+                                      <div class="d-flex"><a class="font-xl-bold color-900 link-effect more-picture-button" data-more-imgs="'.$infrastructure_e["more_imgs"].'">További képek</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></div>
                                     </div>
                                   </div>
                                 </div>';
