@@ -20,8 +20,9 @@ class UsersController extends SecureController{
 		$tablename = $this->tablename;
 		$fields = array("id", 
 			"username", 
+			"name", 
 			"email", 
-			"photo");
+			"img");
 		$pagination = $this->get_pagination(MAX_RECORD_COUNT); // get current pagination e.g array(page_number, page_limit)
 		//search table record
 		if(!empty($request->search)){
@@ -29,12 +30,13 @@ class UsersController extends SecureController{
 			$search_condition = "(
 				users.id LIKE ? OR 
 				users.username LIKE ? OR 
+				users.name LIKE ? OR 
 				users.password LIKE ? OR 
 				users.email LIKE ? OR 
-				users.photo LIKE ?
+				users.img LIKE ?
 			)";
 			$search_params = array(
-				"%$text%","%$text%","%$text%","%$text%","%$text%"
+				"%$text%","%$text%","%$text%","%$text%","%$text%","%$text%"
 			);
 			//setting search conditions
 			$db->where($search_condition, $search_params);
@@ -66,7 +68,7 @@ class UsersController extends SecureController{
 		if($db->getLastError()){
 			$this->set_page_error();
 		}
-		$page_title = $this->view->page_title = "Users";
+		$page_title = $this->view->page_title = "Felhasználók";
 		$this->view->report_filename = date('Y-m-d') . '-' . $page_title;
 		$this->view->report_title = $page_title;
 		$this->view->report_layout = "report_layout.php";
@@ -87,6 +89,7 @@ class UsersController extends SecureController{
 		$tablename = $this->tablename;
 		$fields = array("id", 
 			"username", 
+			"name", 
 			"email");
 		if($value){
 			$db->where($rec_id, urldecode($value)); //select record based on field name
@@ -96,7 +99,7 @@ class UsersController extends SecureController{
 		}
 		$record = $db->getOne($tablename, $fields );
 		if($record){
-			$page_title = $this->view->page_title = "View  Users";
+			$page_title = $this->view->page_title = "Felhasználó megtekintése";
 		$this->view->report_filename = date('Y-m-d') . '-' . $page_title;
 		$this->view->report_title = $page_title;
 		$this->view->report_layout = "report_layout.php";
@@ -124,7 +127,7 @@ class UsersController extends SecureController{
 			$tablename = $this->tablename;
 			$request = $this->request;
 			//fillable fields
-			$fields = $this->fields = array("username","password","email","photo");
+			$fields = $this->fields = array("username","name","password","email","img");
 			$postdata = $this->format_request_data($formdata);
 			$cpassword = $postdata['confirm_password'];
 			$password = $postdata['password'];
@@ -133,14 +136,16 @@ class UsersController extends SecureController{
 			}
 			$this->rules_array = array(
 				'username' => 'required',
+				'name' => 'required',
 				'password' => 'required',
 				'email' => 'required|valid_email',
-				'photo' => 'required',
+				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'username' => 'sanitize_string',
+				'name' => 'sanitize_string',
 				'email' => 'sanitize_string',
-				'photo' => 'sanitize_string',
+				'img' => 'sanitize_string',
 			);
 			$this->filter_vals = true; //set whether to remove empty fields
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
@@ -160,7 +165,7 @@ class UsersController extends SecureController{
 			if($this->validated()){
 				$rec_id = $this->rec_id = $db->insert($tablename, $modeldata);
 				if($rec_id){
-					$this->set_flash_msg("Record added successfully", "success");
+					$this->set_flash_msg("Sikeres létrehozás!", "success");
 					return	$this->redirect("users");
 				}
 				else{
@@ -168,7 +173,7 @@ class UsersController extends SecureController{
 				}
 			}
 		}
-		$page_title = $this->view->page_title = "Add New Users";
+		$page_title = $this->view->page_title = "Felhasználó létrehozása";
 		$this->render_view("users/add.php");
 	}
 	/**
@@ -183,16 +188,18 @@ class UsersController extends SecureController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		 //editable fields
-		$fields = $this->fields = array("id","username","photo");
+		$fields = $this->fields = array("id","username","name","img");
 		if($formdata){
 			$postdata = $this->format_request_data($formdata);
 			$this->rules_array = array(
 				'username' => 'required',
-				'photo' => 'required',
+				'name' => 'required',
+				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'username' => 'sanitize_string',
-				'photo' => 'sanitize_string',
+				'name' => 'sanitize_string',
+				'img' => 'sanitize_string',
 			);
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
 			//Check if Duplicate Record Already Exit In The Database
@@ -207,7 +214,7 @@ class UsersController extends SecureController{
 				$bool = $db->update($tablename, $modeldata);
 				$numRows = $db->getRowCount(); //number of affected rows. 0 = no record field updated
 				if($bool && $numRows){
-					$this->set_flash_msg("Record updated successfully", "success");
+					$this->set_flash_msg("Sikeres szerkesztés!", "success");
 					return $this->redirect("users");
 				}
 				else{
@@ -226,7 +233,7 @@ class UsersController extends SecureController{
 		}
 		$db->where("users.id", $rec_id);;
 		$data = $db->getOne($tablename, $fields);
-		$page_title = $this->view->page_title = "Edit  Users";
+		$page_title = $this->view->page_title = "Felhasználó szerkesztése";
 		if(!$data){
 			$this->set_page_error();
 		}
@@ -243,7 +250,7 @@ class UsersController extends SecureController{
 		$this->rec_id = $rec_id;
 		$tablename = $this->tablename;
 		//editable fields
-		$fields = $this->fields = array("id","username","photo");
+		$fields = $this->fields = array("id","username","name","img");
 		$page_error = null;
 		if($formdata){
 			$postdata = array();
@@ -253,11 +260,13 @@ class UsersController extends SecureController{
 			$postdata = $this->format_request_data($postdata);
 			$this->rules_array = array(
 				'username' => 'required',
-				'photo' => 'required',
+				'name' => 'required',
+				'img' => 'required',
 			);
 			$this->sanitize_array = array(
 				'username' => 'sanitize_string',
-				'photo' => 'sanitize_string',
+				'name' => 'sanitize_string',
+				'img' => 'sanitize_string',
 			);
 			$this->filter_rules = true; //filter validation rules by excluding fields not in the formdata
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
@@ -312,7 +321,7 @@ class UsersController extends SecureController{
 		$db->where("users.id", $arr_rec_id, "in");
 		$bool = $db->delete($tablename);
 		if($bool){
-			$this->set_flash_msg("Record deleted successfully", "success");
+			$this->set_flash_msg("Sikeres törlés!", "success");
 		}
 		elseif($db->getLastError()){
 			$page_error = $db->getLastError();

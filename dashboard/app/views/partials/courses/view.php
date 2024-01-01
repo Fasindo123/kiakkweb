@@ -21,7 +21,7 @@ $show_export_btn = $this->show_export_btn;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">View  Courses</h4>
+                    <h4 class="record-title">Képzés megtekintése</h4>
                 </div>
             </div>
         </div>
@@ -85,7 +85,23 @@ $show_export_btn = $this->show_export_btn;
                                             </span>
                                         </td>
                                     </tr>
-                                    <div><?php echo $data['long_description']; ?></div>
+                                    <tr  class="td-long_description">
+                                        <th class="title"> Hosszú leírás: </th>
+                                        <td class="value">
+                                            <span  data-pk="<?php echo $data['id'] ?>" 
+                                                data-url="<?php print_link("courses/editfield/" . urlencode($data['id'])); ?>" 
+                                                data-name="long_description" 
+                                                data-title="Készítsd el a hosszú leírás oldalát!" 
+                                                data-placement="left" 
+                                                data-toggle="click" 
+                                                data-type="textarea" 
+                                                data-mode="popover" 
+                                                data-showbuttons="left" 
+                                                class="is-editable" >
+                                                <?php echo $data['long_description']; ?> 
+                                            </span>
+                                        </td>
+                                    </tr>
                                 </tbody>
                                 <!-- Table Body End -->
                             </table>

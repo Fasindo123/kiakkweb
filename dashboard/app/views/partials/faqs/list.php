@@ -23,18 +23,18 @@ $show_pagination = $this->show_pagination;
         <div class="container-fluid">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Faqs</h4>
+                    <h4 class="record-title">Gyakori kérdések</h4>
                 </div>
                 <div class="col-sm-3 ">
                     <a  class="btn btn btn-primary my-1" href="<?php print_link("faqs/add") ?>">
                         <i class="fa fa-plus"></i>                              
-                        Add New Faqs 
+                        Kérdés hozzáadása 
                     </a>
                 </div>
                 <div class="col-sm-4 ">
                     <form  class="search" action="<?php print_link('faqs'); ?>" method="get">
                         <div class="input-group">
-                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Search" />
+                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Keresés" />
                                 <div class="input-group-append">
                                     <button class="btn btn-primary"><i class="fa fa-search"></i></button>
                                 </div>
@@ -113,9 +113,9 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th  class="td-id"> Id</th>
-                                                <th  class="td-qst"> Qst</th>
-                                                <th  class="td-answ"> Answ</th>
+                                                <th  class="td-id"> Azonosító</th>
+                                                <th  class="td-qst"> Kérdés</th>
+                                                <th  class="td-answ"> Válasz</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -142,7 +142,7 @@ $show_pagination = $this->show_pagination;
                                                         <span  data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("faqs/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="qst" 
-                                                            data-title="Enter Qst" 
+                                                            data-title="Adj meg kérdést!" 
                                                             data-placement="left" 
                                                             data-toggle="dblclick" 
                                                             data-type="textarea" 
@@ -156,7 +156,7 @@ $show_pagination = $this->show_pagination;
                                                         <span  data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("faqs/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="answ" 
-                                                            data-title="Enter Answ" 
+                                                            data-title="Adj meg választ!" 
                                                             data-placement="left" 
                                                             data-toggle="dblclick" 
                                                             data-type="textarea" 

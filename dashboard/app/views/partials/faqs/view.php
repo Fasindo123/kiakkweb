@@ -21,7 +21,7 @@ $show_export_btn = $this->show_export_btn;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">View  Faqs</h4>
+                    <h4 class="record-title">Kérdés megtekintése</h4>
                 </div>
             </div>
         </div>
@@ -46,16 +46,16 @@ $show_export_btn = $this->show_export_btn;
                                 <!-- Table Body Start -->
                                 <tbody class="page-data" id="page-data-<?php echo $page_element_id; ?>">
                                     <tr  class="td-id">
-                                        <th class="title"> Id: </th>
+                                        <th class="title"> Azonosító: </th>
                                         <td class="value"> <?php echo $data['id']; ?></td>
                                     </tr>
                                     <tr  class="td-qst">
-                                        <th class="title"> Qst: </th>
+                                        <th class="title"> Kérdés: </th>
                                         <td class="value">
                                             <span  data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("faqs/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="qst" 
-                                                data-title="Enter Qst" 
+                                                data-title="Adj meg kérdést!" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="textarea" 
@@ -67,12 +67,12 @@ $show_export_btn = $this->show_export_btn;
                                         </td>
                                     </tr>
                                     <tr  class="td-answ">
-                                        <th class="title"> Answ: </th>
+                                        <th class="title"> Válasz: </th>
                                         <td class="value">
                                             <span  data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("faqs/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="answ" 
-                                                data-title="Enter Answ" 
+                                                data-title="Adj meg választ!" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="textarea" 

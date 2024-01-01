@@ -8,103 +8,47 @@
 class Menu{
 	
 	
-			public static $navbartopleft = array(
-		array(
-			'path' => 'home', 
-			'label' => 'Home', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'courses', 
-			'label' => 'Courses', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'docs', 
-			'label' => 'Docs', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'faqs', 
-			'label' => 'Faqs', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'gallery', 
-			'label' => 'Gallery', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'infrastructure', 
-			'label' => 'Infrastructure', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'news', 
-			'label' => 'News', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'oktatok', 
-			'label' => 'Oktatok', 
-			'icon' => ''
-		)
-	);
-		
 			public static $navbarsideleft = array(
 		array(
-			'path' => 'home', 
-			'label' => 'Home', 
-			'icon' => ''
-		),
-		
-		array(
 			'path' => 'courses', 
-			'label' => 'Courses', 
-			'icon' => ''
+			'label' => 'Képzések', 
+			'icon' => '<i class="fa fa-book "></i>'
 		),
 		
 		array(
 			'path' => 'docs', 
-			'label' => 'Docs', 
-			'icon' => ''
+			'label' => 'Dokumentumok', 
+			'icon' => '<i class="fa fa-files-o "></i>'
 		),
 		
 		array(
 			'path' => 'faqs', 
-			'label' => 'Faqs', 
-			'icon' => ''
-		),
-		
-		array(
-			'path' => 'gallery', 
-			'label' => 'Gallery', 
-			'icon' => ''
+			'label' => 'Gyakori kérdések', 
+			'icon' => '<i class="fa fa-question-circle "></i>'
 		),
 		
 		array(
 			'path' => 'infrastructure', 
-			'label' => 'Infrastructure', 
-			'icon' => ''
+			'label' => 'Infrastruktúra', 
+			'icon' => '<i class="fa fa-building "></i>'
 		),
 		
 		array(
 			'path' => 'news', 
-			'label' => 'News', 
-			'icon' => ''
+			'label' => 'Hírek', 
+			'icon' => '<i class="fa fa-newspaper-o "></i>'
 		),
 		
 		array(
 			'path' => 'oktatok', 
-			'label' => 'Oktatok', 
-			'icon' => ''
+			'label' => 'Oktatók', 
+			'icon' => '<i class="fa fa-users "></i>'
+		),
+		
+		array(
+			'path' => 'users', 
+			'label' => 'Felhasználók', 
+			'icon' => '<i class="fa fa-user "></i>'
 		)
 	);
 		

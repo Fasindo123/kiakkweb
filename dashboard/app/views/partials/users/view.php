@@ -21,7 +21,7 @@ $show_export_btn = $this->show_export_btn;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">View  Users</h4>
+                    <h4 class="record-title">Felhasználó megtekintése</h4>
                 </div>
             </div>
         </div>
@@ -46,17 +46,17 @@ $show_export_btn = $this->show_export_btn;
                                 <!-- Table Body Start -->
                                 <tbody class="page-data" id="page-data-<?php echo $page_element_id; ?>">
                                     <tr  class="td-id">
-                                        <th class="title"> Id: </th>
+                                        <th class="title"> Azonosító: </th>
                                         <td class="value"> <?php echo $data['id']; ?></td>
                                     </tr>
                                     <tr  class="td-username">
-                                        <th class="title"> Username: </th>
+                                        <th class="title"> Felhasználónév: </th>
                                         <td class="value">
                                             <span  data-value="<?php echo $data['username']; ?>" 
                                                 data-pk="<?php echo $data['id'] ?>" 
                                                 data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
                                                 data-name="username" 
-                                                data-title="Enter Username" 
+                                                data-title="Adj meg felhasználónevet" 
                                                 data-placement="left" 
                                                 data-toggle="click" 
                                                 data-type="text" 
@@ -64,6 +64,24 @@ $show_export_btn = $this->show_export_btn;
                                                 data-showbuttons="left" 
                                                 class="is-editable" >
                                                 <?php echo $data['username']; ?> 
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr  class="td-name">
+                                        <th class="title"> Név: </th>
+                                        <td class="value">
+                                            <span  data-value="<?php echo $data['name']; ?>" 
+                                                data-pk="<?php echo $data['id'] ?>" 
+                                                data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
+                                                data-name="name" 
+                                                data-title="Adj meg nevet!" 
+                                                data-placement="left" 
+                                                data-toggle="click" 
+                                                data-type="text" 
+                                                data-mode="popover" 
+                                                data-showbuttons="left" 
+                                                class="is-editable" >
+                                                <?php echo $data['name']; ?> 
                                             </span>
                                         </td>
                                     </tr>
@@ -78,7 +96,7 @@ $show_export_btn = $this->show_export_btn;
                         <div class="p-3 d-flex">
                             <div class="dropup export-btn-holder mx-1">
                                 <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-save"></i> Export
+                                    <i class="fa fa-save"></i> Letöltés
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <?php $export_print_link = $this->set_current_page_link(array('format' => 'print')); ?>
@@ -104,10 +122,10 @@ $show_export_btn = $this->show_export_btn;
                                                     </div>
                                                 </div>
                                                 <a class="btn btn-sm btn-info"  href="<?php print_link("users/edit/$rec_id"); ?>">
-                                                    <i class="fa fa-edit"></i> Edit
+                                                    <i class="fa fa-edit"></i> Szerkeszt
                                                 </a>
-                                                <a class="btn btn-sm btn-danger record-delete-btn mx-1"  href="<?php print_link("users/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Are you sure you want to delete this record?" data-display-style="modal">
-                                                    <i class="fa fa-times"></i> Delete
+                                                <a class="btn btn-sm btn-danger record-delete-btn mx-1"  href="<?php print_link("users/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
+                                                    <i class="fa fa-times"></i> Törlés
                                                 </a>
                                             </div>
                                             <?php

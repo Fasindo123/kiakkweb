@@ -23,18 +23,18 @@ $show_pagination = $this->show_pagination;
         <div class="container-fluid">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Users</h4>
+                    <h4 class="record-title">Felhasználók</h4>
                 </div>
                 <div class="col-sm-3 ">
                     <a  class="btn btn btn-primary my-1" href="<?php print_link("users/add") ?>">
                         <i class="fa fa-plus"></i>                              
-                        Add New Users 
+                        Felhasználó hozzáadása 
                     </a>
                 </div>
                 <div class="col-sm-4 ">
                     <form  class="search" action="<?php print_link('users'); ?>" method="get">
                         <div class="input-group">
-                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Search" />
+                            <input value="<?php echo get_value('search'); ?>" class="form-control" type="text" name="search"  placeholder="Keresés" />
                                 <div class="input-group-append">
                                     <button class="btn btn-primary"><i class="fa fa-search"></i></button>
                                 </div>
@@ -113,11 +113,11 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th class="td-sno">#</th>
-                                                <th  class="td-id"> Id</th>
-                                                <th  class="td-username"> Username</th>
+                                                <th  class="td-id"> Azonosító</th>
+                                                <th  class="td-username"> Felhasználónév</th>
+                                                <th  class="td-name"> Név</th>
                                                 <th  class="td-email"> Email</th>
-                                                <th  class="td-photo"> Photo</th>
+                                                <th  class="td-img"> Kép</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -139,14 +139,13 @@ $show_pagination = $this->show_pagination;
                                                             <span class="custom-control-label"></span>
                                                         </label>
                                                     </th>
-                                                    <th class="td-sno"><?php echo $counter; ?></th>
                                                     <td class="td-id"><a href="<?php print_link("users/view/$data[id]") ?>"><?php echo $data['id']; ?></a></td>
                                                     <td class="td-username">
                                                         <span  data-value="<?php echo $data['username']; ?>" 
                                                             data-pk="<?php echo $data['id'] ?>" 
                                                             data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
                                                             data-name="username" 
-                                                            data-title="Enter Username" 
+                                                            data-title="Adj meg felhasználónevet" 
                                                             data-placement="left" 
                                                             data-toggle="click" 
                                                             data-type="text" 
@@ -156,18 +155,33 @@ $show_pagination = $this->show_pagination;
                                                             <?php echo $data['username']; ?> 
                                                         </span>
                                                     </td>
+                                                    <td class="td-name">
+                                                        <span  data-value="<?php echo $data['name']; ?>" 
+                                                            data-pk="<?php echo $data['id'] ?>" 
+                                                            data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
+                                                            data-name="name" 
+                                                            data-title="Adj meg nevet!" 
+                                                            data-placement="left" 
+                                                            data-toggle="click" 
+                                                            data-type="text" 
+                                                            data-mode="popover" 
+                                                            data-showbuttons="left" 
+                                                            class="is-editable" >
+                                                            <?php echo $data['name']; ?> 
+                                                        </span>
+                                                    </td>
                                                     <td class="td-email"><a href="<?php print_link("mailto:$data[email]") ?>"><?php echo $data['email']; ?></a></td>
-                                                    <td class="td-photo"><?php Html :: page_img($data['photo'],50,50,1); ?></td>
+                                                    <td class="td-img"><?php Html :: page_img($data['img'],50,50,1); ?></td>
                                                     <th class="td-btn">
                                                         <a class="btn btn-sm btn-success has-tooltip" title="View Record" href="<?php print_link("users/view/$rec_id"); ?>">
-                                                            <i class="fa fa-eye"></i> View
+                                                            <i class="fa fa-eye"></i> Megtekint
                                                         </a>
                                                         <a class="btn btn-sm btn-info has-tooltip" title="Edit This Record" href="<?php print_link("users/edit/$rec_id"); ?>">
-                                                            <i class="fa fa-edit"></i> Edit
+                                                            <i class="fa fa-edit"></i> Szerkeszt
                                                         </a>
-                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("users/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Are you sure you want to delete this record?" data-display-style="modal">
+                                                        <a class="btn btn-sm btn-danger has-tooltip record-delete-btn" title="Delete this record" href="<?php print_link("users/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Biztosan törölni szeretnéd?" data-display-style="modal">
                                                             <i class="fa fa-times"></i>
-                                                            Delete
+                                                            Törlés
                                                         </a>
                                                     </th>
                                                 </tr>
@@ -185,7 +199,7 @@ $show_pagination = $this->show_pagination;
                                         if(empty($records)){
                                         ?>
                                         <h4 class="bg-light text-center border-top text-muted animated bounce  p-3">
-                                            <i class="fa fa-ban"></i> No record found
+                                            <i class="fa fa-ban"></i> Nem található adat!
                                         </h4>
                                         <?php
                                         }
@@ -203,7 +217,7 @@ $show_pagination = $this->show_pagination;
                                                     </button>
                                                     <div class="dropup export-btn-holder mx-1">
                                                         <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fa fa-save"></i> Export
+                                                            <i class="fa fa-save"></i> Letöltés
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                             <?php $export_print_link = $this->set_current_page_link(array('format' => 'print')); ?>

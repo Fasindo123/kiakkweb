@@ -34,11 +34,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="title">Title <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="title">Cím <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <input id="ctrl-title"  value="<?php  echo $this->set_field_value('title',""); ?>" type="text" placeholder="Enter Title"  required="" name="title"  class="form-control " />
+                                                <input id="ctrl-title"  value="<?php  echo $this->set_field_value('title',""); ?>" type="text" placeholder="Adj meg címet!"  required="" name="title"  class="form-control " />
                                                 </div>
                                             </div>
                                         </div>
@@ -46,11 +46,11 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="description">Description <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="description">Leírás <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <textarea placeholder="Enter Description" id="ctrl-description"  required="" rows="5" name="description" class=" form-control"><?php  echo $this->set_field_value('description',""); ?></textarea>
+                                                    <textarea placeholder="Adj meg leírást!" id="ctrl-description"  required="" rows="5" name="description" class=" form-control"><?php  echo $this->set_field_value('description',""); ?></textarea>
                                                     <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
                                                 </div>
                                             </div>
@@ -63,7 +63,11 @@ $redirect_to = $this->redirect_to;
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <input id="ctrl-path"  value="<?php  echo $this->set_field_value('path',""); ?>" type="text" placeholder="Enter Path"  required="" name="path"  class="form-control " />
+                                                    <div class="dropzone required" input="#ctrl-path" fieldname="path"    data-multiple="false" dropmsg="Válassz fájlt vagy húzd ide!"    btntext="Browse" filesize="50" maximum="1">
+                                                        <input name="path" id="ctrl-path" required="" class="dropzone-input form-control" value="<?php  echo $this->set_field_value('path',""); ?>" type="text"  />
+                                                            <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
+                                                            <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

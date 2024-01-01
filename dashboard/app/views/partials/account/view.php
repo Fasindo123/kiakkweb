@@ -21,7 +21,7 @@ $show_export_btn = $this->show_export_btn;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">My Account</h4>
+                    <h4 class="record-title">Fiókom</h4>
                 </div>
             </div>
         </div>
@@ -82,17 +82,17 @@ $show_export_btn = $this->show_export_btn;
                                             <table class="table table-hover table-borderless table-striped">
                                                 <tbody class="page-data" id="page-data-<?php echo $page_element_id; ?>">
                                                     <tr  class="td-id">
-                                                        <th class="title"> Id: </th>
+                                                        <th class="title"> Azonosító: </th>
                                                         <td class="value"> <?php echo $data['id']; ?></td>
                                                     </tr>
                                                     <tr  class="td-username">
-                                                        <th class="title"> Username: </th>
+                                                        <th class="title"> Felhasználónév: </th>
                                                         <td class="value">
                                                             <span  data-value="<?php echo $data['username']; ?>" 
                                                                 data-pk="<?php echo $data['id'] ?>" 
                                                                 data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
                                                                 data-name="username" 
-                                                                data-title="Enter Username" 
+                                                                data-title="Adj meg felhasználónevet" 
                                                                 data-placement="left" 
                                                                 data-toggle="click" 
                                                                 data-type="text" 
@@ -100,6 +100,24 @@ $show_export_btn = $this->show_export_btn;
                                                                 data-showbuttons="left" 
                                                                 class="is-editable" >
                                                                 <?php echo $data['username']; ?> 
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr  class="td-name">
+                                                        <th class="title"> Név: </th>
+                                                        <td class="value">
+                                                            <span  data-value="<?php echo $data['name']; ?>" 
+                                                                data-pk="<?php echo $data['id'] ?>" 
+                                                                data-url="<?php print_link("users/editfield/" . urlencode($data['id'])); ?>" 
+                                                                data-name="name" 
+                                                                data-title="Adj meg nevet!" 
+                                                                data-placement="left" 
+                                                                data-toggle="click" 
+                                                                data-type="text" 
+                                                                data-mode="popover" 
+                                                                data-showbuttons="left" 
+                                                                class="is-editable" >
+                                                                <?php echo $data['name']; ?> 
                                                             </span>
                                                         </td>
                                                     </tr>

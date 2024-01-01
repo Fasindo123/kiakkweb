@@ -18,7 +18,7 @@ $redirect_to = $this->redirect_to;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">My Account</h4>
+                    <h4 class="record-title">Fiókom</h4>
                 </div>
             </div>
         </div>
@@ -37,11 +37,11 @@ $redirect_to = $this->redirect_to;
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <label class="control-label" for="username">Username <span class="text-danger">*</span></label>
+                                            <label class="control-label" for="username">Felhasználónév <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="">
-                                                <input id="ctrl-username"  value="<?php  echo $data['username']; ?>" type="text" placeholder="Enter Username"  required="" name="username"  data-url="api/json/account_username_value_exist/" data-loading-msg="Checking availability ..." data-available-msg="Available" data-unavailable-msg="Not available" class="form-control  ctrl-check-duplicate" />
+                                                <input id="ctrl-username"  value="<?php  echo $data['username']; ?>" type="text" placeholder="Adj meg felhasználónevet"  required="" name="username"  data-url="api/json/account_username_value_exist/" data-loading-msg="Checking availability ..." data-available-msg="Available" data-unavailable-msg="Not available" class="form-control  ctrl-check-duplicate" />
                                                     <div class="check-status"></div> 
                                                 </div>
                                             </div>
@@ -50,33 +50,45 @@ $redirect_to = $this->redirect_to;
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label class="control-label" for="photo">Photo <span class="text-danger">*</span></label>
+                                                <label class="control-label" for="name">Név <span class="text-danger">*</span></label>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="">
-                                                    <div class="dropzone required" input="#ctrl-photo" fieldname="photo"    data-multiple="false" dropmsg="Choose files or drag and drop files to upload"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
-                                                        <input name="photo" id="ctrl-photo" required="" class="dropzone-input form-control" value="<?php  echo $data['photo']; ?>" type="text"  />
-                                                            <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
-                                                            <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
-                                                        </div>
+                                                    <input id="ctrl-name"  value="<?php  echo $data['name']; ?>" type="text" placeholder="Adj meg nevet!"  required="" name="name"  class="form-control " />
                                                     </div>
-                                                    <?php Html :: uploaded_files_list($data['photo'], '#ctrl-photo'); ?>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-ajax-status"></div>
-                                    <div class="form-group text-center">
-                                        <button class="btn btn-primary" type="submit">
-                                            Update
-                                            <i class="fa fa-send"></i>
-                                        </button>
-                                    </div>
-                                </form>
+                                        <div class="form-group ">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label class="control-label" for="img">Kép <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <div class="">
+                                                        <div class="dropzone required" input="#ctrl-img" fieldname="img"    data-multiple="false" dropmsg="Válassz fájlt vagy húzd ide!"    btntext="Browse" extensions=".jpg,.png,.gif,.jpeg" filesize="3" maximum="1">
+                                                            <input name="img" id="ctrl-img" required="" class="dropzone-input form-control" value="<?php  echo $data['img']; ?>" type="text"  />
+                                                                <!--<div class="invalid-feedback animated bounceIn text-center">Please a choose file</div>-->
+                                                                <div class="dz-file-limit animated bounceIn text-center text-danger"></div>
+                                                            </div>
+                                                        </div>
+                                                        <?php Html :: uploaded_files_list($data['img'], '#ctrl-img'); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-ajax-status"></div>
+                                        <div class="form-group text-center">
+                                            <button class="btn btn-primary" type="submit">
+                                                Szerkeszt
+                                                <i class="fa fa-send"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
+            </section>
+            
