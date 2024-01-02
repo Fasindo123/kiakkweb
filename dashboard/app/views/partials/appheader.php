@@ -30,8 +30,8 @@
                                 <span>Hi <?php echo ucwords(USER_NAME); ?> !</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="<?php print_link('account') ?>"><i class="fa fa-user"></i> Fiókom</a>
-                                <a class="dropdown-item" href="<?php print_link('index/logout?csrf_token=' . Csrf::$token) ?>"><i class="fa fa-sign-out"></i> Kijelentkezés</a>
+                                <a class="dropdown-item" href="<?php print_link('account') ?>"><i class="fa fa-user"></i> My Account</a>
+                                <a class="dropdown-item" href="<?php print_link('index/logout?csrf_token=' . Csrf::$token) ?>"><i class="fa fa-sign-out"></i> Logout</a>
                             </ul>
                         </li>
                     </ul>
@@ -72,8 +72,8 @@
                                 <i class="fa fa-user"></i>
                             </button>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="<?php print_link('account') ?>"><i class="fa fa-user"></i> Fiókom</a>
-                                <a class="dropdown-item" href="<?php print_link('index/logout?csrf_token=' . Csrf::$token) ?>"><i class="fa fa-sign-out"></i> Kijelentkezés</a>
+                                <a class="dropdown-item" href="<?php print_link('account') ?>"><i class="fa fa-user"></i> My Account</a>
+                                <a class="dropdown-item" href="<?php print_link('index/logout?csrf_token=' . Csrf::$token) ?>"><i class="fa fa-sign-out"></i> Logout</a>
                             </ul>
                         </div>
                     </li>

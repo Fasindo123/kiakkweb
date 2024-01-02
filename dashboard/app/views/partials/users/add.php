@@ -26,7 +26,7 @@ $redirect_to = $this->redirect_to;
     <div  class="">
         <div class="container">
             <div class="row ">
-                <div class="col-md-7 comp-grid">
+                <div class="col-md-12 comp-grid">
                     <?php $this :: display_page_errors(); ?>
                     <div  class="bg-light p-3 animated fadeIn page-content">
                         <form id="users-add-form" role="form" novalidate enctype="multipart/form-data" class="form page-form form-horizontal needs-validation" action="<?php print_link("users/add?csrf_token=$csrf_token") ?>" method="post">

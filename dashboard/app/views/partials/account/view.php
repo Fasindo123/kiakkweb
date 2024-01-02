@@ -59,17 +59,17 @@ $show_export_btn = $this->show_export_btn;
                                     <ul class="nav nav-pills flex-column text-left">
                                         <li class="nav-item">
                                             <a data-toggle="tab" href="#AccountPageView" class="nav-link active">
-                                                <i class="fa fa-user"></i> Fiókadatok
+                                                <i class="fa fa-user"></i> Account Detail
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a data-toggle="tab" href="#AccountPageEdit" class="nav-link">
-                                                <i class="fa fa-edit"></i> Fiókszerkesztés
+                                                <i class="fa fa-edit"></i> Edit Account
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a data-toggle="tab" href="#AccountPageChangeEmail" class="nav-link">
-                                                <i class="fa fa-envelope"></i> Email megváltoztatása
+                                                <i class="fa fa-envelope"></i> Change Email
                                             </a>
                                         </li>
                                     </ul>
@@ -148,7 +148,7 @@ $show_export_btn = $this->show_export_btn;
                         ?>
                         <!-- Empty Record Message -->
                         <div class="text-muted p-3">
-                            <i class="fa fa-ban"></i> Nem található adat!
+                            <i class="fa fa-ban"></i> No Record Found
                         </div>
                         <?php
                         }

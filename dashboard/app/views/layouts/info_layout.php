@@ -40,16 +40,16 @@
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 					<li class="nav-item active">
-						<a class="nav-link" href="<?php print_link(HOME_PAGE) ?>">Kezdőlap</a>
+						<a class="nav-link" href="<?php print_link(HOME_PAGE) ?>">Home</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="<?php print_link('info/about') ?>">Rólunk</a>
+						<a class="nav-link" href="<?php print_link('info/about') ?>">About us</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="<?php print_link('info/help') ?>">Segítségkérés</a>
+						<a class="nav-link" href="<?php print_link('info/help') ?>">Help and FAQ</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="<?php print_link('info/contact') ?>">Kontakt</a>
+						<a class="nav-link" href="<?php print_link('info/contact') ?>">Contact us</a>
 					</li>
 				</ul>
 			</div>
