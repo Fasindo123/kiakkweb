@@ -60,7 +60,7 @@ if (empty($search_query)) {
                 echo '<div class="container">';
                 echo '<div class="row">';
                 foreach ($search_results as $result) {
-                    $cover_img = "dashboard/" . $result['cover_img'];
+                    $cover_img = getPicture($result['cover_img'], 1);
                     echo '<div class="col-lg-6">
                             <div class="cardBlog">
                                 <div class="cardImage"><a href="pages/news.php?news_id=' . $result['id'] . '"><img class="parallax-image" src="' . $cover_img . '" alt="' . $result['title'] . ' cikk borítóképe"></a></div>
