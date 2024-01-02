@@ -10,20 +10,16 @@ require_once('email.php')
       <?php require_once('components/header.php');
       ?>
       <main class="main">
-      <section class="section banner-mode-4 bg-900">
-          <div class="contact-banner">
-            <!-- <div class="banner-icon-1 shape-1"></div> -->
-            <!-- <div class="banner-icon-2 shape-3"></div> -->
             <div class="container">
-            <h2 class="display-1 color-0 mb-30 grow-up scroll-zoom-in">Kapcsolat</h2>
+            <h2 class="display-1 text-center mb-30 mt-200">Kapcsolat</h2>
 
             <div class="row mt-60">
               <div class="col-lg-4">
                 <div class="card-contact">
                   <div class="contact-icon"><img src="assets/imgs/page/touch1.svg" alt="kiakk"></div>
                   <div class="contact-info">
-                    <h4 class="color-0 card-title">Képzőközpont</h4>
-                    <p class="font-md color-0"><i class="fa-solid fa-location-dot"></i> 7400 Kaposvár, <br> Damjanich utca 17.<br><i class="fa-solid fa-phone"></i> (+36) 30 664 8937<br><i class="fa-solid fa-envelope"></i> info@kiakk.hu</p>
+                    <h4 class=" card-title">Képzőközpont</h4>
+                    <p class="font-md"><i class="fa-solid fa-location-dot"></i> 7400 Kaposvár, <br> Damjanich utca 17.<br><i class="fa-solid fa-phone"></i> (+36) 30 664 8937<br><i class="fa-solid fa-envelope"></i> info@kiakk.hu</p>
                   </div>
                 </div>
                 <!-- <div class="card-contact">
@@ -69,7 +65,7 @@ require_once('email.php')
                           <div class="form-group">
                             <button class="btn btn-black" type="submit" name="kuldes" id="kuldes" onclick="return sendForm();">Üzenet küldése<img src="assets/imgs/template/arrow.svg" alt="küldés icon"></button>
                           </div>
-                          <div class="agree-cb fw-bold color-0">
+                          <div class="agree-cb fw-bold">
                             <input class="cb-agree" type="checkbox">A kapcsolatfelvétel gombra kattintva Ön elfogadja feltételeinket és szabályzatunkat.
                           </div>
                         </div>
@@ -82,8 +78,6 @@ require_once('email.php')
           </div>
           <div class="block-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2753.369275933826!2d17.7972176!3d46.362061000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47683e000240052b%3A0x3b1f6a2a20645b22!2zS2Fwb3N2w6FyaSBTWkMgRcO2dHbDtnMgTG9yw6FuZCBNxbFzemFraSBUZWNobmlrdW0gw6lzIEtvbGzDqWdpdW0!5e0!3m2!1shu!2shu!4v1698227964602!5m2!1shu!2shu" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </section>
       </main>
       <?php require_once("components/footer.php"); ?>
     </div>

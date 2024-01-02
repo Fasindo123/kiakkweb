@@ -3933,7 +3933,7 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
   width: 100%;
   position: relative;
   border-bottom: 0px solid #E8E9ED;
-  background-color: transparent;
+  background-color: #166198;
   z-index: 1004;
   position: fixed;
   top: 0px;
@@ -11894,7 +11894,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #68c4a9;
+	background-color: #166198;
 	height: 2px;
 	box-sizing: border-box;
 	width: 60%;
@@ -11902,11 +11902,21 @@ ul{
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
+
 .footer-col ul li a{
 	font-size: 16px;
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+  color: #000;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+ body.dark-mode .footer-col ul li a{
+	font-size: 16px;
+	text-decoration: none;
+	font-weight: 300;
+  color: #F1F1F1;
 	display: block;
 	transition: all 0.3s ease;
 }

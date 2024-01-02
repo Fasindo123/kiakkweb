@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once('components/head.php'); ?>
+
+<style>
+  .header {
+    background-color: transparent;
+  }
+</style>
+
 <body>
       <?php require_once('components/loader.php'); ?>
       <?php require_once('components/mobile-menu.php'); ?>
