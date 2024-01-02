@@ -3939,6 +3939,17 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
   top: 0px;
   left: 0px;
 }
+
+.header-logo .logo-text {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-logo .logo-text {
+      display: none;
+  }
+}
+
 .header .main-header {
   display: flex;
   align-items: center;

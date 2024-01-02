@@ -20,7 +20,7 @@
             <div class="container">
               <div class="text-center">
                 <!-- <h3 class="color-brand-1 mb-25 text-up fadeInUp"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium nemo iusto tempora?</h3> -->
-                <h2 class="display-5 color-white mb-55 fadeInUp">Kaposvári Informatika<br class="d-none d-lg-block">Ágazati Képzőközpont</h2>
+                <h2 class="display-5 color-white mb-55 fadeInUp">Kaposvári Informatika <br> Ágazati Képzőközpont</h2>
                 <div class="d-flex justify-content-center fadeInUp get-quote"><a class="d-inline-block align-middle mr-50" href="pages/contact.php">
                     <div class="box-get-quote parallax-item">
                       <div class="img-quote img-zoom-in"><img src="assets/imgs/page/img-get-quote.png" alt="kiakk"></div>
