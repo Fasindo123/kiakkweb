@@ -6,7 +6,7 @@
               <div class="header-nav">
                 <nav class="nav-main-menu d-none d-xl-block">
                   <ul class="main-menu">
-                    <li><a href="index.php">Kezdőlap</a></li>
+                    <li><a href="/kiakkweb/index.php">Kezdőlap</a></li>
                     <li><a href="#">Szervezetünk</a></li>
                     <li class="has-children"><a href="/kiakkweb/index.php#kepzesek">Képzéseink</a>
                       <ul class="sub-menu">
