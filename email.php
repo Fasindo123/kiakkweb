@@ -1,5 +1,13 @@
 <?php
 
+$nev = "üres";
+$email = "üres";
+
+if (isset($_POST["nev"])) {
+    $nev = $_POST["nev"];
+    $email = $_POST["email"];
+}
+
 use PHPMailer\PHPMailer;
 use PHPMailer\SMTP;
 use PHPMailer\Exception;
@@ -7,9 +15,8 @@ use PHPMailer\Exception;
 require 'dashboard/libs/PHPMailer/class.phpmailer.php';
 require 'dashboard/libs/PHPMailer/class.pop3.php';
 require 'dashboard/libs/PHPMailer/class.smtp.php';
-require 'dashboard/libs/PHPMailer/PHPMailerAutoload.php';
 
-$MAIL_TYPE = "null";
+// $MAIL_TYPE = "null";
 
 if(isset($_POST['kuldes'])) {
 
@@ -22,20 +29,20 @@ if(isset($_POST['kuldes'])) {
     $mail2->SMTPAuth = true;                                   // SMTP
     $mail2->SMTPSecure = 'STARTTLS';
 
-    $mail2->Username = 'huberpetergyorgy@outlook.hu';            // SMTP felhasználo
-    $mail2->Password = 'Peti.2006.Mazli';                               // SMTP jelszo
+    $mail2->Username = 'info@kiakk.hu';            // SMTP felhasználo
+    $mail2->Password = '';                               // SMTP jelszo
 
     $mail2->CharSet = 'UTF-8';
-    $mail2->From     = 'huberpetergyorgy@outlook.hu';            // Felado e-mail cime
-    $mail2->FromName = 'huberpetergyorgy@outlook.hu';                // Felado neve
+    $mail2->From     = 'info@kiakk.hu';            // Felado e-mail cime
+    $mail2->FromName = 'Kaposvári Informatika Ágazati Képzőközpont';                // Felado neve
 //    $mail2->AddAddress('tamas@bloch.hu', 'Bloch Tamás');         // Cimzett es neve
-    $mail2->AddAddress('huberpetergyorgy@gmail.com', 'Huber Péter György');         // Cimzett es neve
-    $mail2->AddAddress('huberpetergyorgy@outlook.hu', 'Huber Péter György');         // Cimzett es neve
-    $mail2->AddReplyTo('huberpetergyorgy@outlook.hu', 'Huber Péter György');
+    $mail2->AddAddress($email, $nev); // Felhasználó által megadott e-mail cím és név
+    $mail2->AddAddress('info@kiakk.hu', 'Kaposvári Informatika Ágazati Képzőközpont');         // Cimzett es neve
+    $mail2->AddReplyTo('info@kiakk.hu', 'Kaposvári Informatika Ágazati Képzőközpont');
     $mail2->WordWrap = 80;                                     // Sortores allitasa
     $mail2->IsHTML(true);                                      // Kuldes HTML-kent
 
-    $targy = 'KIAKK';
+    $targy = 'Kaposvári Informatika Ágazati Képzőközpont';
     $data2 = 'Köszönjük szépen levelét, megkaptuk!';
 
     $mail2->Subject = $targy;                   // A level targya
