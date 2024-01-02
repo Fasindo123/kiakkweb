@@ -28,12 +28,11 @@ $search_query = isset($_GET['s']) ? htmlspecialchars($_GET['s']) : '';
 
 // Ellenőrizze, hogy van-e keresési lekérdezés
 if (empty($search_query)) {
-    // Ha nincs keresési lekérdezés, irányítson át az index.php-re
-    header("Location: index.php");
-    exit();
+    $error_message = "Nem adott meg keresési feltételt.";
+} else {
+    $search_results = searchNews($search_query);
 }
 
-$search_results = searchNews($search_query);
 ?>
 
 <!DOCTYPE html>
@@ -44,29 +43,36 @@ $search_results = searchNews($search_query);
     <?php require_once('components/mobile-menu.php'); ?>
     <?php require_once('components/header.php'); ?>
 
-    <br><br><br><br><br><br>
 
     <div class="container search-txt">
-        <p>Keresett szó: <?php echo $search_query; ?></p>
+        <form role="search" method="get" action="search.php">
+            <input type="search" id="search-text" name="s" value="<?php echo $search_query; ?>" placeholder="Keresés...">
+            <button type="submit">Keresés</button><br><br><br>
+        </form>
         <?php
-        // Ellenőrizze, hogy vannak-e találatok
-        if (count($search_results) > 0) {
-            echo '<p>Találatok: ' . count($search_results) . '</p><br><br><br>';
-            echo '<div class="container">';
-            echo '<div class="row">';
-            foreach ($search_results as $result) {
-                $cover_img = "dashboard/" . $result['cover_img'];
-                echo '<div class="col-lg-6">
-                        <div class="cardBlog">
-                            <div class="cardImage"><a href="pages/news.php?news_id=' . $result['id'] . '"><img class="parallax-image" src="' . $cover_img . '" alt="' . $result['title'] . ' cikk borítóképe"></a></div>
-                            <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="pages/news.php?news_id=' . $result['id'] . '">' . $result['date'] . '</a><a class="link-blog" href="pages/news.php?news_id=' . $result['id'] . '">
-                            <h4 class="color-light-900 text-opacity">' . $result['title'] . '</h4></a></div>
-                        </div>
-                    </div>';
-            }
-            echo '</div></div>';
+        if (isset($error_message)) {
+            echo '<p style="color: red; border: 2px solid red; padding: 10px; width: 50%; margin: 0 auto; text-align: center;">' . $error_message . '</p>';
         } else {
-            echo '<p class="fw-bold" style="color: red; border: 2px solid red; padding: 10px; width: 50%; margin: 0 auto; text-align: center;">Nincs találat.</p>';
+            echo '<p style="margin-bottom: 20px">Keresett szó: ' . $search_query . '</p>';
+            // Ellenőrizze, hogy vannak-e találatok
+            if (count($search_results) > 0) {
+                echo '<p style="margin-bottom: 50px">Találatok: ' . count($search_results) . '</p><br><br><br>';
+                echo '<div class="container">';
+                echo '<div class="row">';
+                foreach ($search_results as $result) {
+                    $cover_img = "dashboard/" . $result['cover_img'];
+                    echo '<div class="col-lg-6">
+                            <div class="cardBlog">
+                                <div class="cardImage"><a href="pages/news.php?news_id=' . $result['id'] . '"><img class="parallax-image" src="' . $cover_img . '" alt="' . $result['title'] . ' cikk borítóképe"></a></div>
+                                <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="pages/news.php?news_id=' . $result['id'] . '">' . $result['date'] . '</a><a class="link-blog" href="pages/news.php?news_id=' . $result['id'] . '">
+                                <h4 class="color-light-900 text-opacity">' . $result['title'] . '</h4></a></div>
+                            </div>
+                        </div>';
+                }
+                echo '</div></div>';
+            } else {
+                echo '<p class="fw-bold" style="color: red; border: 2px solid red; padding: 10px; width: 50%; margin: 0 auto; text-align: center;">Nincs találat.</p>';
+            }
         }
         ?>
     </div>
