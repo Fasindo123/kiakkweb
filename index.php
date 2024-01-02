@@ -14,7 +14,7 @@
               <div class="text-center">
                 <!-- <h3 class="color-brand-1 mb-25 text-up fadeInUp"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium nemo iusto tempora?</h3> -->
                 <h2 class="display-5 color-white mb-55 fadeInUp">Kaposvári Informatika<br class="d-none d-lg-block">Ágazati Képzőközpont</h2>
-                <div class="d-flex justify-content-center fadeInUp get-quote"><a class="d-inline-block align-middle mr-50" href="contact.php">
+                <div class="d-flex justify-content-center fadeInUp get-quote"><a class="d-inline-block align-middle mr-50" href="pages/contact.php">
                     <div class="box-get-quote parallax-item">
                       <div class="img-quote img-zoom-in"><img src="assets/imgs/page/img-get-quote.png" alt="kiakk"></div>
                       <div class="info-quote"><span class="font-xl mr-15">Lépj Kapcsolatba <i class="fa-solid fa-share-from-square"></i></span></div>
@@ -53,6 +53,8 @@
                                   </div>
                                 </div>';
                         }
+                      } else {
+                        echo 'Nincs egy létrehozott hír sem!';
                       }
                     ?>
                   </div>
@@ -96,6 +98,8 @@
                           </div>
                         </div>';
                 }
+              } else {
+                echo 'Nincs létrehozva egy képzés sem!';
               }
               ?>
           </div>
@@ -133,6 +137,8 @@
                                   </div>
                                 </div>';
                         }
+                      } else {
+                        echo 'Nincs hozzáadva egy oktató sem!';
                       }
                     ?>
                   </div>
@@ -186,6 +192,8 @@
                                   </div>
                                 </div>';
                         }
+                      } else {
+                        echo 'Nincs elérhető adat!';
                       }
                     ?>
                   </div>
@@ -265,7 +273,7 @@ $selectedImages = array_slice($imageFiles, 0, 6);
                     <p class="font-md color-600">Vegye fel velünk a kapcsolatot, és mi a lehető leghamarabb jelentkezünk.</p>
                   </div>
                   <div class="mt-40">
-                    <div class="grow-up"><a class="btn btn-default btn-default-sm" href="contact.php">Kapcsolat<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></a></div>
+                    <div class="grow-up"><a class="btn btn-default btn-default-sm" href="pages/contact.php">Kapcsolat<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -283,6 +291,8 @@ $selectedImages = array_slice($imageFiles, 0, 6);
                                   </div>
                                 </div>';
                         }
+                      }  else {
+                        echo 'Nincs létrehozva egy kérdés sem!';
                       }
                     ?>
                   </div>
@@ -303,24 +313,28 @@ $selectedImages = array_slice($imageFiles, 0, 6);
         <div class="accordion" id="accordionDocs">
         <?php 
           $docs = sqlQuery("SELECT * FROM docs");
-          while ($doc = $docs->fetch_assoc()) {
-            echo '<div class="accordion-item scroll-move-up-2">
-                    <h5 class="accordion-header" id="docHeadingOne">
-                      <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapse'.$doc["id"].'" aria-expanded="false" aria-controls="docCollapse'.$doc["id"].'">'.$doc["title"].'</button>
-                    </h5>
-                    <div class="accordion-collapse collapse" id="docCollapse'.$doc["id"].'" aria-labelledby="docHeadingOne" data-bs-parent="#accordionDocs">
-                      <div class="row">
-                        <div class="col-lg-8">
-                          <div class="accordion-body font-lg color-600">
-                            '.$doc["description"].'
+          if ($docs->num_rows>0) {
+            while ($doc = $docs->fetch_assoc()) {
+              echo '<div class="accordion-item scroll-move-up-2">
+                      <h5 class="accordion-header" id="docHeadingOne">
+                        <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapse'.$doc["id"].'" aria-expanded="false" aria-controls="docCollapse'.$doc["id"].'">'.$doc["title"].'</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" id="docCollapse'.$doc["id"].'" aria-labelledby="docHeadingOne" data-bs-parent="#accordionDocs">
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="accordion-body font-lg color-600">
+                              '.$doc["description"].'
+                            </div>
+                          </div>
+                          <div class="col-lg-4 mt-2">
+                            <div class="grow-up"><a class="btn btn-default btn-default-sm" href="dashboard/'.$doc["path"].'" target="_blank">Megnyitás<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="nyíl"></a></div>
                           </div>
                         </div>
-                        <div class="col-lg-4 mt-2">
-                          <div class="grow-up"><a class="btn btn-default btn-default-sm" href="dashboard/'.$doc["path"].'" target="_blank">Megnyitás<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="nyíl"></a></div>
-                        </div>
                       </div>
-                    </div>
-                  </div>';
+                    </div>';
+            }
+          } else {
+            echo 'Nincs egy feltöltött dokumentum sem!';
           }
         ?>
         </div>

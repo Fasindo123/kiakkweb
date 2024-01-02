@@ -1,13 +1,64 @@
 <?php
-require_once('email.php')
+
+$nev = "üres";
+$email = "üres";
+
+if (isset($_POST["nev"])) {
+    $nev = $_POST["nev"];
+    $email = $_POST["email"];
+}
+
+use \kiakkweb\PHPMailer\PHPMailer;
+use \kiakkweb\PHPMailer\SMTP;
+use \kiakkweb\PHPMailer\Exception;
+
+require '../dashboard/libs/PHPMailer/class.phpmailer.php';
+require '../dashboard/libs/PHPMailer/class.pop3.php';
+require '../dashboard/libs/PHPMailer/class.smtp.php';
+
+
+if(isset($_POST['kuldes'])) {
+
+    // ügyfélnek
+    $mail2 = new \PHPMailer();
+    $mail2->IsSMTP();     
+    // $mail2->SMTPDebug = 2;                                     // SMTP-n keresztuli kuldes
+    $mail2->Host     = 'smtp.office365.com';                     // SMTP szerverek
+    $mail2->Port = 587;
+    $mail2->SMTPAuth = true;                                   // SMTP
+    $mail2->SMTPSecure = 'STARTTLS';
+
+    $mail2->Username = 'info@kiakk.hu';            // SMTP felhasználo
+    $mail2->Password = '';                               // SMTP jelszo
+
+    $mail2->CharSet = 'UTF-8';
+    $mail2->From     = 'info@kiakk.hu';            // Felado e-mail cime
+    $mail2->FromName = 'Kaposvári Informatika Ágazati Képzőközpont';                // Felado neve
+//    $mail2->AddAddress('tamas@bloch.hu', 'Bloch Tamás');         // Cimzett es neve
+    $mail2->AddAddress($email, $nev); // Felhasználó által megadott e-mail cím és név
+    $mail2->AddAddress('info@kiakk.hu', 'Kaposvári Informatika Ágazati Képzőközpont');         // Cimzett es neve
+    $mail2->AddReplyTo('info@kiakk.hu', 'Kaposvári Informatika Ágazati Képzőközpont');
+    $mail2->WordWrap = 80;                                     // Sortores allitasa
+    $mail2->IsHTML(true);                                      // Kuldes HTML-kent
+
+    $targy = 'Kaposvári Informatika Ágazati Képzőközpont';
+    $data2 = 'Köszönjük szépen levelét, megkaptuk!';
+
+    $mail2->Subject = $targy;                   // A level targya
+    $mail2->Body    = $data2;          // A level tartalma
+    //				$mail2->AltBody = 'Csak szöveg';            // A level szoveges tartalma
+    $mail2->Send();
+    // magunknak
+    //  echo '<script type="text/javascript" charset="utf-8">alert("Köszönjük az email-jét!"</script>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="hu">
-<?php require_once('components/head.php'); ?>
+<?php require_once('../components/head.php'); ?>
 <body>
-      <?php require_once('components/loader.php'); ?>
-      <?php require_once('components/mobile-menu.php'); ?>
-      <?php require_once('components/header.php');
+      <?php require_once('../components/loader.php'); ?>
+      <?php require_once('../components/mobile-menu.php'); ?>
+      <?php require_once('../components/header.php');
       ?>
       <main class="main">
       <section class="section banner-mode-4 bg-900">
@@ -20,7 +71,7 @@ require_once('email.php')
             <div class="row mt-60">
               <div class="col-lg-4">
                 <div class="card-contact">
-                  <div class="contact-icon"><img src="assets/imgs/page/touch1.svg" alt="kiakk"></div>
+                  <div class="contact-icon"><img src="../assets/imgs/page/touch1.svg" alt="kiakk"></div>
                   <div class="contact-info">
                     <h4 class="color-0 card-title">Képzőközpont</h4>
                     <p class="font-md color-0"><i class="fa-solid fa-location-dot"></i> 7400 Kaposvár, <br> Damjanich utca 17.<br><i class="fa-solid fa-phone"></i> (+36) 30 664 8937<br><i class="fa-solid fa-envelope"></i> info@kiakk.hu</p>
@@ -67,7 +118,7 @@ require_once('email.php')
                       <div class="col-lg-12">
                         <div class="box-button-touch">
                           <div class="form-group">
-                            <button class="btn btn-black" type="submit" name="kuldes" id="kuldes" onclick="return sendForm();">Üzenet küldése<img src="assets/imgs/template/arrow.svg" alt="küldés icon"></button>
+                            <button class="btn btn-black" type="submit" name="kuldes" id="kuldes" onclick="return sendForm();">Üzenet küldése<img src="../assets/imgs/template/arrow.svg" alt="küldés icon"></button>
                           </div>
                           <div class="agree-cb fw-bold color-0">
                             <input class="cb-agree" type="checkbox">A kapcsolatfelvétel gombra kattintva Ön elfogadja feltételeinket és szabályzatunkat.
@@ -85,10 +136,10 @@ require_once('email.php')
           </div>
         </section>
       </main>
-      <?php require_once("components/footer.php"); ?>
+      <?php require_once("../components/footer.php"); ?>
     </div>
     <div class="scroll-to-top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></div>
-    <?php require_once("components/scripts.php"); ?>
+    <?php require_once("../components/scripts.php"); ?>
 
 <script>
   // Üzenet doboz folyamatosan növekedjen

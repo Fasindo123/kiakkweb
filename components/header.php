@@ -30,7 +30,7 @@
                         ?>
                       </ul>
                     </li>
-                    <li><a href="contact.php">Kapcsolat</a></li>
+                    <li><a href="/kiakkweb/pages/contact.php">Kapcsolat</a></li>
                   </ul>
                   
                 </nav>
