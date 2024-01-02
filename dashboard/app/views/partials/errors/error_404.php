@@ -8,7 +8,7 @@
 <div class="container">
 	<div class="info-404 text-center">
 		<h1 class="my-3">404</h1>
-		<h2 class="text-muted">Page Not Found</h2>
+		<h2 class="text-muted">Az oldal nem található!</h2>
 		<?php
 		if (DEVELOPMENT_MODE) {
 		?>
@@ -17,7 +17,7 @@
 		}
 		?>
 		<div class="text-center">
-			<a href="<?php print_link(HOME_PAGE); ?>" class="btn btn-primary">Go to home page</a>
+			<a href="<?php print_link(HOME_PAGE); ?>" class="btn btn-primary">Vissza a kezdőlapra</a>
 		</div>
 	</div>
 </div>

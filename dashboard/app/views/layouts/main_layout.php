@@ -78,15 +78,15 @@
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title">Delete record</h5>
+								<h5 class="modal-title">Törlés</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
 									<span aria-hidden="true">&times;</span> 
 								</button>
 							</div>
 							<div id="delete-record-modal-msg" class="modal-body"></div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-								<a href="" id="delete-record-modal-btn" class="btn btn-primary">Delete</a> 
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Mégsem</button>
+								<a href="" id="delete-record-modal-btn" class="btn btn-primary">Törlés</a> 
 							</div>
 						</div>
 					</div>
@@ -105,19 +105,19 @@
 				<template id="page-loading-indicator">
 					<div class="p-2 text-center m-2 text-muted m-auto">
 						<div class="ajax-loader"></div>
-						<h4 class="p-3 mt-2 font-weight-light">Loading...</h4>
+						<h4 class="p-3 mt-2 font-weight-light">Betöltés...</h4>
 					</div>
 				</template>
 				<template id="page-saving-indicator">
 					<div class="p-2 text-center m-2 text-muted">
 						<div class="lds-dual-ring"></div>
-						<h4 class="p-3 mt-2 font-weight-light">Saving...</h4>
+						<h4 class="p-3 mt-2 font-weight-light">Mentés...</h4>
 					</div>
 				</template>
 				<template id="inline-loading-indicator">
 					<div class="p-2 text-center d-flex justify-content-center">
 						<span class="loader mr-3"></span>
-						<span class="font-weight-bold">Loading...</span>
+						<span class="font-weight-bold">Betöltés...</span>
 					</div>
 				</template>
 			</div>
