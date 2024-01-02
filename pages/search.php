@@ -45,9 +45,9 @@ if (empty($search_query)) {
 
 
     <div class="container search-txt">
-        <form role="search" method="get" action="search.php">
+        <form class="mb-80" role="search" method="get" action="search.php">
             <input type="search" id="search-text" name="s" value="<?php echo $search_query; ?>" placeholder="Keresés...">
-            <button type="submit">Keresés</button><br><br><br>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Keresés</button>
         </form>
         <?php
         if (isset($error_message)) {
@@ -56,7 +56,7 @@ if (empty($search_query)) {
             echo '<p style="margin-bottom: 20px">Keresett szó: ' . $search_query . '</p>';
             // Ellenőrizze, hogy vannak-e találatok
             if (count($search_results) > 0) {
-                echo '<p style="margin-bottom: 50px">Találatok: ' . count($search_results) . '</p><br><br><br>';
+                echo '<p style="margin-bottom: 100px">Találatok: ' . count($search_results) . '</p><br><br><br>';
                 echo '<div class="container">';
                 echo '<div class="row">';
                 foreach ($search_results as $result) {

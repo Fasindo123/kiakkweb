@@ -3928,7 +3928,7 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
 }
 
 .header {
-  padding: 0px 78px;
+  padding: 0px;
   float: left;
   width: 100%;
   position: relative;
@@ -12051,6 +12051,20 @@ ul{
   margin-top: 250px;
   text-align: center;
   font-weight: 600;
+}
+
+.search-txt button {
+  padding: 7px;
+  border: none;
+  background: #1C68FB;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.search-txt input {
+  padding: 5px;
+  border-radius: 5px;
+  color: #000;
 }
 
 /* The Modal (background) */

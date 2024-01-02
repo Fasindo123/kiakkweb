@@ -36,7 +36,7 @@
                 </nav>
               </div>
             </div>
-            <div  id="navbarSupportedContent" id="search">
+            <div id="navbarSupportedContent" id="search">
               <form role="search" method="get" action="/kiakkweb/pages/search.php">
                 <div class="search-box">
                   <button class="btn-search"><i class="fas fa-search"></i></button>
