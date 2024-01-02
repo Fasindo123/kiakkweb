@@ -1,5 +1,5 @@
 <div class="container">
-	<h4>Change Email Address</h4>
+	<h4>Email cím megváltoztatása</h4>
 	<hr />
 	<div class="row">
 		<div class="col-sm-8">
@@ -7,10 +7,10 @@
 				<?php $this :: display_page_errors(); ?>
 				<div class="row">
 					<div  class="col-9">
-						<input placeholder="Enter Your New Email Address" value="<?php  echo get_form_field_value('email'); ?>" name="email"  required="required" class="form-control" type="text"  />
+						<input placeholder="Írd be az új email címed!" value="<?php  echo get_form_field_value('email'); ?>" name="email"  required="required" class="form-control" type="text"  />
 					</div>
 					<div class="col-3">
-						<button class="btn btn-primary btn-block" type="submit">Continue</button>
+						<button class="btn btn-primary btn-block" type="submit">Folytatás</button>
 					</div>
 				</div>
 			</form>

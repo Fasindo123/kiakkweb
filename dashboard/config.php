@@ -34,7 +34,7 @@ define("FORBIDDEN", 403);
 // Application Files and Directories 
 define("IMG_DIR",  "assets/images/");
 define("FONTS_DIR",  "assets/fonts/");
-define("SITE_FAVICON", IMG_DIR . "favicon.svg");
+define("SITE_FAVICON", IMG_DIR . "logo.svg");
 define("SITE_LOGO", IMG_DIR . "logo.svg");
 
 define("CSS_DIR", SITE_ADDR . "assets/css/");

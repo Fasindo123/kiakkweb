@@ -4,6 +4,6 @@
 	</div>
 	<hr />
 	<div class="text-center">
-		<a href="<?php print_link(HOME_PAGE); ?>" class="btn btn-primary">Go to Home Page</a>
+		<a href="<?php print_link(HOME_PAGE); ?>" class="btn btn-primary">Vissza a kezdőlapra</a>
 	</div>
 </div>
