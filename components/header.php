@@ -42,7 +42,7 @@
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
               </form> -->
 
-              <form role="search" method="get" action="search.php">
+              <form role="search" method="get" action="/kiakkweb/search.php">
                 <div class="search-box">
                   <button class="btn-search"><i class="fas fa-search"></i></button>
                   <input type="search" class="input-search" name="s" id="search-text" placeholder="Keresés..." aria-label="Search">
