@@ -4,7 +4,7 @@
             <div class="footer-col">
               <h4><i class="fa-solid fa-folder-open"></i> Menü</h4>
               <ul>
-                <li><a href="#">Szervezetünk</a></li>
+                <li><a href="/kiakkweb/index.php#">Szervezetünk</a></li>
                 <li><a href="/kiakkweb/index.php#kepzesek">Képzéseink</a></li>
                 <li><a href="/kiakkweb/index.php#oktatok">Oktatóink</a></li>
                 <li><a href="/kiakkweb/index.php#infrastruktura">Infrastruktúránk</a></li>

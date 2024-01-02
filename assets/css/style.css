@@ -4291,7 +4291,7 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
   right: 83px;
   height: 35px;
   width: 35px;
-  background: url(../imgs/template/icons/close-btn.svg) no-repeat center;
+  background: url(../imgs/template/close-btn.svg) no-repeat center;
   z-index: 12;
   cursor: pointer;
 }

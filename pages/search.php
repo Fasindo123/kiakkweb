@@ -1,6 +1,6 @@
 <?php
 function searchNews($search_query) {
-    require_once("dashboard/config.php");
+    require_once("../dashboard/config.php");
 
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
@@ -37,11 +37,11 @@ if (empty($search_query)) {
 
 <!DOCTYPE html>
 <html lang="hu">
-<?php require_once('components/head.php'); ?>
+<?php require_once('../components/head.php'); ?>
 <body>
-    <?php require_once('components/loader.php'); ?>
-    <?php require_once('components/mobile-menu.php'); ?>
-    <?php require_once('components/header.php'); ?>
+    <?php require_once('../components/loader.php'); ?>
+    <?php require_once('../components/mobile-menu.php'); ?>
+    <?php require_once('../components/header.php'); ?>
 
 
     <div class="container search-txt">
@@ -77,7 +77,7 @@ if (empty($search_query)) {
         ?>
     </div>
 
-    <?php require_once("components/footer.php"); ?>
-    <?php require_once("components/scripts.php"); ?>
+    <?php require_once("../components/footer.php"); ?>
+    <?php require_once("../components/scripts.php"); ?>
 </body>
 </html>
