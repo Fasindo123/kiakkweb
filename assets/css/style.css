@@ -3948,11 +3948,11 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
 .header .main-header .header-account .dark-light-mode {
   height: 30px;
   width: 30px;
-  background: url(../imgs/template/icons/dark.svg) no-repeat center;
+  background: url(../imgs/template/dark.svg) no-repeat center;
   display: inline-block;
 }
 .header .main-header .header-account .dark-light-mode.dark-mode {
-  background: url(../imgs/template/icons/light.svg) no-repeat center;
+  background: url(../imgs/template/light.svg) no-repeat center;
 }
 .header .main-header .header-account .menu-mobile {
   display: inline-block;
