@@ -11905,9 +11905,12 @@ ul{
 	font-size: 16px;
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+	color: black;
 	display: block;
 	transition: all 0.3s ease;
+}
+.dark-mode .footer-col ul li a{
+	color: white;
 }
 .footer-col ul li a:hover{
 	color: #014FE5;
