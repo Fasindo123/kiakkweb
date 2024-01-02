@@ -3976,7 +3976,7 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
 }
 .header .main-menu li.has-children > a::after {
   content: "";
-  background: url(../imgs/template/icons/angle-down.svg) no-repeat center;
+  background: url(../imgs/template/angle-down.svg) no-repeat center;
   height: 8px;
   width: 12px;
   position: absolute;
@@ -4130,7 +4130,7 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
   color: #0C0D0E;
 }
 .header.header-2 .main-menu > li.has-children > a::after {
-  background: url(../imgs/template/icons/angle-down-black.svg) no-repeat center;
+  background: url(../imgs/template/angle-down-black.svg) no-repeat center;
 }
 .header.header-3 {
   position: relative;
@@ -4147,7 +4147,7 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
   color: #FFFFFF;
 }
 .dark-mode .is-mode.header-2 .main-menu > li.has-children > a::after {
-  background: url(../imgs/template/icons/angle-down.svg) no-repeat center;
+  background: url(../imgs/template/angle-down.svg) no-repeat center;
 }
 .dark-mode .box-banner-product {
   background-color: #1E2022;
@@ -4225,7 +4225,7 @@ section.overflow-unset, .section.overflow-unset, .overflow-unset {
   color: #FFFFFF;
 }
 .sticky-bar.stick.header-2 .main-menu > li.has-children > a::after {
-  background: url(../imgs/template/icons/angle-down.svg) no-repeat center;
+  background: url(../imgs/template/angle-down.svg) no-repeat center;
 }
 .sticky-bar.header-bg-2 {
   background-color: #1C68FB;
