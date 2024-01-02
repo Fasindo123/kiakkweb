@@ -1,4 +1,4 @@
-<?php
+<?php 
 function searchNews($search_query) {
     require_once("../dashboard/config.php");
 

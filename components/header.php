@@ -49,7 +49,7 @@
             </div>
           </div>
         </div><span class="comet-horizontal"></span>
-      </header>
+      </header> 
 
 <script>
   ! function (e) {
