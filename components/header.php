@@ -10,33 +10,24 @@
                     <li><a href="#">Szervezetünk</a></li>
                     <li class="has-children"><a href="/kiakkweb/index.php#kepzesek">Képzéseink</a>
                       <ul class="sub-menu">
-                        <li><a href="#">Képzés 1</a></li>
-                        <li><a href="#">Képzés 2</a></li>
+                        <?php 
+                        $courses = sqlQuery("SELECT `id`, `title` FROM `courses`");
+                        while ($course = $courses->fetch_assoc()) {
+                          echo '<li><a href="/kiakkweb/pages/course.php?course_id='.$course["id"].'">'.$course["title"].'</a></li>';
+                        }
+                        ?>
                       </ul>
                     </li>
-                    <li class="has-children"><a href="/kiakkweb/index.php#oktatok">Oktatóink</a>
-                        <ul class="sub-menu">
-                          <li><a href="#">Oktató 1</a></li>
-                          <li><a href="#">Oktató 2</a></li>
-                          <li><a href="#">Oktató 3</a></li>
-                          <li><a href="#">Oktató 4</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-children"><a href="/kiakkweb/index.php#infrastruktura">Infrastruktúránk</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Helyiség 1</a></li>
-                        <li><a href="#">Helyiség 2</a></li>
-                        <li><a href="#">Helyiség 3</a></li>
-                        <li><a href="#">Helyiség 4</a></li>
-                      </ul>
-                    </li>
+                    <li><a href="/kiakkweb/index.php#oktatok">Oktatóink</a></li>
+                    <li><a href="/kiakkweb/index.php#infrastruktura">Infrastruktúránk</a></li>
                     <li class="has-children"><a href="/kiakkweb/index.php#dokumentumok">Dokumentumok</a>
                       <ul class="sub-menu">
-                        <li><a href="#">Dok 1</a></li>
-                        <li><a href="#">Dok 2</a></li>
-                        <li><a href="#">Dok 3</a></li>
-                        <li><a href="#">Dok 4</a></li>
-                        <li><a href="#">Dok 5</a></li>
+                        <?php 
+                        $docs = sqlQuery("SELECT `title`, `path` FROM `docs`");
+                        while ($docs_e = $docs->fetch_assoc()) {
+                          echo '<li><a href="/kiakkweb/dashboard/'.$docs_e["path"].'">'.$docs_e["title"].'</a></li>';
+                        }
+                        ?>
                       </ul>
                     </li>
                     <li><a href="contact.php">Kapcsolat</a></li>
@@ -61,7 +52,7 @@
 
             </div>
             <div class="header-account d-flex"><a class="dark-light-mode dark-mode" href="#"></a>
-            <a class="menu-mobile mobile-nav-toggle d-xl-none" href="javascript:void(0);"><span class="item-menu"><span class="font-lg text-white">MENU</span><img class="hover-rotate" alt="neuron" src="assets/imgs/template/icons/menu1.svg"></span></a>
+            <a class="menu-mobile mobile-nav-toggle d-xl-none" href="javascript:void(0);"><span class="item-menu"><span class="font-lg text-white">MENU</span><img class="hover-rotate" alt="menu-icon" src="/kiakkweb/assets/imgs/template/icons/menu1.svg"></span></a>
             </div>
           </div>
         </div><span class="comet-horizontal"></span>
