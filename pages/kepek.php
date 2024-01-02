@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
 <?php require_once('../components/head.php'); ?>
-<style>
-    /* Stílus a képekhez */
-    .image-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px; /* Képek közötti tér */
-    }
-
-    .image-container img {
-        flex: 1;
-        max-width: calc(25% - 10px); /* 25% szélesség, azaz négy kép egy sorban */
-        height: auto;
-    }
-</style>
 <body>
     <?php require_once('../components/loader.php'); ?>
     <?php require_once('../components/mobile-menu.php'); ?>

@@ -12148,3 +12148,23 @@ ul{
   border-bottom:1px solid rgba(255,255,255,.5);
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
+
+/* Képek - kepek.php*/
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Képek közötti tér */
+}
+
+.image-container img {
+  flex: 1;
+  max-width: calc(25% - 10px); /* 25% szélesség, azaz négy kép egy sorban */
+  height: auto;
+  object-fit: cover; /* Új szabály az image-containerekhez */
+  transition: transform 0.3s ease-in-out; /* Animáció hozzáadása a hover hatáshoz */
+}
+
+.image-container img:hover {
+  transform: scale(1.1); /* Kép nagyítása a hover hatásra */
+  z-index: 1; /* Kép előtérbe hozása a hover hatásra */
+}
