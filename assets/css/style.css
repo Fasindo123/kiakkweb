@@ -1976,17 +1976,17 @@ body {
 }
 
 .swiper-button-next {
-  background: url(../imgs/slider/swiper/next.svg) no-repeat 0px 0px;
+  background: url(../imgs/page/next.svg) no-repeat 0px 0px;
 }
 .swiper-button-next:hover {
-  background: url(../imgs/slider/swiper/next.svg) no-repeat 0px 0px;
+  background: url(../imgs/page/next.svg) no-repeat 0px 0px;
 }
 
 .swiper-button-prev {
-  background: url(../imgs/slider/swiper/prev.svg) no-repeat 0px 0px;
+  background: url(../imgs/page/prev.svg) no-repeat 0px 0px;
 }
 .swiper-button-prev:hover {
-  background: url(../imgs/slider/swiper/prev.svg) no-repeat 0px 0px;
+  background: url(../imgs/page/prev.svg) no-repeat 0px 0px;
 }
 
 .swiper-button-next,
@@ -7930,7 +7930,7 @@ footer a {
 }
 
 .banner-mode-4 {
-  background-image: url(../imgs/page/homepage4/banner.png);
+  background-image: url(../imgs/page/banner.png);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8781,7 +8781,7 @@ footer a {
 }
 
 .contact-banner {
-  background-image: url(../imgs/page/homepage4/banner.png);
+  background-image: url(../imgs/page/banner.png);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;

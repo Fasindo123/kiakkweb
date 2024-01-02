@@ -20,14 +20,14 @@ require_once('email.php')
             <div class="row mt-60">
               <div class="col-lg-4">
                 <div class="card-contact">
-                  <div class="contact-icon"><img src="assets/imgs/page/homepage2/touch1.svg" alt="neuron"></div>
+                  <div class="contact-icon"><img src="assets/imgs/page/touch1.svg" alt="kiakk"></div>
                   <div class="contact-info">
                     <h4 class="color-0 card-title">Képzőközpont</h4>
                     <p class="font-md color-0"><i class="fa-solid fa-location-dot"></i> 7400 Kaposvár, <br> Damjanich utca 17.<br><i class="fa-solid fa-phone"></i> (+36) 30 664 8937<br><i class="fa-solid fa-envelope"></i> info@kiakk.hu</p>
                   </div>
                 </div>
                 <!-- <div class="card-contact">
-                  <div class="contact-icon"><img src="assets/imgs/page/homepage2/touch1.svg" alt="neuron"></div>
+                  <div class="contact-icon"><img src="assets/imgs/page/touch1.svg" alt="kiakk"></div>
                   <div class="contact-info">
                     <h4 class="color-0 card-title">Studió</h4>
                     <p class="font-md color-600">Cím: 7400 Kaposvár,<br> Damjanich utca 17<br>Telefon: <a href="tel:+36306648937">(+36) 30 664 8937</a><br>E-mail: <a href="mailto:info@kiakk.hu">info@kiakk.hu</a></p>
@@ -67,7 +67,7 @@ require_once('email.php')
                       <div class="col-lg-12">
                         <div class="box-button-touch">
                           <div class="form-group">
-                            <button class="btn btn-black" type="submit" name="kuldes" id="kuldes" onclick="return sendForm();">Üzenet küldése<img src="assets/imgs/template/icons/arrow.svg" alt="küldés icon"></button>
+                            <button class="btn btn-black" type="submit" name="kuldes" id="kuldes" onclick="return sendForm();">Üzenet küldése<img src="assets/imgs/template/arrow.svg" alt="küldés icon"></button>
                           </div>
                           <div class="agree-cb fw-bold color-0">
                             <input class="cb-agree" type="checkbox">A kapcsolatfelvétel gombra kattintva Ön elfogadja feltételeinket és szabályzatunkat.

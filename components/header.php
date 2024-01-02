@@ -1,7 +1,7 @@
 <header class="header sticky-bar">
         <div class="container-fluid">
           <div class="main-header">
-            <div class="header-logo parallax-item"><a class="d-flex cursor-scale small" href="/kiakkweb/index.php"><img alt="neuron" src="/kiakkweb/assets/imgs/template/logo.svg" width="90px" height="90px"><span class="logo-text">Kaposvári Informatika <br>Ágazati Képzőközpont</span></a></div>
+            <div class="header-logo parallax-item"><a class="d-flex cursor-scale small" href="/kiakkweb/index.php"><img alt="KIAKK" src="/kiakkweb/assets/imgs/template/logo.svg" width="90px" height="90px"><span class="logo-text">Kaposvári Informatika <br>Ágazati Képzőközpont</span></a></div>
             <div class="header-menu">
               <div class="header-nav">
                 <nav class="nav-main-menu d-none d-xl-block">
@@ -52,7 +52,7 @@
 
             </div>
             <div class="header-account d-flex"><a class="dark-light-mode dark-mode" href="#"></a>
-            <a class="menu-mobile mobile-nav-toggle d-xl-none" href="javascript:void(0);"><span class="item-menu"><span class="font-lg text-white">MENU</span><img class="hover-rotate" alt="menu-icon" src="/kiakkweb/assets/imgs/template/icons/menu1.svg"></span></a>
+            <a class="menu-mobile mobile-nav-toggle d-xl-none" href="javascript:void(0);"><span class="item-menu"><span class="font-lg text-white">MENU</span><img class="hover-rotate" alt="menu-icon" src="/kiakkweb/assets/imgs/template/menu1.svg"></span></a>
             </div>
           </div>
         </div><span class="comet-horizontal"></span>

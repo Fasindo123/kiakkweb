@@ -1,6 +1,6 @@
 <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar">
     <div class="mobile-logo">
-    <div class="parallax-item"><a href="index.php"><img alt="neuron" src="/kiakkweb/assets/imgs/template/logo.svg" width="100px" height="100px"></a></div>
+    <div class="parallax-item"><a href="index.php"><img alt="KIAKK" src="/kiakkweb/assets/imgs/template/logo.svg" width="100px" height="100px"></a></div>
     </div><a class="btn-close hover-rotate"></a>
     <div class="mobile-header-wrapper-inner">
         <div class="mobile-header-content-area">
@@ -39,6 +39,6 @@
           </div>
         </div>
       </div>
-    <div class="mobile-snow"><img class="rotate-infinite snow-footer" src="/kiakkweb/assets/imgs/template/icons/snow-footer.png" alt="menu-icon"></div>
+    <div class="mobile-snow"><img class="rotate-infinite snow-footer" src="/kiakkweb/assets/imgs/template/snow-footer.png" alt="menu-icon"></div>
 </div>
 <div class="scroll-container" id="scroll-container">

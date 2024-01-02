@@ -16,7 +16,7 @@
                 <h2 class="display-5 color-white mb-55 fadeInUp">Kaposvári Informatika<br class="d-none d-lg-block">Ágazati Képzőközpont</h2>
                 <div class="d-flex justify-content-center fadeInUp get-quote"><a class="d-inline-block align-middle mr-50" href="contact.php">
                     <div class="box-get-quote parallax-item">
-                      <div class="img-quote img-zoom-in"><img src="assets/imgs/page/homepage1/img-get-quote.png" alt="neuron"></div>
+                      <div class="img-quote img-zoom-in"><img src="assets/imgs/page/img-get-quote.png" alt="kiakk"></div>
                       <div class="info-quote"><span class="font-xl mr-15">Lépj Kapcsolatba <i class="fa-solid fa-share-from-square"></i></span></div>
                     </div></a>
                   <div class="d-flex align-items-center"><a class="play-btn popup-youtube" href="https://www.youtube.com/watch?v=sVPYIRF9RCQ"></a>
@@ -92,7 +92,7 @@
                             <h2 class="card-steps heading-1 stroke stroke-900 grow-up">'.$to_print_counter.'.</h2>
                             <h3 class="card-title color-900 text-up">'.$course["title"].'</h3>
                             <h5 class="card-desc color-900 text-opacity">'.$course["short_description"].'</h5>
-                            <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></div>        
+                            <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></div>        
                           </div>
                         </div>';
                 }
@@ -106,7 +106,7 @@
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-lg-6">
-                  <h1 class="title-left text-up"><span class="stroke-900 no-stroke">Az</span><img class="d-inline-block align-middle" src="assets/imgs/page/homepage1/icon-project.png" alt="neuron"></h1>
+                  <h1 class="title-left text-up"><span class="stroke-900 no-stroke">Az</span><img class="d-inline-block align-middle" src="assets/imgs/page/icon-project.png" alt="kiakk"></h1>
                   <h1 class="title-left text-up"><span class="color-900">Oktatóinkról</span></h1>
                 </div>
                 <div class="col-lg-6">
@@ -181,7 +181,7 @@
                                     <div class="cardInfo">
                                       <h3 class="color-900">'.$infrastructure_e["title"].'</h3>
                                       <h5 class="color-700 text-opacity">'.$infrastructure_e["short_description"].'</h5>
-                                      <div class="d-flex"><a class="font-xl-bold color-900 link-effect more-picture-button" data-more-imgs="'.$infrastructure_e["more_imgs"].'" style="cursor:pointer;">További képek</a><img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></div>
+                                      <div class="d-flex"><a class="font-xl-bold color-900 link-effect more-picture-button" data-more-imgs="'.$infrastructure_e["more_imgs"].'" style="cursor:pointer;">További képek</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="nyíl"></div>
                                     </div>
                                   </div>
                                 </div>';
@@ -230,7 +230,7 @@ $selectedImages = array_slice($imageFiles, 0, 6);
         <div class="container">
             <div class="head-recent-work">
                 <h1 class="color-900 text-up">Gal<span class="stroke-900 no-stroke">éria</span></h1>
-                <a class="btn btn-default parallax-item" href="pages/kepek.php">Több kép<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="Galéria képek"></a>
+                <a class="btn btn-default parallax-item" href="pages/kepek.php">Több kép<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="Galéria képek"></a>
             </div>
         </div>
         <div class="container-fluid">
@@ -259,13 +259,13 @@ $selectedImages = array_slice($imageFiles, 0, 6);
               <div class="row">
                 <div class="col-lg-3">
                   <h2 class="color-900 mb-75 text-up">FAQs</h2>
-                  <div class="parallax-item"><img class="parallax-image" src="assets/imgs/page/homepage1/faq1.png" alt="neuron"></div>
+                  <div class="parallax-item"><img class="parallax-image" src="assets/imgs/page/faq1.png" alt="kiakk"></div>
                   <div class="mt-105">
                     <h6 class="color-900 mb-15">Kérdése akadt?</h6>
                     <p class="font-md color-600">Vegye fel velünk a kapcsolatot, és mi a lehető leghamarabb jelentkezünk.</p>
                   </div>
                   <div class="mt-40">
-                    <div class="grow-up"><a class="btn btn-default btn-default-sm" href="contact.php">Kapcsolat<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="neuron"></a></div>
+                    <div class="grow-up"><a class="btn btn-default btn-default-sm" href="contact.php">Kapcsolat<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -288,7 +288,7 @@ $selectedImages = array_slice($imageFiles, 0, 6);
                   </div>
                 </div>
                 <div class="col-lg-3">
-                  <div class="box-image-faqs"><img class="parallax-image" src="assets/imgs/page/homepage1/faq2.png" alt="neuron"><img class="img-sub parallax-image" src="assets/imgs/page/homepage1/faq3.png" alt="neuron"></div>
+                  <div class="box-image-faqs"><img class="parallax-image" src="assets/imgs/page/faq2.png" alt="kiakk"><img class="img-sub parallax-image" src="assets/imgs/page/faq3.png" alt="kiakk"></div>
                 </div>
               </div>
             </div>
@@ -316,7 +316,7 @@ $selectedImages = array_slice($imageFiles, 0, 6);
                           </div>
                         </div>
                         <div class="col-lg-4 mt-2">
-                          <div class="grow-up"><a class="btn btn-default btn-default-sm" href="dashboard/'.$doc["path"].'" target="_blank">Megnyitás<img class="ml-15" src="assets/imgs/template/icons/arrow.svg" alt="nyíl"></a></div>
+                          <div class="grow-up"><a class="btn btn-default btn-default-sm" href="dashboard/'.$doc["path"].'" target="_blank">Megnyitás<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="nyíl"></a></div>
                         </div>
                       </div>
                     </div>
