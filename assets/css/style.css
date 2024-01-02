@@ -6904,11 +6904,11 @@ footer a {
 }
 
 .accordion-button::after {
-  background-image: url(../imgs/page/homepage1/arrow-down.png);
+  background-image: url(../imgs/page/arrow-down.png);
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url(../imgs/page/homepage1/arrow-up.png);
+  background-image: url(../imgs/page/arrow-up.png);
   transform: rotate(0deg);
 }
 
