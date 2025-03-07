@@ -12,24 +12,21 @@
                     <li><a href="/kiakkweb/index.php#">Szervezetünk</a></li>
                     <li class="has-children"><a href="/kiakkweb/index.php#kepzesek">Képzéseink</a>
                       <ul class="sub-menu">
-                        <?php 
-                        $courses = sqlQuery("SELECT `id`, `title` FROM `courses`");
-                        while ($course = $courses->fetch_assoc()) {
-                          echo '<li><a href="/kiakkweb/pages/course.php?course_id='.$course["id"].'">'.$course["title"].'</a></li>';
-                        }
-                        ?>
+                          <li><a href="#">Kurzus 1</a></li>
+                          <li><a href="#">Kurzus 2</a></li>
+                          <li><a href="#">Kurzus 3</a></li>
+                          <li><a href="#">Kurzus 4</a></li>
                       </ul>
                     </li>
                     <li><a href="/kiakkweb/index.php#oktatok">Oktatóink</a></li>
                     <li><a href="/kiakkweb/index.php#infrastruktura">Infrastruktúránk</a></li>
                     <li class="has-children"><a href="/kiakkweb/index.php#dokumentumok">Dokumentumok</a>
                       <ul class="sub-menu">
-                        <?php 
-                        $docs = sqlQuery("SELECT `title`, `path` FROM `docs`");
-                        while ($docs_e = $docs->fetch_assoc()) {
-                          echo '<li><a href="/kiakkweb/dashboard/'.$docs_e["path"].'">'.$docs_e["title"].'</a></li>';
-                        }
-                        ?>
+                          <li><a href="#">Dokumentum 1</a></li>
+                          <li><a href="#">Dokumentum 2</a></li>
+                          <li><a href="#">Dokumentum 3</a></li>
+                          <li><a href="#">Dokumentum 4</a></li>
+                          <li><a href="#">Dokumentum 5</a></li>
                       </ul>
                     </li>
                     <li><a href="/kiakkweb/pages/contact.php">Kapcsolat</a></li>

@@ -12,9 +12,9 @@ use \kiakkweb\PHPMailer\PHPMailer;
 use \kiakkweb\PHPMailer\SMTP;
 use \kiakkweb\PHPMailer\Exception;
 
-require '../dashboard/libs/PHPMailer/class.phpmailer.php';
-require '../dashboard/libs/PHPMailer/class.pop3.php';
-require '../dashboard/libs/PHPMailer/class.smtp.php';
+require '../PHPMailer/class.phpmailer.php';
+require '../PHPMailer/class.pop3.php';
+require '../PHPMailer/class.smtp.php';
 
 
 if(isset($_POST['kuldes'])) {

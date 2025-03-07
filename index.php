@@ -45,25 +45,41 @@
               <div class="box-swiper">
                 <div class="swiper-container swiper-group-3-customer blogs-slider">
                   <div class="swiper-wrapper">
-                    <!-- HÍREK LEKÉRÉSE ADATBÁZISBÓL !!! jelenleg az összes létrehozott hírt lekéri !!! -->
-                    <?php
-                      $news = sqlQuery("SELECT `id`, `title`, `cover_img`, `date` FROM `news`");
-                      
-                      if ($news->num_rows > 0) {
-                        while ($news_e = $news->fetch_assoc()) {
-                          $cover_img = getPicture($news_e["cover_img"], 1);
-                          echo '<div class="swiper-slide">
-                                  <div class="cardBlog">
-                                    <div class="cardImage"><a href="pages/news.php?news_id='.$news_e["id"].'"><img class="parallax-image" src="'.$cover_img.'" alt="'.$news_e["title"].' cikk borítóképe"></a></div>
-                                    <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="pages/news.php?news_id='.$news_e["id"].'">'.$news_e["date"].'</a><a class="link-blog" href="pages/news.php?news_id='.$news_e["id"].'">
-                                    <h4 class="color-light-900 text-opacity">'.$news_e["title"].'</h4></a></div>
-                                  </div>
-                                </div>';
-                        }
-                      } else {
-                        echo 'Nincs egy létrehozott hír sem!';
-                      }
-                    ?>
+                      <div class="swiper-slide">
+                          <div class="cardBlog">
+                              <div class="cardImage"><a href="#"><img class="parallax-image" src="./assets/imgs/no-img.jpg" alt="#"></a></div>
+                              <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="#">2025.02.12.</a><a class="link-blog" href="#">
+                                  <h4 class="color-light-900 text-opacity">A hír címe</h4></a></div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="cardBlog">
+                              <div class="cardImage"><a href="#"><img class="parallax-image" src="./assets/imgs/no-img.jpg" alt="#"></a></div>
+                              <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="#">2025.02.12.</a><a class="link-blog" href="#">
+                                      <h4 class="color-light-900 text-opacity">A hír címe</h4></a></div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="cardBlog">
+                              <div class="cardImage"><a href="#"><img class="parallax-image" src="./assets/imgs/no-img.jpg" alt="#"></a></div>
+                              <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="#">2025.02.12.</a><a class="link-blog" href="#">
+                                      <h4 class="color-light-900 text-opacity">A hír címe</h4></a></div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="cardBlog">
+                              <div class="cardImage"><a href="#"><img class="parallax-image" src="./assets/imgs/no-img.jpg" alt="#"></a></div>
+                              <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="#">2025.02.12.</a><a class="link-blog" href="#">
+                                      <h4 class="color-light-900 text-opacity">A hír címe</h4></a></div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="cardBlog">
+                              <div class="cardImage"><a href="#"><img class="parallax-image" src="./assets/imgs/no-img.jpg" alt="#"></a></div>
+                              <div class="cardInfo scroll-move-up-2"><a class="tag-link" href="#">2025.02.12.</a><a class="link-blog" href="#">
+                                      <h4 class="color-light-900 text-opacity">A hír címe</h4></a></div>
+                          </div>
+                      </div>
                   </div>
                   <div class="box-button-slider-bottom">
                     <div class="swiper-button-prev swiper-button-prev-group-4 swiper-button-prev-style1">
@@ -86,29 +102,46 @@
         <section class="section block-section-2 is-mode bg-0" id="kepzesek">
           <div class="container">
             <div class="row">
-              <?php
-              $courses = sqlQuery("SELECT `id`, `title`, `short_description` FROM courses");
-              if ($courses->num_rows>0) {
-                $count = 1;
-                while ($course = $courses->fetch_assoc()) {
-                  $to_print_counter = $count;
-                  if ($count < 10) {
-                    $to_print_counter = "0".$count;
-                  }
-                  $count += 1;
-                  echo '<div class="col-lg-6 text-break">
-                          <div class="card-feature-3 parallax-item">
-                            <h2 class="card-steps heading-1 stroke stroke-900 grow-up">'.$to_print_counter.'.</h2>
-                            <h3 class="card-title color-900 text-up">'.$course["title"].'</h3>
-                            <h5 class="card-desc color-900 text-opacity">'.$course["short_description"].'</h5>
-                            <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></div>        
-                          </div>
-                        </div>';
-                }
-              } else {
-                echo 'Nincs létrehozva egy képzés sem!';
-              }
-              ?>
+                <div class="col-lg-6 text-break">
+                    <div class="card-feature-3 parallax-item">
+                        <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01</h2>
+                        <h3 class="card-title color-900 text-up">Képzés címe</h3>
+                        <h5 class="card-desc color-900 text-opacity">Rövid leírás ad ad kgljdgdjhkj hksgjkhd hjgkjhkghjksfdjkjf sfjsfjsjklfjklsfjhsf</h5>
+                        <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-break">
+                    <div class="card-feature-3 parallax-item">
+                        <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01</h2>
+                        <h3 class="card-title color-900 text-up">Képzés címe</h3>
+                        <h5 class="card-desc color-900 text-opacity">Rövid leírás ad ad kgljdgdjhkj hksgjkhd hjgkjhkghjksfdjkjf sfjsfjsjklfjklsfjhsf</h5>
+                        <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-break">
+                    <div class="card-feature-3 parallax-item">
+                        <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01</h2>
+                        <h3 class="card-title color-900 text-up">Képzés címe</h3>
+                        <h5 class="card-desc color-900 text-opacity">Rövid leírás ad ad kgljdgdjhkj hksgjkhd hjgkjhkghjksfdjkjf sfjsfjsjklfjklsfjhsf</h5>
+                        <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-break">
+                    <div class="card-feature-3 parallax-item">
+                        <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01</h2>
+                        <h3 class="card-title color-900 text-up">Képzés címe</h3>
+                        <h5 class="card-desc color-900 text-opacity">Rövid leírás ad ad kgljdgdjhkj hksgjkhd hjgkjhkghjksfdjkjf sfjsfjsjklfjklsfjhsf</h5>
+                        <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-break">
+                    <div class="card-feature-3 parallax-item">
+                        <h2 class="card-steps heading-1 stroke stroke-900 grow-up">01</h2>
+                        <h3 class="card-title color-900 text-up">Képzés címe</h3>
+                        <h5 class="card-desc color-900 text-opacity">Rövid leírás ad ad kgljdgdjhkj hksgjkhd hjgkjhkghjksfdjkjf sfjsfjsjklfjklsfjhsf</h5>
+                        <div class="card-link d-flex"><a class="font-xl-bold color-900 link-text link-effect" href="pages/course.php?course_id='.$course["id"].'">TOVÁBBI INFORMÁCIÓK</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="kiakk"></div>
+                    </div>
+                </div>
           </div>
         </section>
 <!-- Oktatók -->
@@ -129,25 +162,60 @@
               <div class="box-swiper">
                 <div class="swiper-container swiper-group-4-center features-slider">
                   <div class="swiper-wrapper">
-                    <?php
-                      $oktatok = sqlQuery("SELECT * FROM oktatok");
-                      if ($oktatok->num_rows>0) {
-                        while ($oktato = $oktatok->fetch_assoc()) {
-                          $cover_img = getPicture($oktato["img"], 1);
-                          echo '<div class="swiper-slide text-break">
-                                  <div class="card-feature card-feature-2">
-                                    <div class="card-image"><img class="parallax-image popup-button" src="'.$cover_img.'" alt="Kép '.$oktato["name"].'-ról/ről"></div>
-                                    <div class="card-info">
-                                      <h4 class="color-900 card-title">'.$oktato["name"].'</h4>
-                                      <p class="card-desc font-xl color-600">'.$oktato["short_description"].'</p>
-                                    </div>
-                                  </div>
-                                </div>';
-                        }
-                      } else {
-                        echo 'Nincs hozzáadva egy oktató sem!';
-                      }
-                    ?>
+                      <div class="swiper-slide text-break">
+                          <div class="card-feature card-feature-2">
+                              <div class="card-image"><img class="parallax-image popup-button" src="./assets/imgs/no-img.jpg" alt="asd"></div>
+                              <div class="card-info">
+                                  <h4 class="color-900 card-title">Oktató Neve</h4>
+                                  <p class="card-desc font-xl color-600">Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide text-break">
+                          <div class="card-feature card-feature-2">
+                              <div class="card-image"><img class="parallax-image popup-button" src="./assets/imgs/no-img.jpg" alt="asd"></div>
+                              <div class="card-info">
+                                  <h4 class="color-900 card-title">Oktató Neve</h4>
+                                  <p class="card-desc font-xl color-600">Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide text-break">
+                          <div class="card-feature card-feature-2">
+                              <div class="card-image"><img class="parallax-image popup-button" src="./assets/imgs/no-img.jpg" alt="asd"></div>
+                              <div class="card-info">
+                                  <h4 class="color-900 card-title">Oktató Neve</h4>
+                                  <p class="card-desc font-xl color-600">Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide text-break">
+                          <div class="card-feature card-feature-2">
+                              <div class="card-image"><img class="parallax-image popup-button" src="./assets/imgs/no-img.jpg" alt="asd"></div>
+                              <div class="card-info">
+                                  <h4 class="color-900 card-title">Oktató Neve</h4>
+                                  <p class="card-desc font-xl color-600">Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide text-break">
+                          <div class="card-feature card-feature-2">
+                              <div class="card-image"><img class="parallax-image popup-button" src="./assets/imgs/no-img.jpg" alt="asd"></div>
+                              <div class="card-info">
+                                  <h4 class="color-900 card-title">Oktató Neve</h4>
+                                  <p class="card-desc font-xl color-600">Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide text-break">
+                          <div class="card-feature card-feature-2">
+                              <div class="card-image"><img class="parallax-image popup-button" src="./assets/imgs/no-img.jpg" alt="asd"></div>
+                              <div class="card-info">
+                                  <h4 class="color-900 card-title">Oktató Neve</h4>
+                                  <p class="card-desc font-xl color-600">Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás Rövid bemutatkozás </p>
+                              </div>
+                          </div>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -183,26 +251,16 @@
               <div class="box-swiper">
                 <div class="swiper-container swiper-group-3-center services-slider">
                   <div class="swiper-wrapper">
-                    <?php
-                      $infrastructure_data = sqlQuery("SELECT * FROM infrastructure");
-                      if ($infrastructure_data->num_rows>0) {
-                        while ($infrastructure_e = $infrastructure_data->fetch_assoc()) {
-                          $cover_img = getPicture($infrastructure_e["img"], 1);
-                          echo '<div class="swiper-slide text-break">
-                                  <div class="cardService">
-                                    <div class="cardImage parallax-item"><a href="#"><img class="parallax-image" src="'.$cover_img.'" alt="Kép: '.$infrastructure_e["title"].'"></a></div>
-                                    <div class="cardInfo">
-                                      <h3 class="color-900">'.$infrastructure_e["title"].'</h3>
-                                      <h5 class="color-700 text-opacity">'.$infrastructure_e["short_description"].'</h5>
-                                      <div class="d-flex"><a class="font-xl-bold color-900 link-effect more-picture-button" data-more-imgs="'.$infrastructure_e["more_imgs"].'" style="cursor:pointer;">További képek</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="nyíl"></div>
-                                    </div>
-                                  </div>
-                                </div>';
-                        }
-                      } else {
-                        echo 'Nincs elérhető adat!';
-                      }
-                    ?>
+                      <div class="swiper-slide text-break">
+                          <div class="cardService">
+                              <div class="cardImage parallax-item"><a href="#"><img class="parallax-image" src="./assets/imgs/no-img.jpg" alt="asd"/></a></div>
+                              <div class="cardInfo">
+                                  <h3 class="color-900">Infrastruktúra neve</h3>
+                                  <h5 class="color-700 text-opacity">Rövid leírás az infrastruktúráról Rövid leírás az infrastruktúráról Rövid leírás az infrastruktúráról Rövid leírás az infrastruktúráról Rövid leírás az infrastruktúráról</h5>
+                                  <div class="d-flex"><a class="font-xl-bold color-900 link-effect more-picture-button" data-more-imgs="asd" style="cursor:pointer;">További képek</a><img class="ml-15" src="assets/imgs/template/arrow.svg" alt="nyíl"></div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -285,23 +343,14 @@ $selectedImages = array_slice($imageFiles, 0, 6);
                 </div>
                 <div class="col-lg-6">
                   <div class="accordion" id="accordionFAQ">
-                    <?php
-                      $faqs = sqlQuery("SELECT * FROM faqs");
-                      if ($faqs->num_rows>0) {
-                        while ($faqs_e = $faqs->fetch_assoc()) {
-                          echo '<div class="accordion-item scroll-move-up-2">
-                                  <h5 class="accordion-header" id="headingOne">
-                                  <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq_'.$faqs_e["id"].'" aria-expanded="false" aria-controls="faq_'.$faqs_e["id"].'">'.$faqs_e["qst"].'</button>
-                                  </h5>
-                                  <div class="accordion-collapse collapse" id="faq_'.$faqs_e["id"].'" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
-                                    <div class="accordion-body font-lg color-600">'.$faqs_e["answ"].'</div>
-                                  </div>
-                                </div>';
-                        }
-                      }  else {
-                        echo 'Nincs létrehozva egy kérdés sem!';
-                      }
-                    ?>
+                      <div class="accordion-item scroll-move-up-2">
+                          <h5 class="accordion-header" id="headingOne">
+                              <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq_1" aria-expanded="false" aria-controls="faq_1">Kérdés</button>
+                          </h5>
+                          <div class="accordion-collapse collapse" id="faq_1" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                          <div class="accordion-body font-lg color-600">Válasz</div>
+                      </div>
+                  </div>
                   </div>
                 </div>
                 <div class="col-lg-3">
@@ -318,32 +367,23 @@ $selectedImages = array_slice($imageFiles, 0, 6);
       <div class="col-lg-12">
         <h2 class="color-900 mb-75 text-up">Dokumentumok</h2>
         <div class="accordion" id="accordionDocs">
-        <?php 
-          $docs = sqlQuery("SELECT * FROM docs");
-          if ($docs->num_rows>0) {
-            while ($doc = $docs->fetch_assoc()) {
-              echo '<div class="accordion-item scroll-move-up-2">
-                      <h5 class="accordion-header" id="docHeadingOne">
-                        <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapse'.$doc["id"].'" aria-expanded="false" aria-controls="docCollapse'.$doc["id"].'">'.$doc["title"].'</button>
-                      </h5>
-                      <div class="accordion-collapse collapse" id="docCollapse'.$doc["id"].'" aria-labelledby="docHeadingOne" data-bs-parent="#accordionDocs">
-                        <div class="row">
-                          <div class="col-lg-8">
-                            <div class="accordion-body font-lg color-600">
-                              '.$doc["description"].'
-                            </div>
-                          </div>
-                          <div class="col-lg-4 mt-2">
-                            <div class="grow-up"><a class="btn btn-default btn-default-sm" href="dashboard/'.$doc["path"].'" target="_blank">Megnyitás<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="nyíl"></a></div>
-                          </div>
+            <div class="accordion-item scroll-move-up-2">
+                <h5 class="accordion-header" id="docHeadingOne">
+                    <button class="accordion-button heading-5 color-900 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docCollapse_1" aria-expanded="false" aria-controls="docCollapse_'">Dokumentum neve</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="docCollapse_1" aria-labelledby="docHeadingOne" data-bs-parent="#accordionDocs">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="accordion-body font-lg color-600">
+                            Dokumentum leírása
                         </div>
-                      </div>
-                    </div>';
-            }
-          } else {
-            echo 'Nincs egy feltöltött dokumentum sem!';
-          }
-        ?>
+                    </div>
+                    <div class="col-lg-4 mt-2">
+                        <div class="grow-up"><a class="btn btn-default btn-default-sm" href="#" target="_blank">Megnyitás<img class="ml-15" src="assets/imgs/template/arrow.svg" alt="nyíl"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
       </div>
     </div>
