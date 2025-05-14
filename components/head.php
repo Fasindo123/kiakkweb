@@ -10,9 +10,9 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, PHP, MySQL">
     <meta name="author" content="Szita Máté Ferenc, Bodó Zoltán, Huber Péter György">
 
-    <link href="/kiakkweb/assets/css/style.css?v=2.0.0" rel="stylesheet">
+    <link href="assets/css/style.css?v=2.0.0" rel="stylesheet">
     <script src="https://kit.fontawesome.com/535ee732fe.js" crossorigin="anonymous"></script>
 
-    <link rel="shortcut icon" type="image/x-icon" href="/kiakkweb/assets/imgs/template/logo-black.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/logo-black.png">
     <title>Kaposvári Informatika Ágazati Képzőközpont</title>
 </head>

@@ -1,14 +1,14 @@
 <header class="header sticky-bar">
         <div class="container-fluid">
           <div class="main-header">
-            <div class="header-logo"><a class="d-flex cursor-scale small" href="/kiakkweb/index.php"><img alt="KIAKK" src="/kiakkweb/assets/imgs/template/logo.svg" width="65px" height="65px"><span class="logo-text">Kaposvári Informatika <br>Ágazati Képzőközpont</span></a></div>
+            <div class="header-logo"><a class="d-flex cursor-scale small" href="index.php"><img alt="KIAKK" src="assets/imgs/template/logo.svg" width="65px" height="65px"><span class="logo-text">Kaposvári Informatika <br>Ágazati Képzőközpont</span></a></div>
             <div class="header-menu">
               <div class="header-nav">
                 <nav class="nav-main-menu d-none d-xl-block">
                   <ul class="main-menu">
-                    <li><a href="/kiakkweb/index.php">Kezdőlap</a></li>
-                    <li><a href="/kiakkweb/index.php#">Szervezetünk</a></li>
-                    <li class="has-children"><a href="/kiakkweb/index.php#kepzesek">Képzéseink</a>
+                    <li><a href="index.php">Kezdőlap</a></li>
+                    <li><a href="index.php#">Szervezetünk</a></li>
+                    <li class="has-children"><a href="index.php#kepzesek">Képzéseink</a>
                       <ul class="sub-menu">
                           <li><a href="#">Kurzus 1</a></li>
                           <li><a href="#">Kurzus 2</a></li>
@@ -17,9 +17,9 @@
                           <li><a href="#">Kurzus 5</a></li>
                       </ul>
                     </li>
-                    <li><a href="/kiakkweb/index.php#oktatok">Oktatóink</a></li>
-                    <li><a href="/kiakkweb/index.php#infrastruktura">Infrastruktúránk</a></li>
-                    <li class="has-children"><a href="/kiakkweb/index.php#dokumentumok">Dokumentumok</a>
+                    <li><a href="index.php#oktatok">Oktatóink</a></li>
+                    <li><a href="index.php#infrastruktura">Infrastruktúránk</a></li>
+                    <li class="has-children"><a href="index.php#dokumentumok">Dokumentumok</a>
                       <ul class="sub-menu">
                           <li><a href="#">Dokumentum 1</a></li>
                           <li><a href="#">Dokumentum 1</a></li>
@@ -28,14 +28,14 @@
                           <li><a href="#">Dokumentum 1</a></li>
                       </ul>
                     </li>
-                    <li><a href="/kiakkweb/pages/contact.php">Kapcsolat</a></li>
+                    <li><a href="pages/contact.php">Kapcsolat</a></li>
                   </ul>
                   
                 </nav>
               </div>
             </div>
             <div id="navbarSupportedContent" id="search">
-              <form role="search" method="get" action="/kiakkweb/pages/search.php">
+              <form role="search" method="get" action="pages/search.php">
                 <div class="search-box">
                   <button class="btn-search"><i class="fas fa-search"></i></button>
                   <input type="search" class="input-search" name="s" id="search-text" placeholder="Keresés..." aria-label="Search">
@@ -43,7 +43,7 @@
               </form>
             </div>
             <div class="header-account d-flex"><a class="dark-light-mode dark-mode" href="#"></a>
-            <a class="menu-mobile mobile-nav-toggle d-xl-none" href="javascript:void(0);"><span class="item-menu"><span class="font-lg text-white"></span><img class="hover-rotate" alt="menu-icon" src="/kiakkweb/assets/imgs/template/menu1.svg"></span></a>
+            <a class="menu-mobile mobile-nav-toggle d-xl-none" href="javascript:void(0);"><span class="item-menu"><span class="font-lg text-white"></span><img class="hover-rotate" alt="menu-icon" src="assets/imgs/template/menu1.svg"></span></a>
             </div>
           </div>
         </div><span class="comet-horizontal"></span>
